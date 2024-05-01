@@ -5,7 +5,7 @@ export function RadixIconsCross2() {
       width="1em"
       height="1em"
       viewBox="0 0 15 15"
-      color="#000"
+      color="#22202a"
     >
       <path
         fill="currentColor"

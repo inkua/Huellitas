@@ -27,15 +27,15 @@ function Navbar() {
             showMenu ? "top-[100%]" : "top-[-300%]"
           } md:w-auto w-full flex items-center px-5 bg-white transition-all duration-500 ease-in-out z-[-10] md:z-0 md:bg-transparent py-4`}
         >
-          <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-black font-semibold">
+          <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-blackHtas font-semibold">
             <li className="relative group">
-              <Link
-                className="flex items-center hover:text-gray-900"
-                href="/"
-              >
+              <Link className="flex items-center hover:text-gray-900" href="/">
                 FUNDACIÓN
-                <ArrowDropMenu className="ml-2 group-hover:rotate-180 transition-transform duration-300" />
+                <div className=" group-hover:rotate-180 transition-transform duration-300">
+                  <ArrowDropMenu />
+                </div>
               </Link>
+
               {/* ----OPCIONES ----- */}
               <ul className="absolute left-0 top-full w-[200px] bg-white shadow-lg rounded hidden group-hover:block p-6 z-10">
                 <li className=" hover:text-gray-800 py-2">
@@ -50,12 +50,11 @@ function Navbar() {
               </ul>
             </li>
             <li className="relative group">
-              <Link
-                className="flex items-center hover:text-gray-900"
-                href="/"
-              >
+              <Link className="flex items-center  hover:text-gray-900" href="/">
                 ADOPCIÓN
-                <ArrowDropMenu />
+                <div className=" group-hover:rotate-180 transition-transform duration-300">
+                  <ArrowDropMenu />
+                </div>
               </Link>
               {/* ----OPCIONES ----- */}
               <ul className="absolute left-0 top-full w-[200px] bg-white shadow-lg rounded hidden group-hover:block p-6 z-10">
@@ -71,12 +70,12 @@ function Navbar() {
               </ul>
             </li>
             <li className="relative group">
-              <Link
-                className="flex justify-center items-center hover:text-gray-900"
-                href="/"
-              >
+            <Link className="flex items-center hover:text-gray-900" href="/">
+
                 COLABORACIÓN
-                <ArrowDropMenu />
+                <div className=" group-hover:rotate-180 transition-transform duration-300">
+                  <ArrowDropMenu />
+                </div>
               </Link>
               {/* ----OPCIONES ----- */}
               <ul className="absolute left-0 top-full w-[200px] bg-white shadow-lg rounded hidden group-hover:block p-6 z-10">
@@ -91,7 +90,7 @@ function Navbar() {
                 </li>
                 <li className=" hover:text-gray-800 py-2">
                   <Link href="/">HOGAR DE TRÁNSITO</Link>
-                </li>{" "}
+                </li>
                 <li className=" hover:text-gray-800 py-2">
                   <Link href="/">SERVICIO DE AYUDA</Link>
                 </li>
@@ -111,7 +110,7 @@ function Navbar() {
         <div className="flex items-center gap-6">
           <button
             type="button"
-            className="bg-[#6c5ce7] py-1 px-4 rounded-full text-white hover:bg-[#6c5ce7d6] shadow-xl"
+            className="bg-violetHtas py-1 px-4 rounded-full text-white hover:bg-[#6c5ce7d6] shadow-grey-400 shadow-md"
           >
             DONÁ AHORA
           </button>

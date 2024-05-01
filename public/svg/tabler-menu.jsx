@@ -5,7 +5,7 @@ export function TablerMenu2() {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      color="#000"
+      color="#22202a"
     >
       <path
         fill="none"
