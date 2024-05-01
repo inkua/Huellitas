@@ -1,34 +1,72 @@
-/* VolunteerComponent.module.css */
+
 .volunteerContainer {
-  background-color: #6c5ce7;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  background-color: #6c5ce7;
+}
+
+.contentContainer {
+  display: flex;
   align-items: center;
+  width: 80%; /* Adjust width of content container */
+}
+
+.leftContent {
+  flex: 1;
+}
+
+.rightContent {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .messageContainer {
+
   color: white;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 30px; /* Increase border radius */
+  margin-bottom: 20px;
+  text-align: left; /* Adjust text alignment */
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+.textInput{
+
+  padding: 20px;
+  border-radius: 30px; /* Increase border radius */
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.textInput input{
+  width: calc(100% - 42px); /* Adjust input width */
+  padding: 10px;
+  border-radius: 30px; /* Increase border radius */
+  border: 1px solid #707070;
   margin-bottom: 10px;
 }
 
-.imageContainer {
-  margin-bottom: 10px;
-}
-
-.nameInput, .contactInfo {
-  
+.contactInfo {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 30px; /* Increase border radius */
+  margin-bottom: 20px;
+  width: 80%;
 }
 
-.nameInput input, .contactInfo input {
-  width: calc(50% - 5px);
+.contactInfo input {
+  width: calc(100% - 42px); /* Adjust input width */
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 30px; /* Increase border radius */
   border: 1px solid #707070;
+  margin-bottom: 10px;
+  
+}
+.contactInfo input:nth-child(2) {
+  margin-left: 5%; /* Adjust margin */
 }
 
 .volunteerButton {
@@ -38,4 +76,8 @@
   border: 1px solid #ffffff;
   background-color: transparent;
   color: #ffffff;
+  margin-bottom: 20px;
+  align-self: flex-end;
+  margin-left: 20px;
 }
+
