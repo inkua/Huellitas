@@ -6,9 +6,9 @@ import history_003 from '../../../../public/assets/History/history_003.jpg'
 function History() {
     return (
         <section>
-            <div className='w-full flex bg-white justify-center items-center px-16 py-16 flex-col gap-8'>
-                <h1 className='text-center whitespace-nowrap text-black text-3xl font-bold lg:w-9/12 lg:text-left md:w-full md:text-left'>SIGUE SUS HISTORIAS</h1>
-                <div className='w-full grid grid-cols-1 gap-4 lg:w-9/12 lg:grid-cols-3 md:grid-cols-2'>
+            <div className='w-full flex bg-white justify-center items-center py-16 flex-col gap-8'>
+                <h1 className='w-11/12 text-center whitespace-nowrap text-black text-3xl font-bold lg:w-9/12 lg:text-left md:text-left'>SIGUE SUS HISTORIAS</h1>
+                <div className='w-11/12 grid grid-cols-1 gap-4 lg:w-9/12 lg:grid-cols-3 md:grid-cols-2'>
                     <div className='flex flex-col gap-4'>
                         <Image src={history_001} alt='Foto del perrito protagonista'></Image>
                         <p className='text-black'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea cumque ad iure quaerat totam?</p>
