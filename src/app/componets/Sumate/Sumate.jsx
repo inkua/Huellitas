@@ -3,8 +3,8 @@ import girlDog from '../../../../public/svg/GirlDog.svg';
 
 function Sumate() {
   return (
-    <div className="flex justify-center bg-indigo-500">
-      <div className="flex items-center w-4/5 bg-indigo-500"> 
+    <div className="flex justify-center bg-violetHtas">
+      <div className="flex items-center w-4/5 bg-violetHtas"> 
         <div className="flex-1">
           <div className="text-white px-6 py-4 rounded-lg mb-6">
             <p className="text-3xl font-semibold">TU TAMBIÉN PUEDES AYUDAR</p>
