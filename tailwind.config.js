@@ -13,9 +13,10 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        "violetHtas":"#6c5ce7",
+        "violetHtas":"#6C5CE7",
         "grayHtas":"#585564",
-        "blackHtas":"#22202a"
+        "blackHtas":"#22202a",
+        "pinkHtas":"#FD79A8"
       }
     },
   },
