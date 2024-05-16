@@ -110,7 +110,7 @@ function Navbar() {
         <div className="flex items-center gap-6">
           <button
             type="button"
-            className="bg-violetHtas py-1 px-4 rounded-full text-white hover:bg-[#6c5ce7d6] shadow-grey-400 shadow-md"
+            className="bg-violetHtas py-1 px-4 rounded-full text-white hover:bg-pinkHtas shadow-grey-400 shadow-md"
           >
             DONÁ AHORA
           </button>
