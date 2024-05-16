@@ -18,7 +18,7 @@ function Footer() {
   }
 
   return (
-    <footer className="w-full ">
+    <footer className="w-full">
       {/* SECTION VIOLETA */}
       <div className="flex justify-around items-center flex-col md:flex-row h-full md:h-[250px] bg-violetHtas rounded-t-[50px] gap-4 py-8 md:gap-0 md:py-0">
         {/* REDES SOCIALES */}
@@ -59,7 +59,7 @@ function Footer() {
           </div>
         </div>
         {/* LINKS RAPIDOS */}
-        <div className="hidden md:block w-auto min-w-52 flex text-center justify-center">
+        <div className="py-6 md:py-0 w-auto min-w-52  text-center justify-center">
           <ul className="flex flex-col gap-2">
             <li className="hover:font-bold">
               <Link href="/">FUNDACIÓN</Link>
@@ -84,7 +84,7 @@ function Footer() {
         </div>
       </div>
       {/* SECTION GRAY */}
-      <div className="h-[40px] bg-grayHtas flex justify-center items-center font-medium">
+      <div className="h-[40px] bg-grayHtas flex justify-center items-center font-medium text-sm md:text-base">
         <p>
           Diseño y Programación:
           <Link
@@ -106,7 +106,7 @@ function Footer() {
     <div className="fixed inset-0 flex items-center justify-center z-50"> 
       <div className="bg-black opacity-50 absolute inset-0"></div>
 
-      <div className="bg-white p-8 rounded-lg shadow-lg z-10 max-w-[50%]">
+      <div className="bg-white p-8 rounded-lg shadow-lg z-10 max-w-[80%] md:max-w-[50%]">
         <h2 className="text-grayHtas text-xl font-bold mb-4">Terminos y Condiciones</h2>
         <p className="text-grayHtas max-h-[300px] w-full overflow-x-hidden overflow-y-auto">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi rem cupiditate commodi quae perferendis animi blanditiis fugit culpa fuga minus voluptate optio accusamus, quaerat ut! Fugit aut ex porro quia!

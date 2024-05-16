@@ -15,6 +15,15 @@ function Navbar() {
   return (
     <div className="relative z-10 w-full bg-white">
       <nav className="flex relative justify-between items-center w-[100%] md:w-[80%] px-4 mx-auto bg-white">
+        <div className="flex items-center gap-6">
+          <button
+            onClick={() => setShowMenu(!showMenu)}
+            className="text-3xl md:hidden"
+          >
+            {showMenu ? <RadixIconsCross2 /> : <TablerMenu2 />}
+          </button>
+        </div>
+
         <Image
           className="text-2xl text-tertiary py-4"
           src={Logo}
@@ -70,8 +79,7 @@ function Navbar() {
               </ul>
             </li>
             <li className="relative group">
-            <Link className="flex items-center hover:text-gray-900" href="/">
-
+              <Link className="flex items-center hover:text-gray-900" href="/">
                 COLABORACIÓN
                 <div className=" group-hover:rotate-180 transition-transform duration-300">
                   <ArrowDropMenu />
@@ -107,20 +115,12 @@ function Navbar() {
           </ul>
         </div>
 
-        <div className="flex items-center gap-6">
-          <button
-            type="button"
-            className="bg-violetHtas py-1 px-4 rounded-full text-white hover:bg-pinkHtas shadow-grey-400 shadow-md"
-          >
-            DONÁ AHORA
-          </button>
-          <button
-            onClick={() => setShowMenu(!showMenu)}
-            className="text-3xl md:hidden"
-          >
-            {showMenu ? <RadixIconsCross2 /> : <TablerMenu2 />}
-          </button>
-        </div>
+        <button
+          type="button"
+          className=" bg-violetHtas py-1 px-4 rounded-full text-white hover:bg-pinkHtas shadow-grey-400 shadow-md"
+        >
+          DONÁ
+        </button>
       </nav>
     </div>
   );
