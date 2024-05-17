@@ -16,7 +16,8 @@ module.exports = {
         "violetHtas":"#6C5CE7",
         "grayHtas":"#585564",
         "blackHtas":"#22202a",
-        "pinkHtas":"#FD79A8"
+        "pinkHtas":"#FD79A8",
+        "colorTerciario": "#f2f0fd",
       }
     },
   },

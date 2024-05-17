@@ -18,7 +18,7 @@ function Footer() {
   }
 
   return (
-    <footer className="w-full">
+    <footer className="w-full mt-auto">
       {/* SECTION VIOLETA */}
       <div className="flex justify-around items-center flex-col md:flex-row h-full md:h-[250px] bg-violetHtas rounded-t-[50px] gap-4 py-8 md:gap-0 md:py-0">
         {/* REDES SOCIALES */}
@@ -62,7 +62,7 @@ function Footer() {
         <div className="py-6 md:py-0 w-auto min-w-52  text-center justify-center">
           <ul className="flex flex-col gap-2">
             <li className="hover:font-bold">
-              <Link href="/">FUNDACIÓN</Link>
+              <Link href="/fundacion">FUNDACIÓN</Link>
             </li>
             <li className="hover:font-bold">
               <Link href="/">ADOPCIÓN</Link>
