@@ -15,13 +15,23 @@ function Navbar() {
   return (
     <div className="relative z-10 w-full bg-white">
       <nav className="flex relative justify-between items-center w-[100%] md:w-[80%] px-4 mx-auto bg-white">
-        <Image
-          className="text-2xl text-tertiary py-4"
-          src={Logo}
-          alt="logo"
-          height={80}
-          width={80}
-        />
+        <div className="md:hidden flex flex-grow basis-0">
+          <button
+            onClick={() => setShowMenu(!showMenu)}
+            className="text-3xl md:hidden"
+          >
+            {showMenu ? <RadixIconsCross2 /> : <TablerMenu2 />}
+          </button>
+        </div>
+        <div className="flex md:flex-grow md:basis-0 md:justify-start">
+          <Image
+            className="py-4"
+            src={Logo}
+            alt="logo"
+            height={80}
+            width={80}
+          />
+        </div>
         <div
           className={`md:static absolute md:min-h-fit left-0 ${
             showMenu ? "top-[100%]" : "top-[-300%]"
@@ -29,7 +39,10 @@ function Navbar() {
         >
           <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-blackHtas font-semibold">
             <li className="relative group">
-              <Link className="flex items-center hover:text-gray-900" href="/">
+              <Link
+                className="flex items-center hover:text-gray-900"
+                href="/fundacion"
+              >
                 FUNDACIÓN
                 <div className=" group-hover:rotate-180 transition-transform duration-300">
                   <ArrowDropMenu />
@@ -39,10 +52,12 @@ function Navbar() {
               {/* ----OPCIONES ----- */}
               <ul className="absolute left-0 top-full w-[200px] bg-white shadow-lg rounded hidden group-hover:block p-6 z-10">
                 <li className=" hover:text-gray-800 py-2">
-                  <Link href="/">NUESTRA HISTORIA</Link>
+                  <Link href="/fundacion#nuestra-historia">
+                    NUESTRA HISTORIA
+                  </Link>
                 </li>
                 <li className=" hover:text-gray-800 py-2">
-                  <Link href="/">MISIÓN Y VISIÓN</Link>
+                  <Link href="/fundacion#mision">MISIÓN Y VISIÓN</Link>
                 </li>
                 <li className=" hover:text-gray-800 py-2">
                   <Link href="/">OBJETIVOS</Link>
@@ -70,8 +85,7 @@ function Navbar() {
               </ul>
             </li>
             <li className="relative group">
-            <Link className="flex items-center hover:text-gray-900" href="/">
-
+              <Link className="flex items-center hover:text-gray-900" href="/">
                 COLABORACIÓN
                 <div className=" group-hover:rotate-180 transition-transform duration-300">
                   <ArrowDropMenu />
@@ -107,18 +121,21 @@ function Navbar() {
           </ul>
         </div>
 
-        <div className="flex items-center gap-6">
+        <div className="flex flex-grow basis-0 justify-end">
           <button
             type="button"
-            className="bg-violetHtas py-1 px-4 rounded-full text-white hover:bg-[#6c5ce7d6] shadow-grey-400 shadow-md"
+            
+            class="bg-violetHtas py-1 px-4 rounded-full text-white hover:bg-pinkHtas shadow-grey-400 shadow-md hidden md:block"
+
           >
             DONÁ AHORA
           </button>
+
           <button
-            onClick={() => setShowMenu(!showMenu)}
-            className="text-3xl md:hidden"
+            type="button"
+            class="bg-violetHtas py-1 px-4 rounded-full text-white hover:bg-pinkHtas shadow-grey-400 shadow-md block md:hidden"
           >
-            {showMenu ? <RadixIconsCross2 /> : <TablerMenu2 />}
+            DONÁ
           </button>
         </div>
       </nav>
