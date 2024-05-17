@@ -124,7 +124,9 @@ function Navbar() {
         <div className="flex flex-grow basis-0 justify-end">
           <button
             type="button"
+            
             class="bg-violetHtas py-1 px-4 rounded-full text-white hover:bg-pinkHtas shadow-grey-400 shadow-md hidden md:block"
+
           >
             DONÁ AHORA
           </button>
