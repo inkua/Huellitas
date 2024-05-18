@@ -9,8 +9,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "adoption-banner": "url('../../public/assets/Adopcion/banner-img.jpg')",
+        "hero-banner-lg": "url('../../public/assets/Hero/banner-img-lg.jpg')",
+        "hero-banner-sm": "url('../../public/assets/Hero/banner-img-sm.jpg')",
       },
       colors: {
         "violetHtas":"#6C5CE7",
