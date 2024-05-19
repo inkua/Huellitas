@@ -20,6 +20,7 @@ module.exports = {
         "colorTerciario": "#f2f0fd",
 
       }
+
     },
   },
   plugins: [],
