@@ -21,6 +21,24 @@ module.exports = {
         "pinkHtas":"#FD79A8",
         "colorTerciario": "#f2f0fd",
 
+        "primaryColor": "#6C5CE7",
+        "secondaryColor": "#FD79A8",
+        "tertiaryColor": "#F2F0FD",
+        "primaryFont": "#22202A",
+
+      },
+      fontSize: {
+        "h1-w": "31px",
+        "h1-m": "25px",
+        "h2-w": "25px",
+        "h2-m": "20px",
+        "p1-w": "20px",
+        "p1-m": "16px",
+        "p2-w": "18px",
+        "p2-m": "16px",
+        "p3-w": "16px",
+        "p3-m": "13px",
+
       }
     },
   },
