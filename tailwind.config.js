@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const importantPlugin = require('tailwindcss-important')
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -42,5 +44,8 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    importantPlugin(),
+
+  ],
 };
