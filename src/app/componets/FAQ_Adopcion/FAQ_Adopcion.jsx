@@ -3,7 +3,6 @@ import Woman_sign_desktop from '../../../../public/assets/FAQs/Woman_sign_deskto
 import Woman_sign_mobile from '../../../../public/assets/FAQs/Woman_sign_mobile.png';
 
 
-
 function FAQ_Adopcion() {
     return (
         <div class="container w-full md:w-4/5 mx-auto p-4 md:p-2">
