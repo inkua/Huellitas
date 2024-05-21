@@ -65,7 +65,7 @@ function Navbar() {
               </ul>
             </li>
             <li className="relative group">
-              <Link className="flex items-center  hover:text-gray-900" href="/">
+              <Link className="flex items-center  hover:text-gray-900" href="/adopcion">
                 ADOPCIÓN
                 <div className=" group-hover:rotate-180 transition-transform duration-300">
                   <ArrowDropMenu />
