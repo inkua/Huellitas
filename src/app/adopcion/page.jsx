@@ -3,6 +3,7 @@ import Image from 'next/image'
 import adopcion_001 from '../../../public/assets/Adopcion/adopcion_001.jpg'
 import adopcion_001_lg from '../../../public/assets/Adopcion/adopcion_001_lg.jpg'
 import { useState } from "react"
+import FAQ_Adopcion from '../componets/FAQ_Adopcion/FAQ_Adopcion'
 
 function Adopcion() {
     const [info, setInfo] = useState(false);
@@ -13,7 +14,7 @@ function Adopcion() {
 
     return (
         <section>
-            <div className='w-full h-72 lg:bg-colorTerciario'>
+            <div className='w-full h-72 lg:bg-tertiaryColor'>
                 <div className="flex w-full h-full max-w-screen-2xl mx-auto items-end lg:justify-center lg:items-center p-8 lg:p-0 lg:py-16 bg-adoption-banner lg:bg-none bg-cover bg-opacity-80">
                     <div className="flex flex-col w-full lg:w-9/12 gap-8">
                         <h1 className="font-bold heading-1">ADOPTALOS</h1>
@@ -37,15 +38,55 @@ function Adopcion() {
                             <button type="button" onClick={() => viewInfo()} className="w-full primary-btn">SABER MÁS</button>
                         </div>
 
+                        <div className="flex flex-col gap-4 items-center lg:gap-8">
+                            <div className='w-full overflow-hidden rounded-full'>
+                                <Image src={adopcion_001} alt='Foto del perrito' width={100} height={100} className='flex w-full'></Image>
+                            </div>
+                            <h1 className='font-bold par-2'>MAX - 3 AÑOS</h1>
+                            <button type="button" onClick={() => viewInfo()} className="w-full primary-btn">SABER MÁS</button>
+                        </div>
+
+                        <div className="flex flex-col gap-4 items-center lg:gap-8">
+                            <div className='w-full overflow-hidden rounded-full'>
+                                <Image src={adopcion_001} alt='Foto del perrito' width={100} height={100} className='flex w-full'></Image>
+                            </div>
+                            <h1 className='font-bold par-2'>MAX - 3 AÑOS</h1>
+                            <button type="button" onClick={() => viewInfo()} className="w-full primary-btn">SABER MÁS</button>
+                        </div>
+
+                        <div className="flex flex-col gap-4 items-center lg:gap-8">
+                            <div className='w-full overflow-hidden rounded-full'>
+                                <Image src={adopcion_001} alt='Foto del perrito' width={100} height={100} className='flex w-full'></Image>
+                            </div>
+                            <h1 className='font-bold par-2'>MAX - 3 AÑOS</h1>
+                            <button type="button" onClick={() => viewInfo()} className="w-full primary-btn">SABER MÁS</button>
+                        </div>
+
+                        <div className="flex flex-col gap-4 items-center lg:gap-8">
+                            <div className='w-full overflow-hidden rounded-full'>
+                                <Image src={adopcion_001} alt='Foto del perrito' width={100} height={100} className='flex w-full'></Image>
+                            </div>
+                            <h1 className='font-bold par-2'>MAX - 3 AÑOS</h1>
+                            <button type="button" onClick={() => viewInfo()} className="w-full primary-btn">SABER MÁS</button>
+                        </div>
+
+                        <div className="flex flex-col gap-4 items-center lg:gap-8">
+                            <div className='w-full overflow-hidden rounded-full'>
+                                <Image src={adopcion_001} alt='Foto del perrito' width={100} height={100} className='flex w-full'></Image>
+                            </div>
+                            <h1 className='font-bold par-2'>MAX - 3 AÑOS</h1>
+                            <button type="button" onClick={() => viewInfo()} className="w-full primary-btn">SABER MÁS</button>
+                        </div>
+
                     </div>
                 </div>
 
                 {info && 
                     (
                         <div className='flex fixed inset-0 justify-center items-center gap-8 backdrop-blur-sm'>
-                            <div className='grid grid-cols-[25%_1fr] w-9/12 gap-14 p-10 bg-white rounded-3xl shadow-lg'>
+                            <div className='grid lg:grid-cols-[25%_1fr] w-9/12 lg:gap-14 p-10 bg-white rounded-3xl shadow-lg'>
                                 <div className='flex w-full items-center'>
-                                    <Image src={adopcion_001_lg} alt='Foto del perrito' width={100} height={100} className='w-full rounded-3xl'></Image>
+                                    <Image src={adopcion_001_lg} alt='Foto del perrito' width={100} height={100} className='hidden lg:block w-full rounded-3xl'></Image>
                                 </div>
 
                                 <div className='flex flex-col justify-center items-start gap-8'>
@@ -68,6 +109,11 @@ function Adopcion() {
                         </div>
                     )
                 }
+            </div>
+            <div className='bg-tertiaryColor py-16'>
+                <div className='max-w-screen-2xl mx-auto'>
+                    <FAQ_Adopcion />
+                </div>
             </div>
         </section>
     )

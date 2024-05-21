@@ -8,7 +8,7 @@ function History() {
         <section>
             <div className='flex flex-col w-full max-w-screen-2xl mx-auto justify-center items-center gap-8 py-16 bg-white'>
                 <h1 className='w-11/12 lg:w-9/12 font-bold heading-1 text-left'>SIGUE SUS HISTORIAS</h1>
-                <div className='grid overflow-x-scroll grid-cols-[repeat(8,90%)] lg:grid-cols-3 w-full lg:w-9/12 px-4 lg:px-0 snap-mandatory snap-x no-scrollbar gap-4'>
+                <div className='grid overflow-x-scroll grid-cols-[repeat(3,90%)] lg:grid-cols-3 w-full lg:w-9/12 px-4 lg:px-0 snap-mandatory snap-x no-scrollbar gap-4'>
                     
                     <div className='flex flex-col gap-4 snap-center'>
                         <Image src={history_001} alt='Foto del perrito protagonista'></Image>
