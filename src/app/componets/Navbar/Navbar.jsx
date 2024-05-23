@@ -65,7 +65,7 @@ function Navbar() {
               </ul>
             </li>
             <li className="relative group">
-              <Link className="flex items-center  hover:text-gray-900" href="/">
+              <Link className="flex items-center  hover:text-gray-900" href="/adopcion">
                 ADOPCIÓN
                 <div className=" group-hover:rotate-180 transition-transform duration-300">
                   <ArrowDropMenu />
@@ -124,14 +124,16 @@ function Navbar() {
         <div className="flex flex-grow basis-0 justify-end">
           <button
             type="button"
-            class="bg-violetHtas py-1 px-4 rounded-full text-white hover:bg-pinkHtas shadow-grey-400 shadow-md hidden md:block"
+            
+            className="bg-violetHtas py-1 px-4 rounded-full text-white hover:bg-pinkHtas shadow-grey-400 shadow-md hidden md:block"
+
           >
             DONÁ AHORA
           </button>
 
           <button
             type="button"
-            class="bg-violetHtas py-1 px-4 rounded-full text-white hover:bg-pinkHtas shadow-grey-400 shadow-md block md:hidden"
+            className="bg-violetHtas py-1 px-4 rounded-full text-white hover:bg-pinkHtas shadow-grey-400 shadow-md block md:hidden"
           >
             DONÁ
           </button>

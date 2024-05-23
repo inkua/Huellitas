@@ -18,7 +18,9 @@ function Footer() {
   }
 
   return (
+
     <footer className="w-full mt-auto">
+
       {/* SECTION VIOLETA */}
       <div className="flex justify-around items-center flex-col md:flex-row h-full md:h-[250px] bg-violetHtas rounded-t-[50px] gap-4 py-8 md:gap-0 md:py-0">
         {/* REDES SOCIALES */}
@@ -105,6 +107,7 @@ function Footer() {
   modalTYC && (
     <div className="fixed inset-0 flex items-center justify-center z-50"> 
       <div className="bg-black opacity-50 absolute inset-0"></div>
+
 
       <div className="bg-white p-8 rounded-lg shadow-lg z-10 max-w-[80%] md:max-w-[50%]">
         <h2 className="text-grayHtas text-xl font-bold mb-4">Terminos y Condiciones</h2>

@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 :root {
   --foreground-rgb: 255, 255, 255;
@@ -21,14 +24,52 @@ body {
   background: rgb(var(--foreground-rgb));
   display: flex;
   flex-direction: column;
-margin: 0;
-padding: 0;
-min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
 }
 
+.heading-1 {
+  @apply text-h1-m lg:text-h1-w md:text-h1-w text-primaryFont;
+}
+
+.heading-2 {
+  @apply text-h2-m lg:text-h2-w md:text-h2-w text-primaryFont;
+}
+
+.par-1 {
+  @apply text-p1-m lg:text-p1-w md:text-p1-w text-primaryFont;
+}
+
+.par-2 {
+  @apply text-p2-m lg:text-p2-w md:text-p2-w text-primaryFont;
+}
+
+.par-3 {
+  @apply text-p3-m lg:text-p3-w md:text-p3-w text-primaryFont;
+}
+
+.primary-btn {
+  @apply text-p3-m lg:text-p3-w md:text-p3-w px-4 py-6 lg:py-1 md:py-1 font-medium text-white bg-primaryColor hover:bg-secondaryColor rounded-full shadow-md;
+}
