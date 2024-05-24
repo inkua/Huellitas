@@ -16,7 +16,7 @@ function AddPetForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-80">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-80">
             <input
                 required
                 placeholder="Titulo"
@@ -45,7 +45,7 @@ function AddPetForm() {
                 className="py-2 px-6 rounded-md text-white bg-[#4dbd65]"
                 type="submit"
             >
-                Crear
+                Agregar
             </button>
         </form>
     );

@@ -1,16 +1,16 @@
 import AddPetForm from './addPetForm/AddPetForm';
-import RemovePetForm from './removePetForm/RemovePetForm';
+import SelectPetForm from './selectPetForm/SelectPetForm';
 
 function Admin() {
     return (
-        <section className="flex flex-wrap justify-center gap-24 p-10 text-black">
+        <section className="flex flex-wrap w-full justify-center gap-24 p-10 text-black">
             <div>
                 <h2 className="text-xl mb-6 font-bold">Agregar una mascota</h2>
                 <AddPetForm />
             </div>
             <div>
-                <h2 className="text-xl mb-6 font-bold">Eliminar una mascota</h2>
-                <RemovePetForm />
+                <h2 className="text-xl mb-6 font-bold">Buscar mascotas</h2>
+                <SelectPetForm />
             </div>
         </section>
     );
