@@ -49,6 +49,11 @@ body {
     font-family: 'Poppins', sans-serif;
   }
 }
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+}
 
 .heading-1 {
   @apply text-h1-m lg:text-h1-w md:text-h1-w text-primaryFont;
