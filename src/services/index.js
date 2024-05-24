@@ -1,7 +1,14 @@
 import axios from 'axios';
 
 export default class CRUD {
-    static async getPets() {}
+    static async getPets() {
+        try {
+            const response = await axios.get('http://localhost:1337/api/posts/');
+            return response.data.data;
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     static async createPet(formData) {
         try {
@@ -11,8 +18,6 @@ export default class CRUD {
                     description: formData.description,
                 },
             });
-
-            console.log(response);
         } catch (error) {
             console.log(error);
         }

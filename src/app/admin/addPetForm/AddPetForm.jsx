@@ -13,10 +13,20 @@ function AddPetForm() {
     async function handleSubmit(e) {
         e.preventDefault();
         CRUD.createPet(formData);
+        setFormData({
+            title: '',
+            description: '',
+            image: null,
+        });
+        document.getElementById('idAddPetForm').reset();
     }
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-80">
+        <form
+            id="idAddPetForm"
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-4 max-w-80"
+        >
             <input
                 required
                 placeholder="Titulo"
@@ -37,7 +47,7 @@ function AddPetForm() {
             />
             <input
                 required
-                className="h-8"
+                className="h-8 "
                 onChange={(e) => setFormData({ ...formData, image: e.target.files })}
                 type="file"
             />

@@ -3,7 +3,7 @@ import SelectPetForm from './selectPetForm/SelectPetForm';
 
 function Admin() {
     return (
-        <section className="flex flex-wrap w-full justify-center gap-24 p-10 text-black">
+        <section className="flex flex-wrap w-full justify-center gap-24 p-10 py-[5rem] text-black">
             <div>
                 <h2 className="text-xl mb-6 font-bold">Agregar una mascota</h2>
                 <AddPetForm />

@@ -1,8 +1,19 @@
 'use client';
 
+import CRUD from '@/services';
 import { useState, useEffect } from 'react';
 
 function SelectPetForm() {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        getPets();
+    }, []);
+
+    async function getPets() {
+        setData(await CRUD.getPets());
+    }
+
     return (
         <form className="flex max-w-80 flex-col gap-4">
             <input
@@ -11,20 +22,10 @@ function SelectPetForm() {
                 type="search"
             />
             <ul className="border-2 h-48 rounded-md w-full border-gray-400 overflow-y-scroll overflow-x-hidden">
-                <Pet
-                    pet={{
-                        title: 'Titulo de mascota muy largo',
-                        description:
-                            'Érase una vez en un pequeño pueblo costero, donde el sol siempre parecía brillar más intensamente y las olas del mar susurraban secretos antiguos a la orilla, vivía una joven llamada Elena. ',
-                    }}
-                />
-                <Pet
-                    pet={{
-                        title: 'Titulo de mascota',
-                        description:
-                            'Érase una vez en un pequeño pueblo costero, donde el sol siempre parecía brillar más intensamente y las olas del mar susurraban secretos antiguos a la orilla, vivía una joven llamada Elena. ',
-                    }}
-                />
+                {data &&
+                    data.map((currentPet) => {
+                        return <NewPet key={currentPet.id} pet={currentPet} />;
+                    })}
             </ul>
             <div className="h-8"></div>
             <div className="flex items-center justify-center gap-8">
@@ -45,15 +46,18 @@ function SelectPetForm() {
     );
 }
 
-function Pet({ pet }) {
-    const title = pet.title.slice(0, 20);
-    const description =
-        pet.description.slice(0, 20) + '\n' + pet.description.slice(20, 40);
+function NewPet({ pet }) {
+    const title = pet.attributes.title.slice(0, 20);
+    const description = pet.attributes.description.slice(0, 20);
 
     return (
-        <li>
-            <h3>{pet.title.length <= 20 ? title : title + '...'}</h3>
-            <p>{pet.description.length >}</p>
+        <li className="even:bg-gray-200 p-2">
+            <h3>{pet.attributes.title.length <= 20 ? title : title + '...'}</h3>
+            <p>
+                {pet.attributes.description.length <= 20
+                    ? description
+                    : description + '...'}
+            </p>
         </li>
     );
 }
