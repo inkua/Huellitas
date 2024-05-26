@@ -14,7 +14,7 @@ function Navbar() {
 
   return (
     <div className="relative z-10 w-full bg-white">
-      <nav className="flex relative justify-between items-center w-[100%] md:w-[80%] px-4 mx-auto bg-white">
+      <nav className="flex relative justify-between items-center w-[100%] md:w-[80%] px-4 mx-auto bg-white max-w-screen-2xl">
         <div className="md:hidden flex flex-grow basis-0">
           <button
             onClick={() => setShowMenu(!showMenu)}
@@ -24,13 +24,15 @@ function Navbar() {
           </button>
         </div>
         <div className="flex md:flex-grow md:basis-0 md:justify-start">
-          <Image
-            className="py-4"
-            src={Logo}
-            alt="logo"
-            height={80}
-            width={80}
-          />
+          <Link href="/">
+            <Image
+              className="py-4"
+              src={Logo}
+              alt="logo"
+              height={80}
+              width={80}
+            />
+          </Link>
         </div>
         <div
           className={`md:static absolute md:min-h-fit left-0 ${
@@ -65,7 +67,10 @@ function Navbar() {
               </ul>
             </li>
             <li className="relative group">
-              <Link className="flex items-center  hover:text-gray-900" href="/adopcion">
+              <Link
+                className="flex items-center  hover:text-gray-900"
+                href="/adopcion"
+              >
                 ADOPCIÓN
                 <div className=" group-hover:rotate-180 transition-transform duration-300">
                   <ArrowDropMenu />
@@ -124,9 +129,7 @@ function Navbar() {
         <div className="flex flex-grow basis-0 justify-end">
           <button
             type="button"
-            
             className="bg-violetHtas py-1 px-4 rounded-full text-white hover:bg-pinkHtas shadow-grey-400 shadow-md hidden md:block"
-
           >
             DONÁ AHORA
           </button>
