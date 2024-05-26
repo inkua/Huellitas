@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-import Peting_dog_desktop from '../../../../public/assets/FAQs/Peting_dog_desktop.png';
-import Peting_dog_mobile from '../../../../public/assets/FAQs/Peting_dog_mobile.png';
+import Petting_dog_desktop from '../../../../public/assets/FAQs/Petting_dog_desktop.png';
+import Petting_dog_mobile from '../../../../public/assets/FAQs/Petting_dog_mobile.png';
 
 function FAQ_Colaboracion() {
     return (
@@ -16,7 +16,7 @@ function FAQ_Colaboracion() {
 
             <div className="flex flex-col lg:flex-row items-start"> 
                 <div className="mb-4 lg:mb-0 lg:mr-4 w-full lg:w-1/2 lg:hidden">
-                    <Image src={Peting_dog_mobile} className="rounded-lg w-full object-cover" alt="woman sign" />
+                    <Image src={Petting_dog_mobile} width={100} height={100} alt="Petting Dog Mobile" className="rounded-lg w-full object-cover"/>
                 </div>
                 
                 <div className="w-full lg:w-full flex flex-col space-y-4 h-full ">
@@ -41,7 +41,7 @@ function FAQ_Colaboracion() {
 											  
 				</div>
                 
-                <Image src={Peting_dog_desktop} className="rounded-xl lg:mb-4  lg:w-4/12 hidden lg:block lg:ml-7 object-cover" alt="woman sign" />
+                <Image src={Petting_dog_desktop} width={300} height={300} className="rounded-xl lg:mb-4  lg:w-4/12 hidden lg:block lg:ml-7 object-cover" alt="Petting Dog Desktop"/>
                 
   
             

@@ -15,10 +15,10 @@ function FAQ_Adopcion() {
 
             <div className="flex flex-col lg:flex-row items-start"> 
                 <div className="mb-4 lg:mb-0 lg:mr-4 w-full lg:w-1/2 lg:hidden">
-                    <Image src={Woman_sign_mobile} className="rounded-lg w-full" alt="Peting dog desktop" />
+                    <Image src={Woman_sign_mobile} width={100} height={100}  className="rounded-lg w-full" alt="Sing dog Mobile" />
                 </div>
                 
-                <Image src={Woman_sign_desktop} className="rounded-xl lg:mb-4 lg:ml-4 lg:w-4/12 hidden lg:block lg:mr-7" alt="Peting dog desktop" />
+                <Image src={Woman_sign_desktop}  width={400} height={400}  className="rounded-xl lg:mb-4 lg:ml-4 lg:w-4/12 hidden lg:block lg:mr-7" alt="Sing dog desktop" />
                 
                 <div className="w-full lg:w-full flex flex-col space-y-4 h-full ">
 
