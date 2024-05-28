@@ -4,12 +4,12 @@ import girlDogMobile from '../../../../public/assets/Sumate/girlDogMobile.png';
 function Sumate() {
   return (
     <div className="flex justify-center bg-primaryColor relative">
-        <div className="flex-1  bottom-0 end-0 md:absolute md:w-5/12">
-          <Image src={girlDogDesktop} alt="ImageMobile"/>
+        <div className="flex-1 hide  bottom-0 end-0 md:absolute md:w-5/12 ">
+          <Image src={girlDogDesktop} width={180} height={180} style={{ width: '100%', height: 'auto' }} alt="ImageDesktop"/>
         </div>
       <div className="flex items-center w-full  relative "> 
-        <div className="flex-1 absolute bottom-0 end-0 md:hidden">
-          <Image src={girlDogMobile} alt="ImageMobile"/>
+        <div className="flex-1 absolute bottom-0 end-0 w-6/12 md:hidden">
+          <Image src={girlDogMobile} width={200} height={200} style={{ width: '100%', height: '100%' }} alt="ImageMobile"/>
         </div>
 
 
@@ -40,8 +40,9 @@ function Sumate() {
             <input type="text" placeholder="Nombre completo" className="w-3/5 md:w-10/12 px-4 py-2 bg-white rounded-full border border-gray-300 mb-4 placeholder-gray-500 text-primaryFont" /> 
             <input type="text" placeholder="Celular" className="w-2/5 md:w-10/12  px-4 py-2 bg-white rounded-full border border-gray-300 mr-2 placeholder-gray-500 text-primaryFont" /> 
             <input type="text" placeholder="Mail" className="w-2/5 md:w-10/12  px-4 py-2 bg-white rounded-full border border-gray-300 placeholder-gray-500 text-primaryFont" />
-            <button className="px-1 py-2 w-6/12 h-12 bg-transparent border border-white text-white rounded-full text-left font-[Poppins] text-p3-m">QUIERO SER VOLUNTARIO</button>
-            <button className="px-1 py-2 w-7/12 h-12 bg-transparent border border-white text-white rounded-full text-left font-[Poppins] text-p3-m">QUIERO SER PADRINO</button>
+            <button className="px-1 py-2 w-fit h-12 bg-transparent border border-white text-white rounded-full text-left font-[Poppins] text-p3-m">QUIERO SER PADRINO</button>
+            <button className="px-1 py-2 w-fit h-12 bg-transparent border border-white text-white rounded-full text-left font-[Poppins] text-p3-m">QUIERO SER VOLUNTARIO</button>
+           
           </div>
 
         </div>
