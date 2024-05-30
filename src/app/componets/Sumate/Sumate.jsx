@@ -4,12 +4,12 @@ import girlDogMobile from '../../../../public/assets/Sumate/girlDogMobile.png';
 function Sumate() {
   return (
     <div className="flex justify-center bg-primaryColor relative">
-        <div className="flex-1 hide  bottom-0 end-0 md:absolute md:w-5/12 ">
-          <Image src={girlDogDesktop} width={180} height={180} style={{ width: '100%', height: 'auto' }} alt="ImageDesktop"/>
+        <div className="flex-1 hide bottom-0 end-0 md:absolute md:w-5/12 ">
+          <Image src={girlDogDesktop} width={700} height={100} quality={100} style={{ width: '100%', height: 'auto' }} alt="ImageDesktop"/>
         </div>
       <div className="flex items-center w-full  relative "> 
-        <div className="flex-1 absolute bottom-0 end-0 w-6/12 md:hidden">
-          <Image src={girlDogMobile} width={200} height={200} style={{ width: '100%', height: '100%' }} alt="ImageMobile"/>
+        <div className="flex-1 absolute bottom-0 end-0 w-5/12 sm:w-5/12 md:hidden">
+          <Image src={girlDogMobile} width={700} height={100} quality={100} style={{ width: '100%', height: '100%' }} alt="ImageMobile"/>
         </div>
 
 
