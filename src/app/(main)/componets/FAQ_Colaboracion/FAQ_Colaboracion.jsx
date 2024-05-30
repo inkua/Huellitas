@@ -11,10 +11,10 @@ function FAQ_Colaboracion() {
 
             <div className="flex flex-col lg:flex-row items-start"> 
                 <div className="mb-4 lg:mb-0 lg:mr-4 w-full lg:w-1/2 lg:hidden">
-                    <Image src={"/assets/FAQs/Petting_dog_mobile.png"} width={100} height={100} alt="Petting Dog Mobile" className="rounded-lg w-full object-cover"/>
+                    <Image src={"/assets/FAQs/Petting_dog_mobile.png"} width={500} height={100} alt="Petting Dog Mobile" className="rounded-lg w-full object-cover"/>
                 </div>
                 
-                <div className="w-full lg:w-full flex flex-col space-y-4 h-full ">
+                <div className="w-full flex flex-col space-y-4 h-full ">
 
                     <button className="flex justify-between items-center p-2 border  bg-tertiaryColor rounded-full shadow-md">
                         <span className='text-primaryFont font-[Poppins] text-xs lg:text-lg'>¿Cuál es la edad mínima para ser voluntario?</span>
@@ -36,7 +36,7 @@ function FAQ_Colaboracion() {
 				
 				</div>
                 
-                <Image src={"/assets/FAQs/Petting_dog_desktop.png"} width={300} height={300} className="rounded-xl lg:mb-4  lg:w-4/12 hidden lg:block lg:ml-7 object-cover" alt="Petting Dog Desktop"/>
+                <Image src={"/assets/FAQs/Petting_dog_desktop.png"} width={500} height={100} className="rounded-xl lg:mb-4  lg:w-4/12 hidden lg:block lg:ml-7 object-cover" alt="Petting Dog Desktop"/>
                 
             
             </div>
