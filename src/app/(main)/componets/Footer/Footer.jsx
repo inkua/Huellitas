@@ -1,11 +1,11 @@
 "use client";
-import SVGFacebook from "../../../../public/svg/facebook.svg";
-import SVGInstagram from "../../../../public/svg/instagram.svg";
-import SVGX from "../../../../public/svg/x.svg";
+//import SVGFacebook from "/assets/logos/svg/facebook.svg";
+//import SVGInstagram from "/assets/logos/svg/instagram.svg";
+//import SVGX from "/assets/logos/svg/x.svg";
 import Image from "next/image";
 import Link from "next/link";
 // import NewsletterForm from "./FormNewsletter";
-import Logo from "../../../../public/svg/logo2.svg";
+//import Logo from "/assets/logos/svg/logo2.svg";
 import { useState } from "react";
 
 // TODO --> Agregar links a las redes, y url a los "LINKS RAPIDOS"
@@ -25,7 +25,7 @@ function Footer() {
         <div className="hidden md:flex flex-col flex-grow basis-0 items-center">
           <Image
             className="py-4"
-            src={Logo}
+            src={"/assets/logos/svg/logo2.svg"}
             alt="logo"
             height={300}
             width={300}
@@ -67,7 +67,7 @@ function Footer() {
               >
                 <Image
                   className="hover:scale-125 h-8 w-8"
-                  src={SVGInstagram}
+                  src={"/assets/logos/svg/instagram.svg"}
                   alt="Instagram"
                   height={80}
                   width={80}
@@ -81,7 +81,7 @@ function Footer() {
               >
                 <Image
                   className="hover:scale-125 h-8 w-8"
-                  src={SVGFacebook}
+                  src={"/assets/logos/svg/facebook.svg"}
                   alt="Facebook"
                   height={80}
                   width={80}
@@ -95,7 +95,7 @@ function Footer() {
               >
                 <Image
                   className="hover:scale-125 h-8 w-8"
-                  src={SVGX}
+                  src={"/assets/logos/svg/x.svg"}
                   alt="X"
                   height={80}
                   width={80}
