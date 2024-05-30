@@ -4,10 +4,9 @@ import Image from "next/image";
 import { useState } from "react";
 
 // SVG ICONS
-import Logo from "../../../../public/svg/logo.svg";
-import { TablerMenu2 } from "../../../../public/svg/tabler-menu";
-import { RadixIconsCross2 } from "../../../../public/svg/cancel";
-import { ArrowDropMenu } from "../../../../public/svg/arrow-drop-menu";
+import { TablerMenu2 } from "../../../../../public/assets/logos/svg/tabler-menu";
+import { RadixIconsCross2 } from "../../../../../public/assets/logos/svg/cancel";
+import { ArrowDropMenu } from "../../../../../public/assets/logos/svg/arrow-drop-menu";
 
 function Navbar() {
   let [showMenu, setShowMenu] = useState(false);
@@ -27,7 +26,7 @@ function Navbar() {
           <Link href="/">
             <Image
               className="py-4"
-              src={Logo}
+              src={"/assets/logos/svg/logo.svg"}
               alt="logo"
               height={80}
               width={80}
