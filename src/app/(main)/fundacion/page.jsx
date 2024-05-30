@@ -1,7 +1,7 @@
-import { NuestraHistoria } from "../componets/NuestraHistoria/NuestraHistoria.jsx";
-import { Mision } from "../componets/Mision/Mision.jsx";
-import { Vision } from "../componets/Vision/Vision.jsx";
-import { Objetivos } from "../componets/Objetivos/Objetivos.jsx";
+import { NuestraHistoria } from "../components/NuestraHistoria/NuestraHistoria.jsx";
+import { Mision } from "../components/Mision/Mision.jsx";
+import { Vision } from "../components/Vision/Vision.jsx";
+import { Objetivos } from "../components/Objetivos/Objetivos.jsx";
 function Fundacion() {
   return (
     <main>
