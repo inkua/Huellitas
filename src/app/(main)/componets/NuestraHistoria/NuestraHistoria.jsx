@@ -1,8 +1,4 @@
 import Image from "next/image";
-import Img2 from "../../../../public/assets/Fundation/image2.png";
-import Img3 from "../../../../public/assets/Fundation/image3.png";
-import Img4 from "../../../../public/assets/Fundation/image4.png";
-import Img5 from "../../../../public/assets/Fundation/image5.png";
 
 export const NuestraHistoria = () => {
   return (
@@ -46,7 +42,7 @@ export const NuestraHistoria = () => {
           <div class="flex flex-col m-6 md:mt-0 pointer-events-none">
             {/* <!-- Imagen grande --> */}
             <Image
-              src={Img2}
+              src={"/assets/Fundation/image2.png"}
               alt="Imagen grande"
               class="w-full h-auto mb-4 rounded-lg"
               height={260}
@@ -57,7 +53,7 @@ export const NuestraHistoria = () => {
               {/* <!-- Imágenes pequeñas --> */}
 
               <Image
-                src={Img3}
+                src={"/assets/Fundation/image3.png"}
                 alt="Imagen pequeña 1"
                 class="w-full h-auto mb-4 rounded-lg"
                 height={160}
@@ -65,7 +61,7 @@ export const NuestraHistoria = () => {
               />
 
               <Image
-                src={Img4}
+                src={"/assets/Fundation/image4.png"}
                 alt="Imagen pequeña 2"
                 class="w-full h-auto mb-4 rounded-lg"
                 height={160}
@@ -73,7 +69,7 @@ export const NuestraHistoria = () => {
               />
 
               <Image
-                src={Img5}
+                src={"/assets/Fundation/image5.png"}
                 alt="Imagen pequeña 3"
                 class="w-full h-auto mb-4 rounded-lg"
                 height={160}

@@ -7,15 +7,12 @@ import FAQ_Colaboracion from "./componets/FAQ_Colaboracion/FAQ_Colaboracion";
 
 export default function Home() {
     return (
-        <>
-            
-            <main className="">
-                <Hero />
-                <History />
-                <Sumate />
-                <FAQ_Adopcion />
-                <FAQ_Colaboracion />
-            </main>
-        </>
+        <main className="">
+            <Hero />
+            <History />
+            <Sumate />
+            <FAQ_Adopcion />
+            <FAQ_Colaboracion />
+        </main>
     )
 }
