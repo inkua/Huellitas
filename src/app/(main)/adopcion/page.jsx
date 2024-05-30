@@ -1,6 +1,6 @@
 
-import FAQ_Adopcion from '../componets/FAQ_Adopcion/FAQ_Adopcion'
-import Card from './compontens/Card/Card'
+import FAQ_Adopcion from '../components/FAQ_Adopcion/FAQ_Adopcion'
+import Card from './components/Card/Card'
 
 function Adopcion() {
 
