@@ -41,10 +41,9 @@ const animals = [
 ]
 
 function Adopcion() {
-
     return (
-        <section>
-            <div className='w-full h-72 lg:bg-tertiaryColor'>
+        <main>
+            <section className='w-full h-72 lg:bg-tertiaryColor' role='section'>
                 <div className="flex w-full h-full max-w-screen-2xl mx-auto items-end lg:justify-center lg:items-center p-8 lg:p-0 lg:py-16 bg-adoption-banner lg:bg-none bg-cover bg-opacity-80">
                     <div className="flex flex-col w-full lg:w-9/12 gap-8">
                         <h1 className="font-bold heading-1 !text-white lg:!text-primaryFont">ADOPTALOS</h1>
@@ -53,12 +52,12 @@ function Adopcion() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div className="flex w-full max-w-screen-2xl mx-auto justify-center items-center py-16">
+            <section className="flex w-full max-w-screen-2xl mx-auto justify-center items-center py-16" role='section'>
                 <div className="flex flex-col w-full lg:w-9/12 gap-y-20">
                     <h1 className="hidden lg:block font-bold heading-1">BUSCAMOS UN HOGAR CON AMOR</h1>
-                    <div className="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-3 px-4 gap-x-4 lg:gap-x-16 gap-y-20">
+                    <div className="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-3 px-4 gap-x-4 lg:gap-x-16 gap-y-20" role='list'>
                         {
                             animals.map(animal => (
                                     <Card
@@ -66,19 +65,20 @@ function Adopcion() {
                                         name={animal.name}
                                         age={animal.age}
                                         source={animal.source}
+                                        role={'listItem'}
                                     />
                             ))
                         }
                     </div>
                 </div>
-
-            </div>
-            <div className='bg-tertiaryColor py-16'>
+            </section>
+            
+            <section className='bg-tertiaryColor py-16' role='section'>
                 <div className='max-w-screen-2xl mx-auto'>
                     <FAQ_Adopcion />
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
     )
 }
 

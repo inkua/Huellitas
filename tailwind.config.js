@@ -15,6 +15,7 @@ module.exports = {
         "adoption-banner": "url('/assets/Adopcion/banner-img.jpg')",
         "hero-banner-lg": "url('/assets/Hero/banner-img-lg.jpg')",
         "hero-banner-sm": "url('/assets/Hero/banner-img-sm.jpg')",
+        "colab-banner": "url('/assets/Colaboracion/banner-img.jpg')",
       },
       colors: {
         "violetHtas":"#6C5CE7",
