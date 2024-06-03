@@ -1,8 +1,8 @@
 
 const TerminosyCondiciones = ({handlerViewTermsAndConditions}) => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50">
-      <div className="bg-black opacity-50 absolute inset-0"></div>
+    <div className="fixed inset-0 flex items-center justify-center z-50 backdrop-blur-sm">
+      <div className="bg-black opacity-50 absolute inset-0 "></div>
 
       <div className="bg-white p-8 rounded-lg shadow-lg z-10 max-w-[80%] md:max-w-[50%]">
         <h2 className="text-grayHtas text-xl font-bold mb-4">
