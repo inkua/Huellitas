@@ -13,9 +13,9 @@ export const NuestraHistoria = () => {
         <div className="flex flex-col md:flex-row md:gap-36 ">
           <p className="flex flex-col gap-4 md:w-1/2 font-normal par-3">
             <span>
-              <spam className="font-bold text-blackHtas">
+              <span className="font-bold text-blackHtas">
                 Huellitas Cartagena{" "}
-              </spam>
+              </span>
               nace el 15 de mayo del 2019. La razón que me motivó a crear esta
               fundación fue el amor que siento por los animales. Desde pequeña
               he tenido mascotas que habían estado en otra ciudad pero desde que
@@ -39,23 +39,23 @@ export const NuestraHistoria = () => {
           </p>
 
           {/* IMAGENES */}
-          <div class="flex flex-col m-6 md:mt-0 pointer-events-none">
+          <div className="flex flex-col m-6 md:mt-0 pointer-events-none">
             {/* <!-- Imagen grande --> */}
             <Image
               src={"/assets/Fundation/image2.png"}
               alt="Imagen grande"
-              class="w-full h-auto mb-4 rounded-lg"
+              className="w-full h-auto mb-4 rounded-lg"
               height={260}
               width={511}
             />
 
-            <div class="flex w-full gap-4">
+            <div className="flex w-full gap-4">
               {/* <!-- Imágenes pequeñas --> */}
 
               <Image
                 src={"/assets/Fundation/image3.png"}
                 alt="Imagen pequeña 1"
-                class="w-full h-auto mb-4 rounded-lg"
+                className="w-full h-auto mb-4 rounded-lg"
                 height={160}
                 width={90}
               />
@@ -63,7 +63,7 @@ export const NuestraHistoria = () => {
               <Image
                 src={"/assets/Fundation/image4.png"}
                 alt="Imagen pequeña 2"
-                class="w-full h-auto mb-4 rounded-lg"
+                className="w-full h-auto mb-4 rounded-lg"
                 height={160}
                 width={90}
               />
@@ -71,7 +71,7 @@ export const NuestraHistoria = () => {
               <Image
                 src={"/assets/Fundation/image5.png"}
                 alt="Imagen pequeña 3"
-                class="w-full h-auto mb-4 rounded-lg"
+                className="w-full h-auto mb-4 rounded-lg"
                 height={160}
                 width={90}
               />
