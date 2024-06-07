@@ -5,7 +5,7 @@ function Contacto() {
     <section>
         <div className='w-full bg-violetHtas'>
             <Map/>
-            <Informacion/>
+            
             
         </div>
 
