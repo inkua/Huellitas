@@ -3,7 +3,7 @@ import Image from "next/image";
 const DonaDineroContent = () => {
   return (
     (
-        <div className="flex flex-col items-center lg:flex-col-reverse max-w-[400px]">
+        <div className="flex flex-col items-center lg:flex-col-reverse max-w-[700px]">
           <div className="text-center lg:text-start ">
             <h2 className="heading-1 font-semibold">TRANSFERENCIA BANCARIA</h2>
             <p className="par-3">Doná el importe que quieras directamente en nuestra cuenta</p>

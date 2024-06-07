@@ -30,11 +30,11 @@ function Navbar() {
         <div className="flex md:flex-grow md:basis-0 md:justify-start">
           <Link href="/">
             <Image
-              className="py-4"
-              src={"/assets/logos/svg/logo.svg"}
+              className="py-4 bg-white h-[100px] w-[100px] md:w-[130px] md:h-[130px] lg:h-[150px] lg:w-[150px] "
+              src={"/assets/logos/png/logoHuellitas.png"}
               alt="logo"
-              height={80}
-              width={80}
+              height={150}
+              width={150}
             />
           </Link>
         </div>
@@ -57,7 +57,7 @@ function Navbar() {
               </Link>
 
               {/* ----OPCIONES ----- */}
-              <ul className="absolute left-0 top-full w-[200px] bg-white shadow-lg rounded hidden md:group-hover:block p-6 z-10">
+              <ul className="absolute left-0 top-full w-[200px] bg-white rounded-2xl  shadow-lg hidden md:group-hover:block p-6 z-10">
                 <li className="hover:text-gray-800 py-2">
                   <Link href="/fundacion#nuestra-historia" onClick={handleLinkClick}>
                     NUESTRA HISTORIA
@@ -87,7 +87,7 @@ function Navbar() {
                 </div>
               </Link>
               {/* ----OPCIONES ----- */}
-              <ul className="absolute left-0 top-full w-[200px] bg-white shadow-lg rounded hidden md:group-hover:block p-6 z-10">
+              <ul className="absolute left-0 top-full w-[200px] bg-white shadow-lg rounded-2xl hidden md:group-hover:block p-6 z-10">
                 <li className="hover:text-gray-800 py-2">
                   <Link href="/" onClick={handleLinkClick}>
                     QUIERO ADOPTAR
@@ -112,48 +112,8 @@ function Navbar() {
                 onClick={handleLinkClick}
               >
                 COLABORACIÓN
-                <div className="group-hover:rotate-180 transition-transform duration-300 hidden md:block">
-                  <ArrowDropMenu />
-                </div>
+          
               </Link>
-              {/* ----OPCIONES ----- */}
-              <ul className="absolute left-0 top-full w-[200px] bg-white shadow-lg rounded hidden md:group-hover:block p-6 z-10">
-                <li className="hover:text-gray-800 py-2">
-                  <Link href="/" onClick={handleLinkClick}>
-                    ECONÓMICA
-                  </Link>
-                </li>
-                <li className="hover:text-gray-800 py-2">
-                  <Link href="/" onClick={handleLinkClick}>
-                    CON MATERIALES
-                  </Link>
-                </li>
-                <li className="hover:text-gray-800 py-2">
-                  <Link href="/" onClick={handleLinkClick}>
-                    VOLUNTARIO
-                  </Link>
-                </li>
-                <li className="hover:text-gray-800 py-2">
-                  <Link href="/" onClick={handleLinkClick}>
-                    HOGAR DE TRÁNSITO
-                  </Link>
-                </li>
-                <li className="hover:text-gray-800 py-2">
-                  <Link href="/" onClick={handleLinkClick}>
-                    SERVICIO DE AYUDA
-                  </Link>
-                </li>
-                <li className="hover:text-gray-800 py-2">
-                  <Link href="/" onClick={handleLinkClick}>
-                    TIENDAS QUE COLABORAN
-                  </Link>
-                </li>
-                <li className="hover:text-gray-800 py-2">
-                  <Link href="/" onClick={handleLinkClick}>
-                    ESTERILIZACIONES
-                  </Link>
-                </li>
-              </ul>
             </li>
             <li>
               <Link className="hover:text-gray-900" href="/" onClick={handleLinkClick}>
