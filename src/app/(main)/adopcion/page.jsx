@@ -6,37 +6,37 @@ const animals = [
         id: 1,
         name: 'MAX 1',
         age: 3,
-        source: '/assets/Adopcion/adopcion_001.jpg',
+        source: '/assets/Adopcion/adopcion_002.jpg',
     },
     {
         id: 2,
         name: 'MAX 2',
         age: 3,
-        source: '/assets/Adopcion/adopcion_001.jpg',
+        source: '/assets/Adopcion/adopcion_002.jpg',
     },
     {
         id: 3,
         name: 'MAX 3',
         age: 3,
-        source: '/assets/Adopcion/adopcion_001.jpg',
+        source: '/assets/Adopcion/adopcion_002.jpg',
     },
     {
         id: 4,
         name: 'MAX 4',
         age: 3,
-        source: '/assets/Adopcion/adopcion_001.jpg',
+        source: '/assets/Adopcion/adopcion_002.jpg',
     },
     {
         id: 5,
         name: 'MAX 5',
         age: 3,
-        source: '/assets/Adopcion/adopcion_001.jpg',
+        source: '/assets/Adopcion/adopcion_002.jpg',
     },
     {
         id: 6,
         name: 'MAX 6',
         age: 3,
-        source: '/assets/Adopcion/adopcion_001.jpg',
+        source: '/assets/Adopcion/adopcion_002.jpg',
     },
 ]
 
@@ -57,7 +57,7 @@ function Adopcion() {
             <section className="flex w-full max-w-screen-2xl mx-auto justify-center items-center py-16" role='section'>
                 <div className="flex flex-col w-full lg:w-9/12 gap-y-20">
                     <h1 className="hidden lg:block font-bold heading-1">BUSCAMOS UN HOGAR CON AMOR</h1>
-                    <div className="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-3 px-4 gap-x-4 lg:gap-x-16 gap-y-20" role='list'>
+                    <div className="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-3 px-4 lg:px-0 gap-x-4 lg:gap-x-16 gap-y-20" role='list'>
                         {
                             animals.map(animal => (
                                     <Card

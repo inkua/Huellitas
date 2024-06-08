@@ -8,21 +8,21 @@ function History() {
                 <div className='grid overflow-x-scroll grid-cols-[repeat(3,90%)] lg:grid-cols-3 w-full lg:w-9/12 px-4 lg:px-0 snap-mandatory snap-x no-scrollbar gap-4' role='list'>
                     
                     <div className='flex flex-col gap-4 snap-center' role='listItem'>
-                        <Image src={'/assets/History/history_001.jpg'} alt='Foto del perrito protagonista' width={100} height={100} className='w-full'/>
+                        <Image src={'/assets/History/history_001.jpg'} alt='Foto del perrito protagonista' width={100} height={100} className='w-full rounded-3xl'/>
                         <p className='font-normal par-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea cumque ad iure quaerat totam?</p>
-                        <button className='w-fit px-4 py-1 text-sm text-black border-solid border-2 border-black rounded-2xl'>SABER MÁS...</button>
+                        <button className='w-fit secondary-btn'>SABER MÁS...</button>
                     </div>
 
                     <div className='flex flex-col gap-4 snap-center' role='listItem'>
-                        <Image src={'/assets/History/history_002.jpg'} alt='Foto del perrito protagonista' width={100} height={100} className='w-full'/>
+                        <Image src={'/assets/History/history_002.jpg'} alt='Foto del perrito protagonista' width={100} height={100} className='w-full rounded-3xl'/>
                         <p className='font-normal par-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea cumque ad iure quaerat totam?</p>
-                        <button className='w-fit px-4 py-1 text-sm text-black border-solid border-2 border-black rounded-2xl'>SABER MÁS...</button>
+                        <button className='w-fit secondary-btn'>SABER MÁS...</button>
                     </div>
 
                     <div className='flex flex-col gap-4 snap-center' role='listItem'>
-                        <Image src={'/assets/History/history_003.jpg'} alt='Foto del perrito protagonista' width={100} height={100} className='w-full'/>
+                        <Image src={'/assets/History/history_003.jpg'} alt='Foto del perrito protagonista' width={100} height={100} className='w-full rounded-3xl'/>
                         <p className='font-normal par-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea cumque ad iure quaerat totam?</p>
-                        <button className='w-fit px-4 py-1 text-sm text-black border-solid border-2 border-black rounded-2xl'>SABER MÁS...</button>
+                        <button className='w-fit secondary-btn'>SABER MÁS...</button>
                     </div>
                 </div>
             </section>
