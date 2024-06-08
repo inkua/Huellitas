@@ -27,6 +27,7 @@ module.exports = {
         "primaryColor": "#6C5CE7",
         "secondaryColor": "#FD79A8",
         "tertiaryColor": "#F2F0FD",
+        "activeButton": "#FF5490",
         "primaryFont": "#22202A",
 
       },

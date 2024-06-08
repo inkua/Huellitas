@@ -6,7 +6,7 @@ function Hero() {
                     <div className='flex flex-col w-full lg:w-2/5 gap-4 lg:items-start'>
                         <h1 className='font-bold heading-1 !text-white'>CONÓCENOS</h1>
                         <p className='hidden lg:block font-medium par-3 !text-white text-center lg:text-left md:text-left'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam, dignissimos.</p>
-                        <button className='w-fit px-4 py-1 border-solid border-2 border-white rounded-2xl'>SABER MÁS...</button>
+                        <button className='w-fit secondary-btn !text-white !border-white'>SABER MÁS...</button>
                     </div>
                 </div>
             </section>
