@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react'
-import Card from './components/Card'
 import Image from 'next/image'
 import Modal from './components/Modal'
 import Slider from '../components/Slider/Slider'
@@ -63,12 +62,6 @@ function Colaboracion() {
 
             <section className='flex flex-col w-full max-w-screen-2xl mx-auto justify-center items-center gap-8 py-16 bg-white'>
                 <h1 className='w-11/12 lg:w-9/12 font-bold heading-1 text-left'>¿COMO QUIERES COLABORAR?</h1>
-                {/*<div className='grid overflow-x-scroll grid-cols-[repeat(3,45%)] lg:grid-cols-3 w-full lg:w-9/12 px-4 lg:px-0 snap-mandatory snap-x no-scrollbar gap-4' role='list'>
-                    <Card source={'/assets/Colaboracion/colaboracion_001.jpg'} btn_txt={'DONAR DINERO'} onButtonClick={() => openModal('donar_dinero')} />
-                    <Card source={'/assets/Colaboracion/colaboracion_002.jpg'} btn_txt={'DONAR INSUMOS'} onButtonClick={() => openModal('donar_insumos')} />
-                    <Card source={'/assets/Colaboracion/colaboracion_003.jpg'} btn_txt={'DONAR SERVICIOS'} onButtonClick={() => openModal('donar_servicios')} />
-                </div>*/}
-
                 <Slider items={items} type={2} def={2.15} lg={3} md={3}></Slider>
             </section>
 

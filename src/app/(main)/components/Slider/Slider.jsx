@@ -7,7 +7,7 @@ import CardH from '../History/Card'
 
 function Slider({ items, type, def, lg, md }) {
     return (
-        <Swiper slidesPerView={def} breakpoints={{ 1024: { slidesPerView: lg }, 768: { slidesPerView: md }}} spaceBetween={15} className='w-full lg:w-9/12 px-4 lg:px-0 cursor-grab'>
+        <Swiper slidesPerView={def} breakpoints={{ 1024: { slidesPerView: lg }, 768: { slidesPerView: md }}} spaceBetween={15} className='w-full lg:w-9/12 cursor-grab' style={{paddingLeft:'16px', paddingRight:'16px'}}>
             {
                 items.map(item => (
                     <SwiperSlide key={item.id}>
