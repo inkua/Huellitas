@@ -4,7 +4,6 @@ function Contacto() {
     return (
         <main className="">
             <Map/>
-            
         </main>
     )
 }
