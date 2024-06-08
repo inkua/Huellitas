@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 function FAQ_Colaboracion() {
     return (
-        <div className="container w-full lg:w-4/5 mx-auto p-4 lg:p-2 font-[Poppins] max-w-screen-2xl mx-auto">
+        <div className="container w-full lg:w-4/5 mx-auto p-4 lg:p-2 font-[Poppins] max-w-screen-2xl">
 
             <div className="text-left mb-4">
                 <h2 className="text-lg text-primaryFont">Colaboración</h2>
