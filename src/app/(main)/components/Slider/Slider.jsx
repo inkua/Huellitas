@@ -1,13 +1,13 @@
 'use client'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css/pagination'
-import 'swiper/css'
 import CardC from '../../colaboracion/components/Card'
 import CardH from '../History/Card'
+import 'swiper/css/pagination'
+import 'swiper/css'
 
 function Slider({ items, type, def, lg, md }) {
     return (
-        <Swiper slidesPerView={def} breakpoints={{ 1024: { slidesPerView: lg }, 768: { slidesPerView: md }}} spaceBetween={15} className='w-full lg:w-9/12 cursor-grab' style={{paddingLeft:'16px', paddingRight:'16px'}}>
+        <Swiper slidesPerView={def} breakpoints={{ 1024: { slidesPerView: lg }, 768: { slidesPerView: md } }} spaceBetween={15} className='w-full lg:w-9/12 cursor-grab' style={{ paddingLeft: '16px', paddingRight: '16px' }}>
             {
                 items.map(item => (
                     <SwiperSlide key={item.id}>
@@ -19,17 +19,12 @@ function Slider({ items, type, def, lg, md }) {
     )
 }
 
-function createItem(type, source, par, btn, action)
-{
-    let div
-    if(type === 1){
-        div = (
-            div = (<CardH source={source} par={par} btn={btn} />)
-        )
-    } else {
-        div = (<CardC source={source} btn_txt={btn} onButtonClick={action} />)
-    }
-    return div
+const createItem = (type, source, par, btn, action) => {
+    const card = [
+        <CardH source={source} par={par} btn={btn} />,
+        <CardC source={source} btn_txt={btn} onButtonClick={action} />,
+    ]
+    return card[type] || null
 }
 
 export default Slider
