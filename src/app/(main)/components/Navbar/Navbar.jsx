@@ -88,6 +88,7 @@ function Navbar() {
               </Link>
               {/* ----OPCIONES ----- */}
               <ul className="absolute left-0 top-full w-[200px] bg-white shadow-lg rounded-2xl hidden md:group-hover:block p-6 z-10">
+
                 <li className="hover:text-gray-800 py-2">
                   <Link href="/" onClick={handleLinkClick}>
                     QUIERO ADOPTAR
@@ -112,8 +113,8 @@ function Navbar() {
                 onClick={handleLinkClick}
               >
                 COLABORACIÓN
-          
               </Link>
+
             </li>
             <li>
               <Link className="hover:text-gray-900" href="/" onClick={handleLinkClick}>
