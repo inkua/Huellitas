@@ -21,7 +21,7 @@ function Footer() {
   return (
     <footer className="w-full mt-auto mx-auto ">
       {/* SECTION VIOLETA */}
-    <div className="w-full bg-violetHtas ">
+    <div className="w-full bg-primaryColor ">
     <div className="flex justify-around items-center max-w-screen-2xl mx-auto flex-col md:flex-row h-full md:h-[250px]  gap-4 py-16 md:gap-0 md:py-0">
         {/* LOGO HUELLITAS */}
         <div className="hidden md:flex flex-col flex-grow basis-0 items-center">
@@ -114,7 +114,7 @@ function Footer() {
       </div>
     </div>
       {/* SECTION GRAY */}
-      <div className="h-[40px] bg-grayHtas flex justify-center items-center font-medium text-sm md:text-base">
+      <div className="h-[40px] bg-[#585564] flex justify-center items-center font-medium text-sm md:text-base">
         <p>
           Diseño y Programación:
           <Link
@@ -128,7 +128,7 @@ function Footer() {
         </p>
 
         <button onClick={() => handlerViewTermsAndConditions()}>
-          <p className="underline hover:text-pinkHtas">
+          <p className="underline hover:text-secondaryColor">
             Terminos y Condiciones
           </p>
         </button>

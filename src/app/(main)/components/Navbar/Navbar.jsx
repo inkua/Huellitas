@@ -43,7 +43,7 @@ function Navbar() {
             showMenu ? "top-[100%]" : "top-[-300%]"
           } md:w-auto w-full flex items-center px-5 bg-white transition-all duration-500 ease-in-out z-[-10] md:z-0 md:bg-transparent py-4`}
         >
-          <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-blackHtas font-semibold">
+          <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-primaryFont font-semibold">
             <li className="relative group">
               <Link
                 className="flex items-center hover:text-gray-900"
@@ -127,14 +127,14 @@ function Navbar() {
         <div className="flex flex-grow basis-0 justify-end">
           <button
             type="button"
-            className="bg-violetHtas py-1 px-4 rounded-full text-white hover:bg-pinkHtas shadow-grey-400 shadow-md hidden md:block"
+            className="bg-primaryColor py-1 px-4 rounded-full text-white hover:bg-secondaryColor shadow-grey-400 shadow-md hidden md:block"
           >
             DONÁ AHORA
           </button>
 
           <button
             type="button"
-            className="bg-violetHtas py-3 px-4 rounded-full text-white hover:bg-pinkHtas shadow-grey-400 shadow-md block md:hidden"
+            className="bg-primaryColor py-3 px-4 rounded-full text-white hover:bg-secondaryColor shadow-grey-400 shadow-md block md:hidden"
           >
             DONÁ
           </button>

@@ -2,20 +2,20 @@ import Image from "next/image";
 
 export const NuestraHistoria = () => {
   return (
-    <section className="bg-colorTerciario py-10">
+    <section className="bg-tertiaryColor py-10">
       <div className="flex flex-col w-[80%] mx-auto max-w-screen-2xl">
         <div className="flex flex-col-reverse md:flex-row md:gap-8">
           <div>
             
             <h2
-              className="text-blackHtas font-bold mb-6 heading-1"
+              className="text-primaryFont font-bold mb-6 heading-1"
               id="nuestra-historia"
             >
               NUESTRA HISTORIA
             </h2>
             <p className="flex flex-col gap-4 font-normal par-3">
               <span>
-                <span className="font-bold text-blackHtas">
+                <span className="font-bold text-primaryFont">
                   Huellitas Cartagena&nbsp;
                 </span>
                 nace el 15 de mayo del 2019. La razón que me motivó a crear esta
