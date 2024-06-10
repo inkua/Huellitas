@@ -11,7 +11,7 @@ function Sumate() {
                 </div>
 
                 <div className="flex-1 absolute invisible lg:visible w-[50%] top-10 bottom-0 -right-24">
-                    <Image src={'/assets/Sumate/girlDogDesktop.png'} 
+                    <Image src={'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957526/huellitas/home-tutambienpuedesayudar-1_ayoz29.png'} 
                         className="w-fit h-fit"
                         width={500} 
                         height={100} 
@@ -19,7 +19,7 @@ function Sumate() {
                         quality={100} alt="ImageMobile" />
                 </div>
                 <div className="flex-1 absolute bottom-0 right-0 w-[50%] sm:top-5  lg:hidden mx-auto">
-                    <Image src={'/assets/Sumate/girlDogMobile.png'} 
+                    <Image src={'https://res.cloudinary.com/dorljfo6v/image/upload/v1717961118/huellitas/home-tutambienpuedesayudar-mobile_hj3svc.png'} 
                     width={500} 
                     height={100} 
                     style={{ width: '100%', height: '100%' }} 

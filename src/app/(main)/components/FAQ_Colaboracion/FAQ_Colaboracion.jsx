@@ -11,7 +11,7 @@ function FAQ_Colaboracion() {
 
             <div className="flex flex-col lg:flex-row items-start"> 
                 <div className="mb-4 lg:mb-0 lg:mr-4 w-full lg:w-1/2 lg:hidden">
-                    <Image src={"/assets/FAQs/Petting_dog_mobile.png"} width={500} height={100} alt="Petting Dog Mobile" className="rounded-lg w-full object-cover"/>
+                    <Image src={"https://res.cloudinary.com/dorljfo6v/image/upload/v1718047151/huellitas/tutambienpuedesayudar-mobile_nlembr.png"} width={700} height={700} alt="Petting Dog Mobile" className="rounded-lg w-full object-cover"/>
                 </div>
                 
                 <div className="w-full flex flex-col space-y-4 h-full ">
@@ -36,7 +36,7 @@ function FAQ_Colaboracion() {
 				
 				</div>
                 
-                <Image src={"/assets/FAQs/Petting_dog_desktop.png"} width={500} height={100} className="rounded-xl lg:mb-4  lg:w-4/12 hidden lg:block lg:ml-7 object-cover" alt="Petting Dog Desktop"/>
+                <Image src={"https://res.cloudinary.com/dorljfo6v/image/upload/v1718046812/huellitas/home-tutambienpuedesayudar-desktop.png"} width={700} height={700} className="rounded-xl lg:mb-4  lg:w-4/12 hidden lg:block lg:ml-7 object-cover" alt="Petting Dog Desktop"/>
                 
             
             </div>
