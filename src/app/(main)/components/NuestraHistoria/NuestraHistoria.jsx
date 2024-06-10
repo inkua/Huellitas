@@ -2,78 +2,90 @@ import Image from "next/image";
 
 export const NuestraHistoria = () => {
   return (
-    <section className=" bg-colorTerciario py-10">
+    <section className="bg-colorTerciario py-10">
       <div className="flex flex-col w-[80%] mx-auto max-w-screen-2xl">
-        <h2
-          className="text-blackHtas font-bold mb-6 heading-1"
-          id="nuestra-historia"
-        >
-          NUESTRA HISTORIA
-        </h2>
-        <div className="flex flex-col md:flex-row md:gap-36 ">
-          <p className="flex flex-col gap-4 md:w-1/2 font-normal par-3">
-            <span>
-              <span className="font-bold text-blackHtas">
-                Huellitas Cartagena{" "}
+        <div className="flex flex-col-reverse md:flex-row md:gap-8">
+          <div>
+            
+            <h2
+              className="text-blackHtas font-bold mb-6 heading-1"
+              id="nuestra-historia"
+            >
+              NUESTRA HISTORIA
+            </h2>
+            <p className="flex flex-col gap-4 font-normal par-3">
+              <span>
+                <span className="font-bold text-blackHtas">
+                  Huellitas Cartagena&nbsp;
+                </span>
+                nace el 15 de mayo del 2019. La razón que me motivó a crear esta
+                fundación fue el amor que siento por los animales. Desde pequeña
+                he tenido mascotas que habían estado en otra ciudad pero desde
+                que obtuve a mi nueva perrita Pucca Sophia el sentimiento creció
+                más.
               </span>
-              nace el 15 de mayo del 2019. La razón que me motivó a crear esta
-              fundación fue el amor que siento por los animales. Desde pequeña
-              he tenido mascotas que habían estado en otra ciudad pero desde que
-              obtuve a mi nueva perrita Pucca Sophia el sentimiento creció más.
-            </span>
 
-            <span>
-              Empecé hace aproximadamente 2 años ayudar animalitos de la calle
-              los cuales algunos de ellos se encuentran ahora mismo en un hogar
-              lleno de amor y otros desafortunadamente murieron pero recibieron
-              mucho amor en sus últimos días. Ver el cambio de vida de estos
-              hermosos seres me ayudó a materializar la idea de crear Huellitas
-              Cartagena.
-            </span>
+              <span>
+                Empecé hace aproximadamente 2 años ayudar animalitos de la calle
+                los cuales algunos de ellos se encuentran ahora mismo en un
+                hogar lleno de amor y otros desafortunadamente murieron pero
+                recibieron mucho amor en sus últimos días. Ver el cambio de vida
+                de estos hermosos seres me ayudó a materializar la idea de crear
+                Huellitas Cartagena.
+              </span>
 
-            <span>
-              Ser parte de este proyecto ha traido mucho más amor, entrega y
-              humanidad en mi vida. También mucha alegría de ver los cambios que
-              logramos sacándolos de las calles y llevándolos a una familia.
-            </span>
-          </p>
+              <span>
+                Ser parte de este proyecto ha traido mucho más amor, entrega y
+                humanidad en mi vida. También mucha alegría de ver los cambios
+                que logramos sacándolos de las calles y llevándolos a una
+                familia.
+              </span>
+            </p>
+          </div>
 
           {/* IMAGENES */}
-          <div className="flex flex-col m-6 md:mt-0 pointer-events-none">
-            {/* <!-- Imagen grande --> */}
+          <div className="flex flex-col items-center pointer-events-none md:mt-20">
+            {/* Imagen grande */}
             <Image
-              src={"/assets/Fundation/image2.png"}
+              src={
+                "https://res.cloudinary.com/dorljfo6v/image/upload/v1717957500/huellitas/fundacion-1_qshmej.png"
+              }
               alt="Imagen grande"
-              className="w-full h-auto mb-4 rounded-lg"
-              height={260}
-              width={511}
+              className="w-[90%] h-auto mb-4 rounded-lg"
+              height={700}
+              width={700}
             />
 
-            <div className="flex w-full gap-4">
-              {/* <!-- Imágenes pequeñas --> */}
-
+            <div className="flex w-[90%] justify-between">
+              {/* Imágenes pequeñas */}
               <Image
-                src={"/assets/Fundation/image3.png"}
+                src={
+                  "https://res.cloudinary.com/dorljfo6v/image/upload/v1717957497/huellitas/fundacion-2_ttio9m.png"
+                }
                 alt="Imagen pequeña 1"
-                className="w-full h-auto mb-4 rounded-lg"
-                height={160}
-                width={90}
+                className="w-[32%] h-auto mb-4 rounded-lg"
+                height={700}
+                width={700}
               />
 
               <Image
-                src={"/assets/Fundation/image4.png"}
+                src={
+                  "https://res.cloudinary.com/dorljfo6v/image/upload/v1717957498/huellitas/fundacion-3_i5u3lf.png"
+                }
                 alt="Imagen pequeña 2"
-                className="w-full h-auto mb-4 rounded-lg"
-                height={160}
-                width={90}
+                className="w-[32%] h-auto mb-4 rounded-lg"
+                height={700}
+                width={700}
               />
 
               <Image
-                src={"/assets/Fundation/image5.png"}
+                src={
+                  "https://res.cloudinary.com/dorljfo6v/image/upload/v1717957499/huellitas/fundacion-4_erflhp.png"
+                }
                 alt="Imagen pequeña 3"
-                className="w-full h-auto mb-4 rounded-lg"
-                height={160}
-                width={90}
+                className="w-[32%] h-auto mb-4 rounded-lg"
+                height={700}
+                width={700}
               />
             </div>
           </div>
