@@ -5,25 +5,25 @@ let items = [
         id: 1,
         par: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea cumque ad iure quaerat totam?',
         btn: 'SABER MAS...',
-        source: '/assets/History/history_001.jpg',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957502/huellitas/home-siguesushistorias-1_aezlpd.png',
     },
     {
         id: 2,
         par: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea cumque ad iure quaerat totam?',
         btn: 'SABER MAS...',
-        source: '/assets/History/history_002.jpg',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957511/huellitas/home-siguesushistorias-2_ishlvs.png',
     },
     {
         id: 3,
         par: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea cumque ad iure quaerat totam?',
         btn: 'SABER MAS...',
-        source: '/assets/History/history_003.jpg',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957513/huellitas/home-siguesushistorias-3_usoorq.png',
     },
     {
         id: 4,
         par: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea cumque ad iure quaerat totam?',
         btn: 'SABER MAS...',
-        source: '/assets/History/history_001.jpg',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957502/huellitas/home-siguesushistorias-1_aezlpd.png',
     },
 ]
 

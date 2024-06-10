@@ -6,37 +6,37 @@ const animals = [
         id: 1,
         name: 'MAX 1',
         age: 3,
-        source: '/assets/Adopcion/adopcion_002.jpg',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957498/huellitas/adopcion-buscamosunhogar_anthxg.png',
     },
     {
         id: 2,
         name: 'MAX 2',
         age: 3,
-        source: '/assets/Adopcion/adopcion_002.jpg',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957498/huellitas/adopcion-buscamosunhogar_anthxg.png',
     },
     {
         id: 3,
         name: 'MAX 3',
         age: 3,
-        source: '/assets/Adopcion/adopcion_002.jpg',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957498/huellitas/adopcion-buscamosunhogar_anthxg.png',
     },
     {
         id: 4,
         name: 'MAX 4',
         age: 3,
-        source: '/assets/Adopcion/adopcion_002.jpg',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957498/huellitas/adopcion-buscamosunhogar_anthxg.png',
     },
     {
         id: 5,
         name: 'MAX 5',
         age: 3,
-        source: '/assets/Adopcion/adopcion_002.jpg',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957498/huellitas/adopcion-buscamosunhogar_anthxg.png',
     },
     {
         id: 6,
         name: 'MAX 6',
         age: 3,
-        source: '/assets/Adopcion/adopcion_002.jpg',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957498/huellitas/adopcion-buscamosunhogar_anthxg.png',
     },
 ]
 
