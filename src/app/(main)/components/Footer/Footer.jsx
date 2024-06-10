@@ -26,11 +26,11 @@ function Footer() {
         {/* LOGO HUELLITAS */}
         <div className="hidden md:flex flex-col flex-grow basis-0 items-center">
           <Image
-            className="py-4 pointer-events-none"
-            src={"/assets/logos/svg/logo2.svg"}
+            className="py-4 pointer-events-none w-[300px] "
+            src={"https://res.cloudinary.com/dorljfo6v/image/upload/v1718048248/huellitas/logo2_b5nm5v.svg"}
             alt="logo"
-            height={300}
-            width={300}
+            height={700}
+            width={700}
           />
         </div>
 

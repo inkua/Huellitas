@@ -30,11 +30,11 @@ function Navbar() {
         <div className="flex md:flex-grow md:basis-0 md:justify-start">
           <Link href="/">
             <Image
-              className="py-4 bg-white h-[100px] w-[100px] md:w-[130px] md:h-[130px] lg:h-[150px] lg:w-[150px] "
-              src={"/assets/logos/png/logoHuellitas.png"}
+              className="py-2 bg-white w-[100px] min-w-24 md:w-[144px] "
+              src={"https://res.cloudinary.com/dorljfo6v/image/upload/v1718047440/huellitas/logo-huellitas_ckm05d.png"}
               alt="logo"
-              height={150}
-              width={150}
+              height={700}
+              width={700}
             />
           </Link>
         </div>
