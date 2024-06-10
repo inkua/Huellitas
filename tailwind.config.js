@@ -18,9 +18,6 @@ module.exports = {
         "colab-banner": "url('https://res.cloudinary.com/dorljfo6v/image/upload/v1718050498/huellitas/colaboraciones-banner.jpg')",
       },
       colors: {
-        
-        "secondaryColor":"#FD79A8",
-        "colorTerciario": "#f2f0fd",
 
         "primaryColor": "#6C5CE7",
         "secondaryColor": "#FD79A8",
