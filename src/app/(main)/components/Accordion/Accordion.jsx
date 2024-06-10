@@ -3,7 +3,7 @@ import { Accordion, AccordionItem } from "@nextui-org/accordion"
 
 function Accord({ items }) {
     return (
-        <Accordion variant="splitted">
+        <Accordion variant="splitted" className="outline-none">
             {
                 items.map(item => (
                     <AccordionItem
