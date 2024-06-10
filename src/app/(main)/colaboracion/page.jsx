@@ -69,13 +69,13 @@ function Colaboracion() {
                 <div className='flex flex-col w-11/12 lg:w-9/12 gap-8 py-8'>
                     <h1 className='font-bold heading-1 text-left'>TIENDAS QUE COLABORAN</h1>
                     <p className='block lg:hidden font-medium par-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt labore minima modi quos reprehenderit delectus molestias dolor laborum impedit a?</p>
-                    <div className='grid overflow-x-scroll grid-cols-1 lg:grid-cols-4 md:grid-cols-2 px-12 lg:px-0 snap-mandatory snap-x no-scrollbar gap-8' role='list'>
+                    <div className='grid overflow-x-scroll grid-cols-2 lg:grid-cols-4 px-12 lg:px-0 snap-mandatory snap-x no-scrollbar gap-8' role='list'>
                         <Image src={'/assets/Colaboracion/logo_001.png'} alt='Logo Tailwind' width={100} height={100} className='w-full' role='listItem' />
                         <Image src={'/assets/Colaboracion/logo_002.png'} alt='Logo Next' width={100} height={100} className='w-full' role='listItem' />
                         <Image src={'/assets/Colaboracion/logo_001.png'} alt='Logo Tailwind' width={100} height={100} className='w-full' role='listItem' />
                         <Image src={'/assets/Colaboracion/logo_002.png'} alt='Logo Next' width={100} height={100} className='w-full' role='listItem' />
                     </div>
-                </div>
+                </div>        
             </section>
 
                 <Modal isOpenD={modalVisible.donar_dinero } isOpenI={modalVisible.donar_insumos}  isOpenS={modalVisible.donar_servicios} onClose={closeModal}/>
