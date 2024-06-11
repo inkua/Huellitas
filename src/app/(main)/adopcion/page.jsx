@@ -6,39 +6,63 @@ const animals = [
         id: 1,
         name: 'MAX 1',
         age: 3,
-        source: '/assets/Adopcion/adopcion_002.jpg',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957498/huellitas/adopcion-buscamosunhogar_anthxg.png',
     },
     {
         id: 2,
         name: 'MAX 2',
         age: 3,
-        source: '/assets/Adopcion/adopcion_002.jpg',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957498/huellitas/adopcion-buscamosunhogar_anthxg.png',
     },
     {
         id: 3,
         name: 'MAX 3',
         age: 3,
-        source: '/assets/Adopcion/adopcion_002.jpg',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957498/huellitas/adopcion-buscamosunhogar_anthxg.png',
     },
     {
         id: 4,
         name: 'MAX 4',
         age: 3,
-        source: '/assets/Adopcion/adopcion_002.jpg',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957498/huellitas/adopcion-buscamosunhogar_anthxg.png',
     },
     {
         id: 5,
         name: 'MAX 5',
         age: 3,
-        source: '/assets/Adopcion/adopcion_002.jpg',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957498/huellitas/adopcion-buscamosunhogar_anthxg.png',
     },
     {
         id: 6,
         name: 'MAX 6',
         age: 3,
-        source: '/assets/Adopcion/adopcion_002.jpg',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957498/huellitas/adopcion-buscamosunhogar_anthxg.png',
     },
 ]
+
+let faq = [
+    {
+        id: 1,
+        title: '¿Cuál es la edad mínima para ser voluntario?',
+        par: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    },
+    {
+        id: 2,
+        title: '¿Necesito alguna formación o experiencia previa?',
+        par: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    },
+    {
+        id: 3,
+        title: '¿Qué actividades puedo realizar como voluntario?',
+        par: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    },
+    {
+        id: 4,
+        title: '¿Cuál es la diferencia entre padrino y voluntario?',
+        par: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    },
+]
+
 
 function Adopcion() {
     return (

@@ -12,17 +12,12 @@ module.exports = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "adoption-banner": "url('/assets/Adopcion/banner-img.jpg')",
-        "hero-banner-lg": "url('/assets/Hero/banner-img-lg.jpg')",
-        "hero-banner-sm": "url('/assets/Hero/banner-img-sm.jpg')",
-        "colab-banner": "url('/assets/Colaboracion/banner-img.jpg')",
+        "adoption-banner": "url('https://res.cloudinary.com/dorljfo6v/image/upload/v1718050129/huellitas/adopcion-banner-mobile.jpg')",
+        "hero-banner-lg": "url('https://res.cloudinary.com/dorljfo6v/image/upload/v1718046400/huellitas/home-banner-desktop.jpg')",
+        "hero-banner-sm": "url('https://res.cloudinary.com/dorljfo6v/image/upload/v1718046399/huellitas/home-banner-mobile.jpg')",
+        "colab-banner": "url('https://res.cloudinary.com/dorljfo6v/image/upload/v1718050498/huellitas/colaboraciones-banner.jpg')",
       },
       colors: {
-        "violetHtas":"#6C5CE7",
-        "grayHtas":"#585564",
-        "blackHtas":"#22202a",
-        "pinkHtas":"#FD79A8",
-        "colorTerciario": "#f2f0fd",
 
         "primaryColor": "#6C5CE7",
         "secondaryColor": "#FD79A8",
