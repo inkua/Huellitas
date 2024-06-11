@@ -1,8 +1,32 @@
 import Image from 'next/image';
+import Accord from '../Accordion/Accordion';
+
+let items = [
+    {
+        id: 1,
+        title: '¿Cuál es la edad mínima para ser voluntario?',
+        par: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    },
+    {
+        id: 2,
+        title: '¿Necesito alguna formación o experiencia previa?',
+        par: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    },
+    {
+        id: 3,
+        title: '¿Qué actividades puedo realizar como voluntario?',
+        par: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    },
+    {
+        id: 4,
+        title: '¿Cuál es la diferencia entre padrino y voluntario?',
+        par: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    },
+]
 
 function FAQ_Colaboracion() {
     return (
-        <div className="container w-full lg:w-4/5 mx-auto p-4 lg:p-2 font-[Poppins] max-w-screen-2xl">
+        <div className="container w-full lg:w-4/5 mx-auto p-4 lg:p-2 font-[Poppins]">
 
             <div className="text-left mb-4">
                 <h2 className="text-lg text-primaryFont">Colaboración</h2>
@@ -16,23 +40,7 @@ function FAQ_Colaboracion() {
                 
                 <div className="w-full flex flex-col space-y-4 h-full ">
 
-                    <button className="flex justify-between items-center p-2 border  bg-tertiaryColor rounded-full shadow-md">
-                        <span className='text-primaryFont font-[Poppins] text-xs lg:text-lg'>¿Cuál es la edad mínima para ser voluntario?</span>
-                        <svg className="h-6 w-6 text-primaryFont mr-2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <circle cx="12" cy="12" r="10" />  <line x1="12" y1="8" x2="12" y2="16" />  <line x1="8" y1="12" x2="16" y2="12" /></svg>
-                    </button>
-                    <button className="flex justify-between items-center p-2 border bg-tertiaryColor rounded-full shadow-md">
-                        <span className='text-primaryFont font-[Poppins] text-xs lg:text-lg'>¿Necesito alguna formación o experiencia previa?</span>
-                        <svg className="h-6 w-6 text-primaryFont mr-2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <circle cx="12" cy="12" r="10" />  <line x1="12" y1="8" x2="12" y2="16" />  <line x1="8" y1="12" x2="16" y2="12" /></svg>
-                    </button>
-                    <button className="flex justify-between items-center p-2 border  bg-tertiaryColor rounded-full shadow-md">
-                        <span className='text-primaryFont font-[Poppins] text-xs lg:text-lg'>¿Qué actividades puedo realizar como voluntario?</span>
-                        <svg className="h-6 w-6 text-primaryFont mr-2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <circle cx="12" cy="12" r="10" />  <line x1="12" y1="8" x2="12" y2="16" />  <line x1="8" y1="12" x2="16" y2="12" /></svg>
-                    </button>
-
-                    <button className="flex justify-between items-center p-2 border  bg-tertiaryColor rounded-full shadow-md">
-                        <span className='text-primaryFont font-[Poppins] text-xs lg:text-lg'>¿Cuál es la diferencia entre padrino y voluntario?</span>
-                        <svg className="h-6 w-6 text-primaryFont mr-2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <circle cx="12" cy="12" r="10" />  <line x1="12" y1="8" x2="12" y2="16" />  <line x1="8" y1="12" x2="16" y2="12" /></svg>
-                    </button>
+                    <Accord items={items} />
 				
 				</div>
                 
