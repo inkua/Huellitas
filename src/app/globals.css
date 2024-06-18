@@ -72,5 +72,13 @@ body {
 }
 
 .primary-btn {
-    @apply text-p3-m lg:text-p3-w md:text-p3-w px-4 py-6 lg:py-1 md:py-1 font-medium text-white bg-primaryColor hover:bg-secondaryColor rounded-full shadow-md;
+  @apply text-p3-m lg:text-p3-w md:text-p3-w px-4 py-4 lg:py-1 md:py-1 font-medium text-white bg-primaryColor hover:bg-secondaryColor rounded-full shadow-md transition-all duration-150 active:bg-activeButton;
+}
+
+.secondary-btn {
+  @apply px-4 py-1 text-sm text-primaryColor border-solid border-2 border-primaryColor rounded-2xl hover:text-white hover:bg-primaryColor hover:border-violet-900 transition-all duration-150 active:bg-violet-600;
+}
+
+.close-btn {
+  @apply text-p3-m lg:text-p3-w md:text-p3-w px-4 py-4 lg:py-1 md:py-1 font-medium text-black bg-gray-200 hover:bg-gray-300 rounded-full shadow-md transition-all duration-150 active:bg-gray-400;
 }
