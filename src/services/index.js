@@ -12,7 +12,7 @@ export default class CRUD {
 
     static async createPet(formData) {
         try {
-            const response = await axios.post('http://localhost:1337/api/posts/', {
+            await axios.post('http://localhost:1337/api/posts/', {
                 data: {
                     title: formData.title,
                     description: formData.description,
