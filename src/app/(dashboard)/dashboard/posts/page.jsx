@@ -6,6 +6,9 @@ async function Posts() {
         const posts = await CRUD.getPosts();
         return (
             <div>
+                <h2 className="text-xl mb-4 font-bold tracking-tight text-gray-900">
+                    Posteos
+                </h2>
                 <PostsTable data={posts} />
             </div>
         );

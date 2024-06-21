@@ -53,7 +53,7 @@ export default class CRUD {
     static async getPosts() {
         try {
             const response = await axios.get(
-                "http://localhost:1337/api/posts/"
+                "http://localhost:1337/api/posts?populate=*"
             );
             return response.data.data;
         } catch (error) {
@@ -102,7 +102,7 @@ export default class CRUD {
     static async getSponsors() {
         try {
             const response = await axios.get(
-                "http://localhost:1337/api/sponsors/"
+                "http://localhost:1337/api/sponsors?populate=*"
             );
             return response.data.data;
         } catch (error) {
