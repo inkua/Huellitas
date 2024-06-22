@@ -11,8 +11,10 @@ export default function Home() {
             <Hero />
             <History />
             <Sumate />
-            <FAQ_Adopcion />
-            <FAQ_Colaboracion />
+            <section>
+                <FAQ_Adopcion />
+                <FAQ_Colaboracion />
+            </section>
         </main>
     )
 }
