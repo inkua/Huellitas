@@ -16,6 +16,12 @@ module.exports = {
         "hero-banner-lg": "url('https://res.cloudinary.com/dorljfo6v/image/upload/v1718046400/huellitas/home-banner-desktop.jpg')",
         "hero-banner-sm": "url('https://res.cloudinary.com/dorljfo6v/image/upload/v1718046399/huellitas/home-banner-mobile.jpg')",
         "colab-banner": "url('https://res.cloudinary.com/dorljfo6v/image/upload/v1718050498/huellitas/colaboraciones-banner.jpg')",
+        "sample": "url('/assets/Sumate/sample2.jpg')",
+      },
+      backgroundSize: {
+        '1': '45%',
+        '2': '30%',
+        '3': '25%',
       },
       colors: {
 
@@ -25,6 +31,9 @@ module.exports = {
         "activeButton": "#FF5490",
         "primaryFont": "#22202A",
 
+      },
+      screens: {
+        'xs': '320px',
       },
       fontSize: {
         "h1-w": "31px",
