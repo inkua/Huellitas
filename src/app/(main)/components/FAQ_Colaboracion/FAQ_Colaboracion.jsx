@@ -49,7 +49,7 @@ function FAQ_Colaboracion() {
               />
             </div>
 
-            <div className="w-full flex flex-col space-y-4 h-full ">
+            <div className="w-full h-full flex flex-col m-auto">
               <Accord items={items} />
             </div>
 
@@ -59,7 +59,7 @@ function FAQ_Colaboracion() {
               }
               width={700}
               height={700}
-              className="rounded-xl lg:mb-4 lg:w-4/12 hidden lg:block lg:ml-7 object-cover"
+              className="rounded-xl lg:w-5/12 hidden lg:block lg:ml-7 object-cover"
               alt="Petting Dog Desktop"
             />
           </div>
