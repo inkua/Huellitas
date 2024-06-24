@@ -1,4 +1,4 @@
-import DonaDineroContent from "./donaDineroContent";
+import DonaDineroContent from "./DonaDineroContent.jsx";
 import DonaInsumosContent from "./DonaInsumosContent.jsx";
 import DonaServiciosContent from "./DonaServiciosContent.jsx";
 

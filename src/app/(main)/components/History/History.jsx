@@ -29,13 +29,11 @@ let items = [
 
 function History() {
     return (
-        <main>
-            <section className='flex flex-col w-full max-w-screen-2xl mx-auto justify-center items-center gap-8 py-16 bg-white'>
-                <h1 className='w-11/12 lg:w-9/12 font-bold heading-1 text-left'>SIGUE SUS HISTORIAS</h1>
-                <Slider items={items} type={1} def={1.1} md={2.15} lg={3.15}></Slider>
-            </section>
+        <section className='flex flex-col w-full max-w-screen-2xl mx-auto justify-center items-center gap-8 py-16 bg-white'>
+            <h1 className='w-[90%] lg:w-9/12 font-bold heading-1 text-left'>SIGUE SUS HISTORIAS</h1>
+            <Slider items={items} type={0} def={1.1} md={2.15} lg={3.15}></Slider>
+        </section>
 
-        </main>
     )
 }
 

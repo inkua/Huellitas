@@ -9,12 +9,12 @@ import { RadixIconsCross2 } from "../../../../../public/assets/logos/svg/cancel"
 import { ArrowDropMenu } from "../../../../../public/assets/logos/svg/arrow-drop-menu";
 
 function Navbar() {
-  const [showMenu, setShowMenu] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
 
-  // Function to handle link click and close the menu
-  const handleLinkClick = () => {
-    setShowMenu(false);
-  };
+    // Function to handle link click and close the menu
+    const handleLinkClick = () => {
+        setShowMenu(false);
+    };
 
   return (
     <div className="relative z-10 w-full bg-white">
@@ -56,73 +56,73 @@ function Navbar() {
                 </div>
               </Link>
 
-              {/* ----OPCIONES ----- */}
-              <ul className="absolute left-0 top-full w-[200px] bg-white rounded-2xl  shadow-lg hidden md:group-hover:block p-6 z-10">
-                <li className="hover:text-gray-800 py-2">
-                  <Link href="/fundacion#nuestra-historia" onClick={handleLinkClick}>
-                    NUESTRA HISTORIA
-                  </Link>
-                </li>
-                <li className="hover:text-gray-800 py-2">
-                  <Link href="/fundacion#mision" onClick={handleLinkClick}>
-                    MISIÓN Y VISIÓN
-                  </Link>
-                </li>
-                <li className="hover:text-gray-800 py-2">
-                  <Link href="/" onClick={handleLinkClick}>
-                    OBJETIVOS
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li className="relative group">
-              <Link
-                className="flex items-center hover:text-gray-900"
-                href="/adopcion"
-                onClick={handleLinkClick}
-              >
-                ADOPCIÓN
-                <div className="group-hover:rotate-180 transition-transform duration-300 hidden md:block">
-                  <ArrowDropMenu />
+                            {/* ----OPCIONES ----- */}
+                            <ul className="absolute left-0 top-full w-[200px] bg-white rounded-2xl  shadow-lg hidden md:group-hover:block p-6 z-10">
+                                <li className="hover:text-gray-800 py-2">
+                                    <Link href="/fundacion#nuestra-historia" onClick={handleLinkClick}>
+                                        NUESTRA HISTORIA
+                                    </Link>
+                                </li>
+                                <li className="hover:text-gray-800 py-2">
+                                    <Link href="/fundacion#mision" onClick={handleLinkClick}>
+                                        MISIÓN Y VISIÓN
+                                    </Link>
+                                </li>
+                                <li className="hover:text-gray-800 py-2">
+                                    <Link href="/fundacion#objetivos" onClick={handleLinkClick}>
+                                        OBJETIVOS
+                                    </Link>
+                                </li>
+                            </ul>
+                        </li>
+                        <li className="relative group">
+                            <Link
+                                className="flex items-center hover:text-gray-900"
+                                href="/adopcion"
+                                onClick={handleLinkClick}
+                            >
+                                ADOPCIÓN
+                                <div className="group-hover:rotate-180 transition-transform duration-300 hidden md:block">
+                                    <ArrowDropMenu />
+                                </div>
+                            </Link>
+                            {/* ----OPCIONES ----- */}
+                            <ul className="absolute left-0 top-full w-[200px] bg-white shadow-lg rounded-2xl hidden md:group-hover:block p-6 z-10">
+
+                                <li className="hover:text-gray-800 py-2">
+                                    <Link href="/adopcion" onClick={handleLinkClick}>
+                                        QUIERO ADOPTAR
+                                    </Link>
+                                </li>
+                                <li className="hover:text-gray-800 py-2">
+                                    <Link href="/adopcion" onClick={handleLinkClick}>
+                                        REQUISITOS
+                                    </Link>
+                                </li>
+                                <li className="hover:text-gray-800 py-2">
+                                    <Link href="/adopcion" onClick={handleLinkClick}>
+                                        ELLOS BUSCAN HOGAR
+                                    </Link>
+                                </li>
+                            </ul>
+                        </li>
+                        <li className="relative group">
+                            <Link
+                                className="flex items-center hover:text-gray-900"
+                                href="/colaboracion"
+                                onClick={handleLinkClick}
+                            >
+                                COLABORACIÓN
+                            </Link>
+
+                        </li>
+                        <li>
+                            <Link className="hover:text-gray-900" href="/contacto" onClick={handleLinkClick}>
+                                CONTACTO
+                            </Link>
+                        </li>
+                    </ul>
                 </div>
-              </Link>
-              {/* ----OPCIONES ----- */}
-              <ul className="absolute left-0 top-full w-[200px] bg-white shadow-lg rounded-2xl hidden md:group-hover:block p-6 z-10">
-
-                <li className="hover:text-gray-800 py-2">
-                  <Link href="/" onClick={handleLinkClick}>
-                    QUIERO ADOPTAR
-                  </Link>
-                </li>
-                <li className="hover:text-gray-800 py-2">
-                  <Link href="/" onClick={handleLinkClick}>
-                    REQUISITOS
-                  </Link>
-                </li>
-                <li className="hover:text-gray-800 py-2">
-                  <Link href="/" onClick={handleLinkClick}>
-                    ELLOS BUSCAN HOGAR
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li className="relative group">
-              <Link
-                className="flex items-center hover:text-gray-900"
-                href="/colaboracion"
-                onClick={handleLinkClick}
-              >
-                COLABORACIÓN
-              </Link>
-
-            </li>
-            <li>
-              <Link className="hover:text-gray-900" href="/" onClick={handleLinkClick}>
-                CONTACTO
-              </Link>
-            </li>
-          </ul>
-        </div>
 
         <div className="flex flex-grow basis-0 justify-end">
           <button
