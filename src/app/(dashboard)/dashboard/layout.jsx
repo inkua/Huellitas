@@ -1,6 +1,14 @@
+"use client";
+
 import Navigation from "./components/Navigation/Navigation";
 
 export default function layout({ children }) {
+    return <Authorized children={children} />;
+}
+
+function UnAuthorized() {}
+
+function Authorized({ children }) {
     return (
         <body>
             <div className="min-h-full">
@@ -15,7 +23,6 @@ export default function layout({ children }) {
                 </header>
                 <main>
                     <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-                        {/* Your content */}
                         {children}
                     </div>
                 </main>
