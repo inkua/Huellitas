@@ -1,15 +1,29 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import CRUD from "@/services";
 import Table from "./components/Table/Table";
 
-async function Dashboard() {
+function Dashboard() {
+    const [stories, setStories] = useState(null);
+    const [refresh, refreshTable] = useState(0);
+
     try {
-        const stories = await CRUD.getStories();
+        useEffect(() => {
+            async function load() {
+                setStories(await CRUD.getStories());
+            }
+            load();
+        }, [refresh]);
+
         return (
             <div>
                 <h2 className="text-xl mb-4 font-bold tracking-tight text-gray-900">
                     Historias
                 </h2>
-                <Table data={stories} />
+                {stories != null && (
+                    <Table data={stories} refreshCallback={refreshTable} />
+                )}
             </div>
         );
     } catch (e) {

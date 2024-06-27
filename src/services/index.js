@@ -1,6 +1,14 @@
 import axios from "axios";
 
 export default class CRUD {
+    static formatToken(token) {
+        return {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        };
+    }
+
     static async getStories() {
         try {
             const response = await axios.get(
@@ -12,38 +20,53 @@ export default class CRUD {
         }
     }
 
-    static async createStory(item, image) {
+    static async createStory(item, image, token) {
         try {
             let formData = new FormData();
             formData.append("files", image);
 
             const newImage = await axios.post(
                 "http://localhost:1337/api/upload",
-                formData
+                formData,
+                CRUD.formatToken(token)
             );
             item.data.image = newImage.data[0].id;
 
-            await axios.post("http://localhost:1337/api/stories/", item);
+            console.log(newImage.data);
+
+            await axios.post(
+                "http://localhost:1337/api/stories/",
+                item,
+                CRUD.formatToken(token)
+            );
         } catch (error) {
             console.log(error);
         }
     }
 
-    static async updateStory(id, item) {
+    static async updateStory(id, item, token) {
         try {
-            await axios.put("http://localhost:1337/api/stories/" + id, item);
+            await axios.put(
+                "http://localhost:1337/api/stories/" + id,
+                item,
+                CRUD.formatToken(token)
+            );
         } catch (error) {
             console.log(error);
         }
     }
 
-    static async removeStory(item) {
+    static async removeStory(item, token) {
         try {
-            await axios.delete("http://localhost:1337/api/stories/" + item.id);
+            await axios.delete(
+                "http://localhost:1337/api/stories/" + item.id,
+                CRUD.formatToken(token)
+            );
 
             await axios.delete(
                 "http://localhost:1337/api/upload/files/" +
-                    item.attributes.image.data.id
+                    item.attributes.image.data.id,
+                CRUD.formatToken(token)
             );
         } catch (error) {
             console.log(error);
@@ -61,38 +84,51 @@ export default class CRUD {
         }
     }
 
-    static async createPost(item, image) {
+    static async createPost(item, image, token) {
         try {
             let formData = new FormData();
             formData.append("files", image);
 
             const newImage = await axios.post(
                 "http://localhost:1337/api/upload",
-                formData
+                formData,
+                CRUD.formatToken(token)
             );
             item.data.image = newImage.data[0].id;
 
-            await axios.post("http://localhost:1337/api/posts/", item);
+            await axios.post(
+                "http://localhost:1337/api/posts/",
+                item,
+                CRUD.formatToken(token)
+            );
         } catch (error) {
             console.log(error);
         }
     }
 
-    static async updatePost(id, item) {
+    static async updatePost(id, item, token) {
         try {
-            await axios.put("http://localhost:1337/api/posts/" + id, item);
+            await axios.put(
+                "http://localhost:1337/api/posts/" + id,
+                item,
+                CRUD.formatToken(token)
+            );
         } catch (error) {
             console.log(error);
         }
     }
 
-    static async removePost(item) {
+    static async removePost(item, token) {
         try {
-            await axios.delete("http://localhost:1337/api/posts/" + item.id);
+            await axios.delete(
+                "http://localhost:1337/api/posts/" + item.id,
+                CRUD.formatToken(token)
+            );
 
             await axios.delete(
                 "http://localhost:1337/api/upload/files/" +
-                    item.attributes.image.data.id
+                    item.attributes.image.data.id,
+                CRUD.formatToken(token)
             );
         } catch (error) {
             console.log(error);
@@ -110,14 +146,15 @@ export default class CRUD {
         }
     }
 
-    static async createSponsor(item, image) {
+    static async createSponsor(item, image, token) {
         try {
             let formData = new FormData();
             formData.append("files", image);
 
             const newImage = await axios.post(
                 "http://localhost:1337/api/upload",
-                formData
+                formData,
+                CRUD.formatToken(token)
             );
             item.data.image = newImage.data[0].id;
 
@@ -127,21 +164,29 @@ export default class CRUD {
         }
     }
 
-    static async updateSponsor(id, item) {
+    static async updateSponsor(id, item, token) {
         try {
-            await axios.put("http://localhost:1337/api/sponsors/" + id, item);
+            await axios.put(
+                "http://localhost:1337/api/sponsors/" + id,
+                item,
+                CRUD.formatToken(token)
+            );
         } catch (error) {
             console.log(error);
         }
     }
 
-    static async removeSponsor(item) {
+    static async removeSponsor(item, token) {
         try {
-            await axios.delete("http://localhost:1337/api/sponsors/" + item.id);
+            await axios.delete(
+                "http://localhost:1337/api/sponsors/" + item.id,
+                CRUD.formatToken(token)
+            );
 
             await axios.delete(
                 "http://localhost:1337/api/upload/files/" +
-                    item.attributes.image.data.id
+                    item.attributes.image.data.id,
+                CRUD.formatToken(token)
             );
         } catch (error) {
             console.log(error);

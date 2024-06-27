@@ -25,7 +25,7 @@ function LoginForm() {
             saveUser(response.data);
             window.location.replace("/dashboard");
         } catch (error) {
-            console.log(error);
+            console.log(error.data);
             setShowNoUserMessage(true);
         }
     }

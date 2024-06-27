@@ -5,10 +5,6 @@ import { useEffect, useState } from "react";
 
 export default function layout({ children }) {
     const [user, setUser] = useState(null);
-    const [jwt, setJwt] = useState("");
-
-    console.log("user:", user);
-    console.log("jwt:", jwt);
 
     useEffect(() => {
         if (document.cookie) {
@@ -18,15 +14,20 @@ export default function layout({ children }) {
         }
     }, []);
 
-    return <Authorized children={children} />;
+    if (user) {
+        return <Authorized children={children} />;
+    } else {
+        return <UnAuthorized />;
+    }
 }
 
 function UnAuthorized() {
     return (
         <body>
-            <main>
+            <main className="flex h-[50vh] items-center justify-center">
                 <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-                    Debes iniciar sesión para ingresar a este sitio.
+                    Solo los administradores y colaboradores pueden acceder a
+                    este sitio.
                 </h1>
             </main>
         </body>
