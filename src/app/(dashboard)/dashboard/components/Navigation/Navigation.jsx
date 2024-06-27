@@ -7,6 +7,13 @@ export default function Navigation() {
     const [menu, setMenu] = useState(false);
     const [drop, setDrop] = useState(false);
 
+    function handleLogout() {
+        localStorage.clear();
+        sessionStorage.clear();
+        // We delete the cookie setting an "expires" in the past
+        document.cookie = "jwt=deleted;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    }
+
     return (
         <nav className="bg-gray-800">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -77,7 +84,8 @@ export default function Navigation() {
                                         tabIndex="-1"
                                     >
                                         <Link
-                                            href="#"
+                                            onClick={handleLogout}
+                                            href="/auth"
                                             className="block px-4 py-2 text-sm text-gray-700"
                                             role="menuitem"
                                             tabIndex="-1"
@@ -179,12 +187,13 @@ export default function Navigation() {
                             </div>
                         </div>
                         <div className="mt-3 space-y-1 px-2">
-                            <a
-                                href="#"
+                            <Link
+                                onClick={handleLogout}
+                                href="/auth"
                                 className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                             >
                                 Cerrar sesión
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

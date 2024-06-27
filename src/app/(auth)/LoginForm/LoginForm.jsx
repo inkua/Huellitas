@@ -16,7 +16,7 @@ function LoginForm() {
     async function logIn(user, pass) {
         try {
             const response = await axios.post(
-                "http://localhost:1337/api/auth/local",
+                "http://localhost:1337/api/auth/local?populate=*",
                 {
                     identifier: user,
                     password: pass,
@@ -36,9 +36,12 @@ function LoginForm() {
                 "jwt=" +
                 data.jwt +
                 ";expires=" +
-                new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString();
+                new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString() +
+                ";SameSite=None";
+            localStorage.setItem("user", JSON.stringify(data.user));
         } else {
             sessionStorage.setItem("jwt", data.jwt);
+            sessionStorage.setItem("user", JSON.stringify(data.user));
         }
     }
 

@@ -1,12 +1,37 @@
 "use client";
 
 import Navigation from "./components/Navigation/Navigation";
+import { useEffect, useState } from "react";
 
 export default function layout({ children }) {
+    const [user, setUser] = useState(null);
+    const [jwt, setJwt] = useState("");
+
+    console.log("user:", user);
+    console.log("jwt:", jwt);
+
+    useEffect(() => {
+        if (document.cookie) {
+            setUser(JSON.parse(localStorage.getItem("user")));
+        } else {
+            setUser(JSON.parse(sessionStorage.getItem("user")));
+        }
+    }, []);
+
     return <Authorized children={children} />;
 }
 
-function UnAuthorized() {}
+function UnAuthorized() {
+    return (
+        <body>
+            <main>
+                <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+                    Debes iniciar sesión para ingresar a este sitio.
+                </h1>
+            </main>
+        </body>
+    );
+}
 
 function Authorized({ children }) {
     return (
