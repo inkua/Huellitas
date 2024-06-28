@@ -1,17 +1,42 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import CRUD from "@/services";
+import { useState, useEffect } from "react";
 
-export default function Navigation() {
+export default function Navigation({ user }) {
     const [menu, setMenu] = useState(false);
     const [drop, setDrop] = useState(false);
+    const [isAdmin, setIsAdmin] = useState(false);
+
+    useEffect(() => {
+        let token;
+
+        if (document.cookie) {
+            token = document.cookie.split("=")[1];
+        } else {
+            token = sessionStorage.getItem("jwt");
+        }
+
+        async function getPermisions() {
+            try {
+                const response = await CRUD.getPermisions(token);
+                if (response.role.name.toUpperCase() == "ADMINISTRADOR") {
+                    setIsAdmin(true);
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        getPermisions();
+    });
 
     function handleLogout() {
         localStorage.clear();
         sessionStorage.clear();
         // We delete the cookie setting an "expires" in the past
-        document.cookie = "jwt=deleted;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        document.cookie =
+            "jwt=deleted;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
     }
 
     return (
@@ -35,18 +60,31 @@ export default function Navigation() {
                                 >
                                     Historias
                                 </Link>
+
                                 <Link
                                     href="/dashboard/posts"
                                     className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                                 >
                                     Posteos
                                 </Link>
-                                <Link
-                                    href="/dashboard/sponsors"
-                                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                                >
-                                    Sponsors
-                                </Link>
+
+                                {isAdmin && (
+                                    <Link
+                                        href="/dashboard/sponsors"
+                                        className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                    >
+                                        Sponsors
+                                    </Link>
+                                )}
+
+                                {isAdmin && (
+                                    <Link
+                                        href="/dashboard/colaboradores"
+                                        className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                    >
+                                        Colaboradores
+                                    </Link>
+                                )}
                             </div>
                         </div>
                     </div>
@@ -67,11 +105,12 @@ export default function Navigation() {
                                         <span className="sr-only">
                                             Open user menu
                                         </span>
-                                        <img
-                                            className="h-8 w-8 rounded-full"
-                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                            alt=""
-                                        ></img>
+                                        <div className="h-10 w-10 bg-white rounded-full">
+                                            <img
+                                                src="/assets/Login/profile.svg"
+                                                alt=""
+                                            />
+                                        </div>
                                     </button>
                                 </div>
 
@@ -170,19 +209,12 @@ export default function Navigation() {
                     </div>
                     <div className="border-t border-gray-700 pb-3 pt-4">
                         <div className="flex items-center px-5">
-                            <div className="flex-shrink-0">
-                                <img
-                                    className="h-10 w-10 rounded-full"
-                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                    alt=""
-                                ></img>
-                            </div>
-                            <div className="ml-3">
+                            <div className="">
                                 <div className="text-base font-medium leading-none text-white">
-                                    Tom Cook {/* Nombre de usuario*/}
+                                    {user.username} {/* Nombre de usuario*/}
                                 </div>
                                 <div className="text-sm font-medium leading-none text-gray-400">
-                                    tom@example.com {/* Correo del usuario*/}
+                                    {user.email} {/* Correo del usuario*/}
                                 </div>
                             </div>
                         </div>

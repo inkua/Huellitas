@@ -1,4 +1,3 @@
-//@ts-check--jsx
 "use client";
 
 import { useState } from "react";
@@ -10,7 +9,12 @@ function LoginForm() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        logIn(e.target.username.value, e.target.password.value);
+
+        if (!sessionStorage.getItem("jwt") && !document.cookie) {
+            logIn(e.target.username.value, e.target.password.value);
+        } else {
+            window.location.replace("/dashboard");
+        }
     }
 
     async function logIn(user, pass) {
@@ -37,7 +41,7 @@ function LoginForm() {
                 data.jwt +
                 ";expires=" +
                 new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString() +
-                ";SameSite=None";
+                ";SameSite=None;path=/";
             localStorage.setItem("user", JSON.stringify(data.user));
         } else {
             sessionStorage.setItem("jwt", data.jwt);

@@ -9,6 +9,18 @@ export default class CRUD {
         };
     }
 
+    static async getPermisions(token) {
+        try {
+            const response = await axios.get(
+                `http://localhost:1337/api/users/me?populate=*`,
+                this.formatToken(token)
+            );
+            return response.data;
+        } catch (error) {
+            console.log(error.response);
+        }
+    }
+
     static async getStories() {
         try {
             const response = await axios.get(
@@ -16,7 +28,7 @@ export default class CRUD {
             );
             return response.data.data;
         } catch (error) {
-            console.log(error);
+            console.log(error.response);
         }
     }
 
@@ -32,15 +44,13 @@ export default class CRUD {
             );
             item.data.image = newImage.data[0].id;
 
-            console.log(newImage.data);
-
             await axios.post(
                 "http://localhost:1337/api/stories/",
                 item,
                 CRUD.formatToken(token)
             );
         } catch (error) {
-            console.log(error);
+            console.log(error.response);
         }
     }
 
@@ -52,7 +62,7 @@ export default class CRUD {
                 CRUD.formatToken(token)
             );
         } catch (error) {
-            console.log(error);
+            console.log(error.response);
         }
     }
 
@@ -69,7 +79,7 @@ export default class CRUD {
                 CRUD.formatToken(token)
             );
         } catch (error) {
-            console.log(error);
+            console.log(error.response);
         }
     }
 
@@ -80,7 +90,7 @@ export default class CRUD {
             );
             return response.data.data;
         } catch (error) {
-            console.log(error);
+            console.log(error.response);
         }
     }
 
@@ -102,7 +112,7 @@ export default class CRUD {
                 CRUD.formatToken(token)
             );
         } catch (error) {
-            console.log(error);
+            console.log(error.response);
         }
     }
 
@@ -114,7 +124,7 @@ export default class CRUD {
                 CRUD.formatToken(token)
             );
         } catch (error) {
-            console.log(error);
+            console.log(error.response);
         }
     }
 
@@ -131,7 +141,7 @@ export default class CRUD {
                 CRUD.formatToken(token)
             );
         } catch (error) {
-            console.log(error);
+            console.log(error.response);
         }
     }
 
@@ -142,7 +152,7 @@ export default class CRUD {
             );
             return response.data.data;
         } catch (error) {
-            console.log(error);
+            console.log(error.response);
         }
     }
 
@@ -158,9 +168,13 @@ export default class CRUD {
             );
             item.data.image = newImage.data[0].id;
 
-            await axios.post("http://localhost:1337/api/sponsors/", item);
+            await axios.post(
+                "http://localhost:1337/api/sponsors/",
+                item,
+                CRUD.formatToken(token)
+            );
         } catch (error) {
-            console.log(error);
+            console.log(error.response);
         }
     }
 
@@ -172,7 +186,7 @@ export default class CRUD {
                 CRUD.formatToken(token)
             );
         } catch (error) {
-            console.log(error);
+            console.log(error.response);
         }
     }
 
@@ -189,7 +203,7 @@ export default class CRUD {
                 CRUD.formatToken(token)
             );
         } catch (error) {
-            console.log(error);
+            console.log(error.response);
         }
     }
 }

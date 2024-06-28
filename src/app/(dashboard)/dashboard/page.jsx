@@ -21,7 +21,7 @@ function Dashboard() {
                 <h2 className="text-xl mb-4 font-bold tracking-tight text-gray-900">
                     Historias
                 </h2>
-                {stories != null && (
+                {stories && (
                     <Table data={stories} refreshCallback={refreshTable} />
                 )}
             </div>

@@ -7,7 +7,7 @@ export default function layout({ children }) {
     const [user, setUser] = useState(null);
 
     useEffect(() => {
-        if (document.cookie) {
+        if (document.cookie && localStorage.getItem("user")) {
             setUser(JSON.parse(localStorage.getItem("user")));
         } else {
             setUser(JSON.parse(sessionStorage.getItem("user")));
@@ -15,7 +15,7 @@ export default function layout({ children }) {
     }, []);
 
     if (user) {
-        return <Authorized children={children} />;
+        return <Authorized children={children} user={user} />;
     } else {
         return <UnAuthorized />;
     }
@@ -26,7 +26,7 @@ function UnAuthorized() {
         <body>
             <main className="flex h-[50vh] items-center justify-center">
                 <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-                    Solo los administradores y colaboradores pueden acceder a
+                    Solo el administrador y los colaboradores pueden acceder a
                     este sitio.
                 </h1>
             </main>
@@ -34,11 +34,11 @@ function UnAuthorized() {
     );
 }
 
-function Authorized({ children }) {
+function Authorized({ children, user }) {
     return (
         <body>
             <div className="min-h-full">
-                <Navigation />
+                <Navigation user={user} />
 
                 <header className="bg-white shadow">
                     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
@@ -48,7 +48,7 @@ function Authorized({ children }) {
                     </div>
                 </header>
                 <main>
-                    <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+                    <div className="mx-auto max-w-7xl py-6 px-6 sm:px-6 lg:px-8">
                         {children}
                     </div>
                 </main>

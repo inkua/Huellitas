@@ -17,7 +17,7 @@ function Login() {
                         alt="logo de Huellitas Cartagena conformado por un perrito y un gato."
                         className="w-[15rem]"
                     />
-                    <h1 className="font-semibold text-3xl">
+                    <h1 className="font-semibold text-3xl text-center">
                         Entrá a tu cuenta
                     </h1>
 

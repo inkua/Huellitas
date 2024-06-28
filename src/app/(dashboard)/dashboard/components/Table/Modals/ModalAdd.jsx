@@ -1,22 +1,20 @@
 import CRUD from "@/services";
 
-function ModalMod({ item, closeCallback, token }) {
+function ModalAdd({ closeCallback, token }) {
     async function handleClick(e) {
         try {
             e.preventDefault();
 
-            await CRUD.updateStory(item.id, {
-                data: {
-                    title: e.target.title.value,
-                    description: e.target.description.value,
+            await CRUD.createStory(
+                {
+                    data: {
+                        title: e.target.title.value,
+                        description: e.target.description.value,
+                    },
                 },
-                token,
-            });
-
-            // Just to refresh de component
-            if (location) {
-                location.reload();
-            }
+                e.target.image.files[0],
+                token
+            );
 
             closeCallback();
         } catch (e) {
@@ -34,7 +32,7 @@ function ModalMod({ item, closeCallback, token }) {
                     <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
                         <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                                Modificar historia
+                                Crear nueva historia
                             </h3>
                             <button
                                 onClick={closeCallback}
@@ -92,12 +90,26 @@ function ModalMod({ item, closeCallback, token }) {
                                         required
                                     ></textarea>
                                 </div>
+                                <div className="col-span-2">
+                                    <label
+                                        htmlFor="image"
+                                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                    >
+                                        Imagen
+                                    </label>
+                                    <input
+                                        required
+                                        type="file"
+                                        name="image"
+                                        id="image"
+                                    />
+                                </div>
                             </div>
                             <button
                                 type="submit"
-                                className="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                className="text-white inline-flex items-center bg-green-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                             >
-                                Modificar historia
+                                Agregar historia
                             </button>
                         </form>
                     </div>
@@ -106,5 +118,4 @@ function ModalMod({ item, closeCallback, token }) {
         </>
     );
 }
-
-export default ModalMod;
+export default ModalAdd;

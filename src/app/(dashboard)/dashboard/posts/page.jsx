@@ -1,15 +1,29 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import CRUD from "@/services";
 import PostsTable from "../components/Table/PostsTable";
 
-async function Posts() {
+function Posts() {
+    const [posts, setPosts] = useState(null);
+    const [refresh, refreshTable] = useState(0);
+
     try {
-        const posts = await CRUD.getPosts();
+        useEffect(() => {
+            async function load() {
+                setPosts(await CRUD.getPosts());
+            }
+            load();
+        }, [refresh]);
+
         return (
             <div>
                 <h2 className="text-xl mb-4 font-bold tracking-tight text-gray-900">
                     Posteos
                 </h2>
-                <PostsTable data={posts} />
+                {posts && (
+                    <PostsTable data={posts} refreshCallback={refreshTable} />
+                )}
             </div>
         );
     } catch (e) {

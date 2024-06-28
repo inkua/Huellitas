@@ -3,18 +3,22 @@
 import { useState, useEffect } from "react";
 import CRUD from "@/services";
 import ModalAdd from "./Modals/ModalAdd";
+import ModalMod from "./Modals/ModalMod";
 
 function Table({ data, refreshCallback }) {
     const [isModalAddActive, setIsModalAddActive] = useState(false);
     const [isModalModActive, setIsModalModActive] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
     const [token, setToken] = useState("");
+    const [user, setUser] = useState(null);
 
     useEffect(() => {
         if (document.cookie) {
-            console.log(document.cookie);
+            setToken(document.cookie.split("=")[1]);
+            setUser(JSON.parse(localStorage.getItem("user")));
         } else {
             setToken(sessionStorage.getItem("jwt"));
+            setUser(JSON.parse(sessionStorage.getItem("user")));
         }
     }, []);
 
@@ -30,10 +34,12 @@ function Table({ data, refreshCallback }) {
     function handleModalModClose() {
         setIsModalModActive(false);
         setSelectedItem(null);
+        refreshCallback(Date.now());
     }
 
     function handleModalAddClose() {
         setIsModalAddActive(false);
+        refreshCallback(Date.now());
     }
 
     async function handleRemove(item) {
