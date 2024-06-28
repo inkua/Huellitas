@@ -30,14 +30,14 @@ function Colaboracion() {
         {
             id: 1,
             par: '',
-            btn: 'DONAR DINERO',
+            btn: 'ECONÓMICAS',
             source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957518/huellitas/colaboraciones-comoquierescolaborar-1_do2ctq.png',
             action: () => openModal('donar_dinero'),
         },
         {
             id: 2,
             par: '',
-            btn: 'DONAR INSUMOS',
+            btn: 'INSUMOS',
             source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957521/huellitas/colaboraciones-comoquierescolaborar-2_koocxt.png',
             action: () => openModal('donar_insumos'),
         },
@@ -67,13 +67,22 @@ function Colaboracion() {
 
             <section className='flex w-full max-w-screen-2xl mx-auto justify-center items-center bg-white'>
                 <div className='flex flex-col w-11/12 lg:w-9/12 gap-8 py-8'>
-                    <h1 className='font-bold heading-1 text-left'>TIENDAS QUE COLABORAN</h1>
-                    <p className='block lg:hidden font-medium par-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt labore minima modi quos reprehenderit delectus molestias dolor laborum impedit a?</p>
-                    <div className='grid overflow-x-scroll grid-cols-2 lg:grid-cols-4 md:grid-cols-2 px-12 lg:px-0 snap-mandatory snap-x no-scrollbar gap-8' role='list'>
-                        <Image src={'/assets/Colaboracion/logo_001.png'} alt='Logo Tailwind' width={100} height={100} className='w-full' role='listItem' />
-                        <Image src={'/assets/Colaboracion/logo_002.png'} alt='Logo Next' width={100} height={100} className='w-full' role='listItem' />
-                        <Image src={'/assets/Colaboracion/logo_001.png'} alt='Logo Tailwind' width={100} height={100} className='w-full' role='listItem' />
-                        <Image src={'/assets/Colaboracion/logo_002.png'} alt='Logo Next' width={100} height={100} className='w-full' role='listItem' />
+                    <h1 className='font-bold heading-1 text-center lg:text-left'>TIENDAS QUE COLABORAN</h1>
+                    <div className='grid overflow-x-scroll grid-cols-2 lg:grid-cols-4 md:grid-cols-2 px-12 lg:px-0 snap-mandatory snap-x no-scrollbar gap-8' role='list'>                        
+                        <Image src={'/assets/Colaboracion/ArtemisLogo.jpg'} alt='Logo Artemis' width={1000} height={1000} className='w-full' role='listItem' />
+                        <Image src={'/assets/Colaboracion/ArtemisLogo.jpg'} alt='Logo Artemis' width={1000} height={1000} className='w-full rounded-full' role='listItem' />
+
+                        <a href='https://www.instagram.com/salitrex.cartagena'><Image src={'/assets/Colaboracion/LogoSalitrexPalabraFondo.jpg'} alt='Logo Salitrex Texto' width={1000} height={1000} className='w-full rounded-full' role='listItem' /></a>
+                        <a href='https://salitrex.co/'><Image src={'/assets/Colaboracion/LogoSalitrexPalabraFondo.jpg'} alt='Logo Salitrex Texto' width={1000} height={1000} className='w-full ' role='listItem' /></a>
+                        <Image src={'/assets/Colaboracion/SalitrexLogo.png'} alt='Logo Salitrex' width={1000} height={1000} className='w-full' role='listItem' />
+                        <Image src={'/assets/Colaboracion/SalitrexLogoTexto.png'} alt='Logo Salitrex Texto' width={1000} height={1000} className='w-full' role='listItem' />
+                        <Image src={'/assets/Colaboracion/SalitrexLogo.png'} alt='Logo Salitrex' width={1000} height={1000} className='w-full bg-primaryColor rounded-full' role='listItem' />
+                        <Image src={'/assets/Colaboracion/SalitrexLogoTexto.png'} alt='Logo Salitrex Texto' width={1000} height={1000} className='w-full bg-primaryColor rounded-full' role='listItem' />
+                        <Image src={'/assets/Colaboracion/SalitrexLogo.png'} alt='Logo Salitrex' width={1000} height={1000} className='w-full bg-secondaryColor' role='listItem' />
+                        <Image src={'/assets/Colaboracion/SalitrexLogoTexto.png'} alt='Logo Salitrex Texto' width={1000} height={1000} className='w-full bg-secondaryColor' role='listItem' />
+                        <Image src={'/assets/Colaboracion/SalitrexLogo.png'} alt='Logo Salitrex' width={1000} height={1000} className='w-full bg-primaryFont' role='listItem' />
+                        <Image src={'/assets/Colaboracion/SalitrexLogoTexto.png'} alt='Logo Salitrex Texto' width={1000} height={1000} className='w-full bg-primaryFont' role='listItem' />
+
                     </div>
                 </div>        
             </section>
