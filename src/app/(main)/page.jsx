@@ -11,7 +11,7 @@ export default function Home() {
             <Hero />
             <History />
             <Sumate />
-            <section>
+            <section className="mb-12">
                 <FAQ_Adopcion />
                 <FAQ_Colaboracion />
             </section>
