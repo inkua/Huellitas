@@ -52,10 +52,10 @@ function Colaboracion() {
 
     return (
         <main className='relative'>
-            <section className='flex flex-col relative w-full h-80 lg:h-96 max-w-screen-2xl mx-auto bg-colab-banner bg-cover bg-center' role='banner'>
-                <div className='flex absolute w-full lg:w-6/12 h-full items-end lg:justify-center p-6'>
-                    <div className='flex w-full lg:w-2/5 justify-center lg:justify-start items-end'>
-                        <h1 className='font-bold heading-1 !text-white'>COLABORACIONES</h1>
+            <section className='flex flex-col relative w-full h-80 lg:h-[40rem] max-w-screen-2xl mx-auto bg-colab-banner bg-cover  bg-center' role='banner'>
+                <div className='flex absolute w-full lg:w-6/12 h-full items-end lg:justify-center p-6 lg:pb-[6rem]'>
+                    <div className='flex w-full lg:w-6/12 justify-center lg:justify-start items-end'>
+                        <h1 className='font-semibold  text-7xl !text-white'>COLABORACIONES</h1>
                     </div>
                 </div>
             </section>
@@ -69,20 +69,13 @@ function Colaboracion() {
                 <div className='flex flex-col w-11/12 lg:w-9/12 gap-8 py-8'>
                     <h1 className='font-bold heading-1 text-center lg:text-left'>TIENDAS QUE COLABORAN</h1>
                     <div className='grid overflow-x-scroll grid-cols-2 lg:grid-cols-4 md:grid-cols-2 px-12 lg:px-0 snap-mandatory snap-x no-scrollbar gap-8' role='list'>                        
-                        <Image src={'/assets/Colaboracion/ArtemisLogo.jpg'} alt='Logo Artemis' width={1000} height={1000} className='w-full' role='listItem' />
-                        <Image src={'/assets/Colaboracion/ArtemisLogo.jpg'} alt='Logo Artemis' width={1000} height={1000} className='w-full rounded-full' role='listItem' />
-
-                        <a href='https://www.instagram.com/salitrex.cartagena'><Image src={'/assets/Colaboracion/LogoSalitrexPalabraFondo.jpg'} alt='Logo Salitrex Texto' width={1000} height={1000} className='w-full rounded-full' role='listItem' /></a>
-                        <a href='https://salitrex.co/'><Image src={'/assets/Colaboracion/LogoSalitrexPalabraFondo.jpg'} alt='Logo Salitrex Texto' width={1000} height={1000} className='w-full ' role='listItem' /></a>
-                        <Image src={'/assets/Colaboracion/SalitrexLogo.png'} alt='Logo Salitrex' width={1000} height={1000} className='w-full' role='listItem' />
-                        <Image src={'/assets/Colaboracion/SalitrexLogoTexto.png'} alt='Logo Salitrex Texto' width={1000} height={1000} className='w-full' role='listItem' />
-                        <Image src={'/assets/Colaboracion/SalitrexLogo.png'} alt='Logo Salitrex' width={1000} height={1000} className='w-full bg-primaryColor rounded-full' role='listItem' />
-                        <Image src={'/assets/Colaboracion/SalitrexLogoTexto.png'} alt='Logo Salitrex Texto' width={1000} height={1000} className='w-full bg-primaryColor rounded-full' role='listItem' />
-                        <Image src={'/assets/Colaboracion/SalitrexLogo.png'} alt='Logo Salitrex' width={1000} height={1000} className='w-full bg-secondaryColor' role='listItem' />
-                        <Image src={'/assets/Colaboracion/SalitrexLogoTexto.png'} alt='Logo Salitrex Texto' width={1000} height={1000} className='w-full bg-secondaryColor' role='listItem' />
-                        <Image src={'/assets/Colaboracion/SalitrexLogo.png'} alt='Logo Salitrex' width={1000} height={1000} className='w-full bg-primaryFont' role='listItem' />
-                        <Image src={'/assets/Colaboracion/SalitrexLogoTexto.png'} alt='Logo Salitrex Texto' width={1000} height={1000} className='w-full bg-primaryFont' role='listItem' />
-
+                        <Image src={'/assets/Colaboracion/LogoArtemis.png'} alt='Logo Salitrex' width={1000} height={1000} className='w-full' role='listItem' />
+                        <Image src={'/assets/Colaboracion/salitrex1.jpeg'} alt='Logo Salitrex Texto' width={1000} height={1000} className='w-full' role='listItem'/>
+                        <Image src={'/assets/Colaboracion/salitrex2.jpeg'} alt='Logo Salitrex' width={1000} height={1000} className='w-full' role='listItem' />
+                        <Image src={'/assets/Colaboracion/salitrex3.jpeg'} alt='Logo Salitrex Texto' width={1000} height={1000} className='w-full' role='listItem' />
+                        <Image src={'/assets/Colaboracion/salitrex4.jpeg'} alt='Logo Salitrex' width={1000} height={1000} className='w-full' role='listItem' />
+                        <Image src={'/assets/Colaboracion/salitrex5.jpeg'} alt='Logo Salitrex Texto' width={1000} height={1000} className='w-full' role='listItem'/>
+                        <Image src={'/assets/Colaboracion/salitrex6.jpeg'} alt='Logo Salitrex' width={1000} height={1000} className='w-full' role='listItem'/>
                     </div>
                 </div>        
             </section>
