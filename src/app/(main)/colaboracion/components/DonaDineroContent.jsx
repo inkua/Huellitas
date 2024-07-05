@@ -4,7 +4,7 @@ const DonaDineroContent = () => {
   return (
     (
         <div className="flex flex-col items-center lg:flex-col-reverse max-w-[700px]">
-          <div className="text-center lg:text-start ">
+          <div className="text-center lg:text-start lg:w-[70%]">
             <h2 className="heading-1 font-semibold">TRANSFERENCIA BANCARIA</h2>
             <p className="par-3">Doná el importe que quieras directamente en nuestra cuenta</p>
             <p className="par-3 font-semibold py-4">Cta Ahorros Bancolombia: 08500009646</p>
@@ -17,11 +17,8 @@ const DonaDineroContent = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center space-y-4 py-4 w-[80%] lg:w-full">
-          <h3 className="heading-1 font-semibold">Si deseas aportar un granito de arena, tenemos estas cuentas: </h3>
-            <div className="flex flex-col items-center py-4 gap-4 lg:flex-row lg:gap-24">
-            
-            </div>
+          <div className="flex flex-col items-center space-y-4 py-4 w-[80%]  lg:w-full">
+
             <div className="flex flex-col items-center py-4 gap-4 lg:flex-row lg:gap-24">
               <div>
               <Image src="/assets/Colaboracion/PayPalLogo.svg" alt="PayPal" width={150} height={150} />

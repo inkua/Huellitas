@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Modal from './components/Modal'
 import Slider from '../components/Slider/Slider'
 
+
+
 function Colaboracion() {
     const [modalVisible, setModalVisible] = useState({
         donar_dinero: false,
@@ -90,9 +92,9 @@ function Colaboracion() {
     return (
         <main className='relative'>
             <section className='flex flex-col relative w-full h-80 lg:h-[40rem] max-w-screen-2xl mx-auto bg-colab-banner bg-cover  bg-center' role='banner'>
-                <div className='flex absolute w-full lg:w-6/12 h-full items-end lg:justify-center p-6 lg:pb-[6rem]'>
+                <div className='flex absolute w-full lg:w-6/12 h-full items-end lg:justify-center p-6 lg:pb-[6rem] '>
                     <div className='flex w-full lg:w-6/12 justify-center lg:justify-start items-end'>
-                        <h1 className='font-bold lg:font-semibold heading-1 lg:text-7xl !text-white'>COLABORACIONES</h1>
+                        <h1 className='font-bold lg:font-semibold heading-1 lg:text-[5.5rem] !text-white'>COLABORACIONES</h1>
                     </div>
                 </div>
             </section>
@@ -105,7 +107,7 @@ function Colaboracion() {
             <section className='flex w-full max-w-screen-2xl mx-auto justify-center items-center bg-white lg:justify-start'>
                 <div className='flex flex-col w-11/12 lg:w-full gap-8 py-8'>
                     <h1 className='font-bold heading-1 text-center lg:text-left lg:ml-[12rem]'>TIENDAS QUE COLABORAN</h1>
-                    <Slider items={itemsColab} type={2} def={4} lg={3} md={3}></Slider>
+                    <Slider items={itemsColab} type={2} def={2} lg={5} md={3} className='lg:disabled'></Slider>
                 </div>        
             </section>
             <Modal isOpenD={modalVisible.donar_dinero } isOpenI={modalVisible.donar_insumos}  isOpenS={modalVisible.donar_servicios} onClose={closeModal}/>
