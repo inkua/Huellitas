@@ -13,7 +13,7 @@ function Table({ data, refreshCallback }) {
 
     useEffect(() => {
         if (document.cookie) {
-            console.log(document.cookie);
+            setToken(document.cookie.split("=")[1]);
         } else {
             setToken(sessionStorage.getItem("jwt"));
         }

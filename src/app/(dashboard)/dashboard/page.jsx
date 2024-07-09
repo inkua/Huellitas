@@ -6,7 +6,7 @@ import Table from "./components/Table/Table";
 
 function Dashboard() {
     const [stories, setStories] = useState(null);
-    const [refresh, refreshTable] = useState(0);
+    const [refresh, refreshTable] = useState(0); // Refresh callback to reload data from children components
 
     try {
         useEffect(() => {
@@ -17,10 +17,7 @@ function Dashboard() {
         }, [refresh]);
 
         return (
-            <div>
-                <h2 className="text-xl mb-4 font-bold tracking-tight text-gray-900">
-                    Historias
-                </h2>
+            <div className="my-12">
                 {stories && (
                     <Table data={stories} refreshCallback={refreshTable} />
                 )}

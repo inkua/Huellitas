@@ -17,6 +17,7 @@ export default function layout({ children }) {
                 setUser(isUser);
             }
 
+            //If no user, redirect to login page
             if (!isUser) {
                 window.location.replace("/auth");
             }
@@ -28,7 +29,7 @@ export default function layout({ children }) {
     if (user) {
         return <Authorized children={children} user={user} />;
     } else {
-        return <UnAuthorized />;
+        return <body></body>;
     }
 }
 
@@ -37,28 +38,12 @@ function Authorized({ children, user }) {
         <body>
             <div className="min-h-full">
                 <Navigation user={user} />
-
-                <header className="bg-white shadow">
-                    <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                        <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-                            Administrador
-                        </h1>
-                    </div>
-                </header>
                 <main>
                     <div className="mx-auto max-w-7xl py-6 px-6 sm:px-6 lg:px-8">
                         {children}
                     </div>
                 </main>
             </div>
-        </body>
-    );
-}
-
-function UnAuthorized() {
-    return (
-        <body>
-            <main></main>
         </body>
     );
 }
