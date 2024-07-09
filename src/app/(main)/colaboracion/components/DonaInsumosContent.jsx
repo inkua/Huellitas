@@ -1,6 +1,6 @@
 const DonaInsumosContent = () => {
   return (
-    <div className="overflow-y-auto max-w-[800px] flex flex-col justify-center items-center gap-10 px-12">
+    <div className="overflow-y-auto max-w-[800px] flex flex-col justify-center items-center gap-5 px-3 lg:px-12">
       <div className="flex lg:gap-6 flex-col lg:flex-row">
         <div className="lg:w-1/2">
           <h2 className="heading-2 font-semibold py-8">MEDICAMENTOS </h2>
@@ -42,13 +42,14 @@ const DonaInsumosContent = () => {
         </div>
       </div>
 
-      <div className="bg-primaryColor rounded-3xl py-6 px-14 my-4 w-full">
+      <div className="bg-primaryColor rounded-3xl py-2 px-4 my-4 w-full">
         <h2 className="pb-4">¿DÓNDE RECIBIMOS LAS DONACIONES?</h2>
         <p className="py-1 font-light">Dirección de huellitas cartagena</p>
         <p className="py-1 font-light">Lunes a viernes de X a X hs.</p>
-        <p className="py-1 font-light">En caso de ser cosas grandes, como ser casillas, carretillas, etc,
-          coordinar por mail axxxxx@xxxxx.com</p>
+        <p className="py-1 font-light">En caso de ser cosas grandes, como ser casillas, carretillas, etc, coordinar por mail axxxxx@xxxxx.com</p>
+
       </div>
+
     </div>
   );
 };
