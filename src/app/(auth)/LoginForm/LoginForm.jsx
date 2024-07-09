@@ -6,6 +6,7 @@ import axios from "axios";
 function LoginForm() {
     const [remember, setRemember] = useState(false);
     const [showNoUserMessage, setShowNoUserMessage] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -49,6 +50,10 @@ function LoginForm() {
         }
     }
 
+    function handleShowPassword() {
+        setShowPassword(!showPassword);
+    }
+
     return (
         <form
             onSubmit={handleSubmit}
@@ -61,13 +66,39 @@ function LoginForm() {
                 type="text"
                 id="idUsername"
             />
-            <input
-                className="w-[75vw] shadow-[0_4px_4px_rgba(0,0,0,0.25)] max-w-[26.935rem] p-3 rounded-[2rem]"
-                placeholder="Contraseña"
-                name="password"
-                type="password"
-                id="idPassword"
-            />
+            <div className="relative">
+                <input
+                    className="w-[75vw] shadow-[0_4px_4px_rgba(0,0,0,0.25)] max-w-[26.935rem] p-3 rounded-[2rem]"
+                    placeholder="Contraseña"
+                    name="password"
+                    type={showPassword ? "text" : "password"}
+                    id="idPassword"
+                />
+                {showPassword ? (
+                    <button
+                        type="button"
+                        onClick={handleShowPassword}
+                        className="absolute right-0 mr-3 top-1 mt-[0.6rem]"
+                    >
+                        <img
+                            src="assets/Login/eye.svg"
+                            alt="Boton de ocultar contraseña"
+                        />
+                    </button>
+                ) : (
+                    <button
+                        type="button"
+                        onClick={handleShowPassword}
+                        className="absolute right-0 mr-3 top-1 mt-[0.6rem]"
+                    >
+                        <img
+                            src="assets/Login/eyent.svg"
+                            alt="Boton de mostrar contraseña"
+                        />
+                    </button>
+                )}
+            </div>
+
             <section className="flex flex-col md:flex-row gap-3 my-3 w-[calc(100%-2rem)] text-white text-sm items-center md:justify-between">
                 <div
                     onClick={() => setRemember(!remember)}
@@ -87,13 +118,6 @@ function LoginForm() {
                     </div>
                     Recuerda mis datos
                 </div>
-
-                <a
-                    className="underline hover:text-blue-200"
-                    href="#LlamanosQueTeLoArreglamos"
-                >
-                    Olvidé mi contraseña
-                </a>
             </section>
             {showNoUserMessage && (
                 <section className="text-white drop-shadow-[0_0px_5px_rgba(255,0,0,1)]">

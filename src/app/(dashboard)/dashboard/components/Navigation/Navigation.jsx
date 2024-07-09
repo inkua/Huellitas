@@ -1,35 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import CRUD from "@/services";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Navigation({ user }) {
     const [menu, setMenu] = useState(false);
     const [drop, setDrop] = useState(false);
-    const [isAdmin, setIsAdmin] = useState(false);
-
-    useEffect(() => {
-        let token;
-
-        if (document.cookie) {
-            token = document.cookie.split("=")[1];
-        } else {
-            token = sessionStorage.getItem("jwt");
-        }
-
-        async function getPermisions() {
-            try {
-                const response = await CRUD.getPermisions(token);
-                if (response.role.name.toUpperCase() == "ADMINISTRADOR") {
-                    setIsAdmin(true);
-                }
-            } catch (error) {
-                console.log(error);
-            }
-        }
-        getPermisions();
-    });
 
     function handleLogout() {
         localStorage.clear();
@@ -67,24 +43,12 @@ export default function Navigation({ user }) {
                                 >
                                     Posteos
                                 </Link>
-
-                                {isAdmin && (
-                                    <Link
-                                        href="/dashboard/sponsors"
-                                        className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                                    >
-                                        Sponsors
-                                    </Link>
-                                )}
-
-                                {isAdmin && (
-                                    <Link
-                                        href="/dashboard/colaboradores"
-                                        className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                                    >
-                                        Colaboradores
-                                    </Link>
-                                )}
+                                <Link
+                                    href="/dashboard/sponsors"
+                                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                >
+                                    Sponsors
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -188,20 +152,20 @@ export default function Navigation({ user }) {
                 <div className="md:hidden" id="mobile-menu">
                     <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
                         <Link
-                            href="#"
+                            href="/dashboard"
                             className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                             aria-current="page"
                         >
                             Historias
                         </Link>
                         <Link
-                            href="#"
+                            href="/dashboard/posts"
                             className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                         >
                             Posteos
                         </Link>
                         <Link
-                            href="#"
+                            href="/dashboard/sponsors"
                             className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                         >
                             Sponsors

@@ -7,10 +7,21 @@ export default function layout({ children }) {
     const [user, setUser] = useState(null);
 
     useEffect(() => {
-        if (document.cookie && localStorage.getItem("user")) {
-            setUser(JSON.parse(localStorage.getItem("user")));
-        } else {
-            setUser(JSON.parse(sessionStorage.getItem("user")));
+        try {
+            let isUser;
+            if (document.cookie && localStorage.getItem("user")) {
+                isUser = JSON.parse(localStorage.getItem("user"));
+                setUser(isUser);
+            } else {
+                isUser = JSON.parse(sessionStorage.getItem("user"));
+                setUser(isUser);
+            }
+
+            if (!isUser) {
+                window.location.replace("/auth");
+            }
+        } catch (error) {
+            console.log(error);
         }
     }, []);
 
@@ -19,19 +30,6 @@ export default function layout({ children }) {
     } else {
         return <UnAuthorized />;
     }
-}
-
-function UnAuthorized() {
-    return (
-        <body>
-            <main className="flex h-[50vh] items-center justify-center">
-                <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-                    Solo el administrador y los colaboradores pueden acceder a
-                    este sitio.
-                </h1>
-            </main>
-        </body>
-    );
 }
 
 function Authorized({ children, user }) {
@@ -53,6 +51,14 @@ function Authorized({ children, user }) {
                     </div>
                 </main>
             </div>
+        </body>
+    );
+}
+
+function UnAuthorized() {
+    return (
+        <body>
+            <main></main>
         </body>
     );
 }
