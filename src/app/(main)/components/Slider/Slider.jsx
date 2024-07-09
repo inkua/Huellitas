@@ -2,6 +2,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import CardC from '../../colaboracion/components/Card'
 import CardH from '../History/Card'
+import CardColab from '../../colaboracion/components/Colab'
 import 'swiper/css/pagination'
 import 'swiper/css'
 
@@ -19,10 +20,11 @@ function Slider({ items, type, def, lg, md }) {
     )
 }
 
-const createItem = (type, source, par, btn, action) => {
+const createItem = (type, source, par, btn, action, alt) => {
     const card = [
         <CardH source={source} par={par} btn={btn} />,
         <CardC source={source} btn_txt={btn} onButtonClick={action} />,
+        <CardColab source={source} alt={alt} />, 
     ]
     return card[type] || null
 }
