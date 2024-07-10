@@ -16,7 +16,7 @@ module.exports = {
         "hero-banner-lg": "url('https://res.cloudinary.com/dorljfo6v/image/upload/v1718046400/huellitas/home-banner-desktop.jpg')",
         "hero-banner-sm": "url('https://res.cloudinary.com/dorljfo6v/image/upload/v1718046399/huellitas/home-banner-mobile.jpg')",
         "colab-banner": "url('https://res.cloudinary.com/dorljfo6v/image/upload/v1718050498/huellitas/colaboraciones-banner.jpg')",
-        "sample": "url('/assets/Sumate/sample2.jpg')",
+        "sample": "url('/assets/Sumate/girl&dog.png')",
       },
       backgroundSize: {
         '1': '45%',

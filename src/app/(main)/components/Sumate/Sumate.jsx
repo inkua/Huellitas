@@ -1,12 +1,11 @@
-import Image from 'next/image';
 
 function Sumate() {
     return (
-        <section className="flex justify-center w-full bg-primaryColor py-8 md:py-10 lg:py-16 xs:bg-sample bg-1 bg-no-repeat bg-right-bottom md:bg-none bg-none">
+        <section className="flex justify-center w-full bg-primaryColor pt-8 md:pt-10 lg:pt-16 xs:bg-sample bg-1 bg-no-repeat bg-right-bottom md:bg-none bg-none">
 
             <div className="w-full max-w-screen-2xl mx-auto h-full" >
 
-                <div className='w-[90%] lg:w-9/12 m-auto md:bg-sample bg-2 bg-no-repeat bg-right-bottom lg:bg-3'>
+                <div className='w-[90%] lg:w-9/12 m-auto md:bg-sample pb-8 md:pb-10 lg:pb-16 bg-2 bg-no-repeat bg-right-bottom lg:bg-4'>
                     <h2 className="heading-1 font-bold !text-white">TÚ TAMBIÉN PUEDES AYUDAR</h2>
                     <div className="flex items-center w-full">
 
