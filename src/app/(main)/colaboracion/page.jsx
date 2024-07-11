@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Modal from './components/Modal'
 import Slider from '../components/Slider/Slider'
-
+import Slider2 from '../components/Slider/slider2'
 
 
 function Colaboracion() {
@@ -88,6 +88,22 @@ function Colaboracion() {
             source: '/assets/Colaboracion/salitrex6.jpeg',
         },
     ]
+    const images = [
+        
+            '/assets/Colaboracion/LogoArtemis.png',
+      
+            '/assets/Colaboracion/salitrex1.jpeg',
+       
+            '/assets/Colaboracion/salitrex2.jpeg',
+    
+            '/assets/Colaboracion/salitrex3.jpeg',
+            '/assets/Colaboracion/salitrex4.jpeg',
+       
+           '/assets/Colaboracion/salitrex5.jpeg',
+     
+           '/assets/Colaboracion/salitrex6.jpeg',
+       
+    ]
 
     return (
         <main className='relative'>
@@ -106,11 +122,12 @@ function Colaboracion() {
 
             <section className='flex w-full max-w-screen-2xl mx-auto justify-center items-center bg-white lg:justify-start'>
                 <div className='flex flex-col w-11/12 lg:w-full gap-8 py-8'>
-                    <h1 className='font-bold heading-1 text-center lg:text-left lg:ml-[12rem]'>TIENDAS QUE COLABORAN</h1>
-                    <Slider items={itemsColab} type={2} def={2} lg={5} md={3} className='lg:disabled'></Slider>
+                    <h1 className='font-bold heading-1 text-center lg:text-left lg:ml-[12rem]'>TIENDAS QUE COLABORAN</h1>       
+                    <Slider2 images={images}/>                
                 </div>        
             </section>
             <Modal isOpenD={modalVisible.donar_dinero } isOpenI={modalVisible.donar_insumos}  isOpenS={modalVisible.donar_servicios} onClose={closeModal}/>
+            
         
         </main>
     )
