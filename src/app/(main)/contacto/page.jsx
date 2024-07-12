@@ -3,6 +3,7 @@ import Informacion from "./componentes/informacion.jsx"
 function Contacto() {
     return (
         <main className="">
+            <title>Contacto</title> 
             <Map/>
         </main>
     )

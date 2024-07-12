@@ -106,7 +106,9 @@ function Colaboracion() {
     ]
 
     return (
+        
         <main className='relative'>
+            <title>Colaboración</title> 
             <section className='flex flex-col relative w-full h-80 lg:h-[40rem] max-w-screen-2xl mx-auto bg-colab-banner bg-cover  bg-center' role='banner'>
                 <div className='flex absolute w-full lg:w-6/12 h-full items-end lg:justify-center p-6 lg:pb-[6rem] '>
                     <div className='flex w-full lg:w-6/12 justify-center lg:justify-start items-end'>
