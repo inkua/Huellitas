@@ -23,7 +23,7 @@ let items = [
         id: 4,
         par: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea cumque ad iure quaerat totam?',
         btn: 'SABER MAS...',
-        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957502/huellitas/home-siguesushistorias-1_aezlpd.png',
+        source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957511/huellitas/home-siguesushistorias-2_ishlvs.png',
     },
 ]
 

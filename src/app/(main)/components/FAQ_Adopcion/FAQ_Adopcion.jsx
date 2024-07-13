@@ -67,19 +67,20 @@ function FAQ_Adopcion() {
                 alt="Sing dog Mobile"
               />
             </div>
+            <div className='flex w-full'>
+              <Image
+                src={
+                  "https://res.cloudinary.com/dorljfo6v/image/upload/v1718046053/huellitas/adopcion-faq-desktop.png"
+                }
+                width={700}
+                height={700}
+                className="rounded-xl lg:w-5/12 hidden lg:block lg:mr-7 object-cover self-start relative"
+                alt="Sing dog desktop"
+              />
 
-            <Image
-              src={
-                "https://res.cloudinary.com/dorljfo6v/image/upload/v1718046053/huellitas/adopcion-faq-desktop.png"
-              }
-              width={700}
-              height={700}
-              className="rounded-xl lg:w-5/12 hidden lg:block lg:mr-7 object-cover relative"
-              alt="Sing dog desktop"
-            />
-
-            <div className="w-full flex flex-col h-full ">
-              <Accord items={items} />
+              <div className="w-full flex flex-col space-y-4">
+                <Accord items={items} />
+              </div>
             </div>
           </div>
         </div>

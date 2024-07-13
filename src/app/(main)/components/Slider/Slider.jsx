@@ -7,11 +7,12 @@ import CardColab from '../../colaboracion/components/Colab'
 import 'swiper/css/navigation'
 import 'swiper/css/bundle'
 import 'swiper/css'
+import './custom-swiper-bullet.css'
 
 function Slider({ items, type, def, lg, md }) {
     return (
         <Swiper modules={[Navigation]}
-            navigation
+            navigation={true}
             slidesPerView={def} breakpoints={{ 1024: { slidesPerView: lg }, 768: { slidesPerView: md } }}
             spaceBetween={15}
             loop={true}

@@ -3,13 +3,13 @@ import { Accordion, AccordionItem } from "@nextui-org/accordion"
 
 function Accord({ items }) {
     return (
-        <Accordion variant="splitted" className="outline-none lg:gap-2 px-0 flex-1">
+        <Accordion variant="splitted" className="grid outline-none lg:gap-2 px-0 h-full">
             {
                 items.map(item => (
                     <AccordionItem
                         key={item.id}
-                        title={<h1 className="par-2 text-left px-4">{item.title}</h1>}
-                        className='bg-tertiaryColor rounded-3xl shadow-md flex-1'
+                        title={<h1 className="par-2 text-left px-4 p-auto">{item.title}</h1>}
+                        className='w-full flex flex-col justify-center bg-tertiaryColor rounded-3xl shadow-md h-auto'
                         isCompact={true}
                         textValue='question'
                         indicator={({ isOpen }) => (isOpen ? 
