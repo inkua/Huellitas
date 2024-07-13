@@ -13,7 +13,6 @@ export default function Home() {
             <Sumate />
             <section className="mb-12">
                 <FAQ_Adopcion />
-                <FAQ_Colaboracion />
             </section>
         </main>
     )
