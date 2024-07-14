@@ -81,22 +81,7 @@ function Colaboracion() {
         },
       
     ]
-    const images = [
-        
-            '/assets/Colaboracion/LogoArtemis.png',
-      
-            '/assets/Colaboracion/salitrex1.jpeg',
-       
-            '/assets/Colaboracion/salitrex2.jpeg',
     
-            '/assets/Colaboracion/salitrex3.jpeg',
-            '/assets/Colaboracion/salitrex4.jpeg',
-       
-           '/assets/Colaboracion/salitrex5.jpeg',
-     
-           '/assets/Colaboracion/salitrex6.jpeg',
-       
-    ]
 
     return (
         
