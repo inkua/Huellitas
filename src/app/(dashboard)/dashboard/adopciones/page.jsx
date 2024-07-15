@@ -2,14 +2,15 @@
 
 import { useState, useEffect } from "react";
 import Table from "../components/Table/Table";
+import { collection } from "firebase/firestore";
 
-function Sponsors() {
+function Adopciones() {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
     const [data, setData] = useState(null);
     const [refresh, refreshCallback] = useState(0); // Just to update the data from child components
 
     async function getData() {
-        const res = await fetch(apiUrl + "/sponsors");
+        const res = await fetch(apiUrl + "/adopciones");
         setData(await res.json());
     }
 
@@ -23,7 +24,7 @@ function Sponsors() {
                 <Table
                     data={data}
                     refreshCallback={refreshCallback}
-                    config={{ collection: "sponsors" }}
+                    config={{ collection: "adopciones" }}
                 />
             </div>
         );
@@ -33,4 +34,4 @@ function Sponsors() {
     }
 }
 
-export default Sponsors;
+export default Adopciones;

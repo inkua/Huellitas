@@ -2,13 +2,10 @@
 
 import Link from "next/link";
 
-export default function Navigation({ user }) {
+export default function Navigation() {
     function handleLogout() {
         localStorage.clear();
         sessionStorage.clear();
-        // We delete the cookie setting an expiration date in the past
-        document.cookie =
-            "jwt=deleted;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
     }
 
     return (
@@ -27,7 +24,7 @@ export default function Navigation({ user }) {
                                 </Link>
 
                                 <Link
-                                    href="/dashboard/posts"
+                                    href="/dashboard/adopciones"
                                     className="hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                                 >
                                     ADOPCIÓN

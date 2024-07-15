@@ -1,19 +1,25 @@
-import CRUD from "@/services";
-
-function ModalMod({ item, closeCallback, token }) {
+function ModalMod({ item, closeCallback, token, config }) {
     async function handleClick(e) {
         try {
             e.preventDefault();
-            await CRUD.updateStory(
-                item.id,
-                {
-                    data: {
-                        title: e.target.title.value,
-                        description: e.target.description.value,
-                    },
-                },
-                token
-            );
+
+            const data = {
+                nombre: e.target.title.value,
+            };
+
+            if (config.collection != "sponsors") {
+                data.descripcion = e.target.description.value;
+            }
+
+            await fetch("/api/" + config.collection, {
+                method: "PUT",
+                body: JSON.stringify({
+                    token: token,
+                    id: item.id,
+                    data: data,
+                }),
+            });
+
             closeCallback();
         } catch (e) {
             console.log(e.message);
@@ -30,7 +36,7 @@ function ModalMod({ item, closeCallback, token }) {
                     <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
                         <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                                Modificar historia
+                                Modificar
                             </h3>
                             <button
                                 onClick={closeCallback}
@@ -62,38 +68,40 @@ function ModalMod({ item, closeCallback, token }) {
                                         htmlFor="title"
                                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                     >
-                                        Título
+                                        Nombre
                                     </label>
                                     <input
                                         type="text"
                                         name="title"
                                         id="title"
                                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                        placeholder="Título de la historia"
+                                        placeholder="Nombre"
                                         required
                                     ></input>
                                 </div>
-                                <div className="col-span-2">
-                                    <label
-                                        htmlFor="description"
-                                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                    >
-                                        Descripcion
-                                    </label>
-                                    <textarea
-                                        id="description"
-                                        rows="4"
-                                        className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="Descripción de la historia"
-                                        required
-                                    ></textarea>
-                                </div>
+                                {config.collection != "sponsors" && (
+                                    <div className="col-span-2">
+                                        <label
+                                            htmlFor="description"
+                                            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                        >
+                                            Descripcion
+                                        </label>
+                                        <textarea
+                                            id="description"
+                                            rows="4"
+                                            className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            placeholder="Descripción"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                )}
                             </div>
                             <button
                                 type="submit"
                                 className="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                             >
-                                Modificar historia
+                                Modificar
                             </button>
                         </form>
                     </div>

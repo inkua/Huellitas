@@ -1,19 +1,18 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import CRUD from "@/services";
 import ModalAdd from "./Modals/ModalAdd";
 import ModalMod from "./Modals/ModalMod";
 
-function Table({ data, refreshCallback }) {
+function Table({ data, refreshCallback, config }) {
     const [isModalAddActive, setIsModalAddActive] = useState(false);
     const [isModalModActive, setIsModalModActive] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
     const [token, setToken] = useState("");
 
     useEffect(() => {
-        if (document.cookie) {
-            setToken(document.cookie.split("=")[1]);
+        if (localStorage.getItem("jwt")) {
+            setToken(localStorage.getItem("jwt"));
         } else {
             setToken(sessionStorage.getItem("jwt"));
         }
@@ -40,7 +39,13 @@ function Table({ data, refreshCallback }) {
     }
 
     async function handleRemove(item) {
-        await CRUD.removeStory(item, token);
+        await fetch("/api/" + config.collection, {
+            method: "DELETE",
+            body: JSON.stringify({
+                token: token,
+                id: item.id,
+            }),
+        });
         refreshCallback(Date.now());
     }
 
@@ -65,7 +70,7 @@ function Table({ data, refreshCallback }) {
                         </tr>
                     </thead>
                     <tbody className="">
-                        {data.map((item) => {
+                        {data?.map((item) => {
                             return (
                                 <tr
                                     key={item.id}
@@ -73,29 +78,18 @@ function Table({ data, refreshCallback }) {
                                 >
                                     <th
                                         scope="row"
-                                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
                                     >
-                                        {item.attributes.title}
+                                        {item.data.nombre}
                                     </th>
                                     <td className="px-6 py-4">
-                                        {item.attributes.description.length > 30
-                                            ? item.attributes.description.slice(
-                                                  0,
-                                                  30
-                                              ) + "..."
-                                            : item.attributes.description}
+                                        {item.data.descripcion}
                                     </td>
                                     <td className="px-6 min-w-[10rem] py-2">
                                         <img
                                             className="h-24"
-                                            src={
-                                                item.attributes.image.data
-                                                    .attributes.url
-                                            }
-                                            alt={
-                                                item.attributes.image.data
-                                                    .attributes.alt
-                                            }
+                                            src={item.data.imagen}
+                                            alt="Imagen de un perrito"
                                         />
                                     </td>
                                     <td className="px-6 py-4 text-right min-w-[15rem]">
@@ -123,6 +117,7 @@ function Table({ data, refreshCallback }) {
                         item={selectedItem}
                         closeCallback={handleModalModClose}
                         token={token}
+                        config={config}
                     />
                 )}
 
@@ -130,6 +125,7 @@ function Table({ data, refreshCallback }) {
                     <ModalAdd
                         closeCallback={handleModalAddClose}
                         token={token}
+                        config={config}
                     />
                 )}
             </div>

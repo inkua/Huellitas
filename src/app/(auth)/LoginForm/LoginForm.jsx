@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import axios from "axios";
 
 function LoginForm() {
     const [remember, setRemember] = useState(false);
@@ -10,43 +9,41 @@ function LoginForm() {
 
     function handleSubmit(e) {
         e.preventDefault();
-
-        if (!sessionStorage.getItem("jwt") && !document.cookie) {
-            logIn(e.target.username.value, e.target.password.value);
-        } else {
-            window.location.replace("/dashboard");
-        }
+        logIn(e.target.email.value, e.target.password.value);
     }
 
-    async function logIn(user, pass) {
+    async function logIn(email, pass) {
         try {
-            const response = await axios.post(
-                "http://localhost:1337/api/auth/local?populate=*",
-                {
-                    identifier: user,
-                    password: pass,
-                }
-            );
-            saveUser(response.data);
-            window.location.replace("/dashboard");
-        } catch (error) {
-            console.log(error.data);
+            const response = await fetch("/api/auth", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email: email,
+                    pass: pass,
+                }),
+            });
+
+            const data = await response.json();
+
+            if (data.status == 200) {
+                saveUser(data.data);
+                window.location.replace("/dashboard");
+            } else {
+                setShowNoUserMessage(true);
+            }
+        } catch (e) {
+            console.log(e);
             setShowNoUserMessage(true);
         }
     }
 
-    function saveUser(data) {
+    function saveUser(jwt) {
         if (remember) {
-            document.cookie =
-                "jwt=" +
-                data.jwt +
-                ";expires=" +
-                new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString() +
-                ";SameSite=None;path=/";
-            localStorage.setItem("user", JSON.stringify(data.user));
+            localStorage.setItem("jwt", jwt);
         } else {
-            sessionStorage.setItem("jwt", data.jwt);
-            sessionStorage.setItem("user", JSON.stringify(data.user));
+            sessionStorage.setItem("jwt", jwt);
         }
     }
 
@@ -61,10 +58,10 @@ function LoginForm() {
         >
             <input
                 className="w-[75vw] shadow-[0_4px_4px_rgba(0,0,0,0.25)] max-w-[26.935rem] p-3 rounded-[2rem]"
-                placeholder="Usuario"
-                name="username"
+                placeholder="Email"
+                name="email"
                 type="text"
-                id="idUsername"
+                id="idEmail"
             />
             <div className="relative">
                 <input

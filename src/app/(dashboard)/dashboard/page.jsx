@@ -1,26 +1,30 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import CRUD from "@/services";
 import Table from "./components/Table/Table";
 
 function Dashboard() {
-    const [stories, setStories] = useState(null);
-    const [refresh, refreshTable] = useState(0); // Refresh callback to reload data from children components
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const [data, setData] = useState(null);
+    const [refresh, refreshCallback] = useState(0); // Just to update the data from child components
+
+    async function getData() {
+        const res = await fetch(apiUrl + "/historias");
+        setData(await res.json());
+    }
+
+    useEffect(() => {
+        getData();
+    }, [refresh]);
 
     try {
-        useEffect(() => {
-            async function load() {
-                setStories(await CRUD.getStories());
-            }
-            load();
-        }, [refresh]);
-
         return (
             <div className="my-12">
-                {stories && (
-                    <Table data={stories} refreshCallback={refreshTable} />
-                )}
+                <Table
+                    data={data}
+                    refreshCallback={refreshCallback}
+                    config={{ collection: "historias" }}
+                />
             </div>
         );
     } catch (e) {
