@@ -11,6 +11,12 @@
   --background-end-rgb: 255, 255, 255;
 
 }
+/* no tocar */
+.slide-image-reference .swiper-wrapper{
+  display: flex;
+  align-items: center;
+}
+/* no tocar */
 
 @media (prefers-color-scheme: dark) {
   :root {
