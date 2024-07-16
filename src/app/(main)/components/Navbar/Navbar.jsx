@@ -54,7 +54,7 @@ function Navbar() {
                         </Link>
                     </div>
                     <div
-                        className={`md:static absolute md:min-h-fit left-0 ${showMenu ? "top-[100%]" : "top-[-300%]"
+                        className={`md:static absolute md:shadow-none md:min-h-fit left-0 ${showMenu ? "top-[100%] shadow-lg" : "top-[-300%]"
                             } md:w-auto w-full flex items-center px-5 bg-white transition-all duration-500 ease-in-out z-[-10] md:z-0 md:bg-transparent py-4`}
                     >
                         <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-primaryFont font-semibold">
