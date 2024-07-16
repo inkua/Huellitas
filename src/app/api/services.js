@@ -7,7 +7,13 @@ import {
     deleteDoc,
     getDoc,
 } from "firebase/firestore";
-import { db } from "@/services/firebaseConfig";
+import { db, storage } from "@/app/api/firebaseConfig";
+import {
+    ref,
+    uploadBytes,
+    getDownloadURL,
+    deleteObject,
+} from "firebase/storage";
 
 // Get docs refs
 export async function getRef(collectionName) {
@@ -53,6 +59,26 @@ export async function delElement(id, collectionName) {
         console.log(e);
     }
 }
+
+// Upload an image
+export async function uploadImage(file) {
+    const storageRef = ref(storage, `images/${file.name}`);
+    await uploadBytes(storageRef, file);
+    return await getDownloadURL(storageRef);
+}
+
+// Delete an image
+export async function delImage(imageUrl) {
+    try {
+        const storageRef = ref(storage, imageUrl);
+        await deleteObject(storageRef);
+    } catch (e) {
+        console.error("Error al eliminar el post: ", e);
+        throw new Error("Error al eliminar el post");
+    }
+}
+
+export default uploadImage;
 
 // Adapt docs format to use them easily
 export function formatData(res) {

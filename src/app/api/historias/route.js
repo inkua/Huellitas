@@ -4,6 +4,7 @@ import {
     addElement,
     putElement,
     delElement,
+    delImage,
 } from "../services";
 
 export async function GET() {
@@ -43,10 +44,11 @@ export async function PUT(req) {
 
 export async function DELETE(req) {
     try {
-        const { token, id } = await req.json();
+        const { token, item } = await req.json();
         // Use token to validate request
 
-        const res = await delElement(id, "historias");
+        await delImage(item.data.imagen);
+        const res = await delElement(item.id, "historias");
         return Response.json({ status: 200, data: res });
     } catch (e) {
         console.log(e);

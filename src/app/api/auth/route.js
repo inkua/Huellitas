@@ -1,5 +1,5 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "@/services/firebaseConfig";
+import { auth } from "@/app/api/firebaseConfig";
 
 export async function POST(req) {
     try {

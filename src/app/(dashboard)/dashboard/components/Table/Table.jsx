@@ -43,7 +43,7 @@ function Table({ data, refreshCallback, config }) {
             method: "DELETE",
             body: JSON.stringify({
                 token: token,
-                id: item.id,
+                item: item,
             }),
         });
         refreshCallback(Date.now());

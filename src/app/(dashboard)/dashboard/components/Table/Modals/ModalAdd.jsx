@@ -1,12 +1,17 @@
+import uploadImage from "@/app/api/services";
+
 function ModalAdd({ closeCallback, token, config }) {
     async function handleClick(e) {
         try {
             e.preventDefault();
 
+            const imageUrl = await uploadImage(e.target.image.files[0]);
             const data = {
                 nombre: e.target.title.value,
+                imagen: imageUrl,
             };
 
+            // Sponsors is the only who has no comments so...
             if (config.collection != "sponsors") {
                 data.descripcion = e.target.description.value;
             }
