@@ -6,7 +6,7 @@ function NotFound() {
         return (
             <body>
                 <main>
-                    <section className='w-screen h-screen flex flex-col lg:flex-row'>
+                    <section className='w-screen h-screen flex flex-col lg:flex-row max-w-screen-2xl mx-auto'>
                         <div className='flex flex-col w-full lg:w-6/12 h-[35%] lg:h-full justify-center items-center gap-4 lg:bg-primaryFont'>
                             <h1 className='text-6xl md:text-7xl font-bold text-primaryFont lg:text-white'>PÁGINA</h1>
                             <h2 className='text-4xl md:text-5xl font-bold text-primaryFont lg:text-white'>NO ENCONTRADA</h2>
