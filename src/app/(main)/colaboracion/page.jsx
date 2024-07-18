@@ -54,31 +54,39 @@ function Colaboracion() {
     ]
     let itemsColab = [
         {
-            id: 1,
+            id: 0,
             alt:'Logo Artemix',
             source: '/assets/Colaboracion/LogoArtemis.png',
         },
-       
+        
+        {
+            id: 1,
+            alt:'Logo Salitrex',
+            source: '/assets/Colaboracion/salitrex.jpeg',
+        },
         {
             id: 2,
-            alt:'Logo Salitrex',
-            source: '/assets/Colaboracion/salitrex3.jpeg',
+            alt:'Logo Artemix',
+            source: '/assets/Colaboracion/LogoArtemis.png',
         },
+        
         {
             id: 3,
             alt:'Logo Salitrex',
-            source: '/assets/Colaboracion/salitrex4.jpeg',
+            source: '/assets/Colaboracion/salitrex.jpeg',
         },
         {
             id: 4,
-            alt:'Logo Salitrex',
-            source: '/assets/Colaboracion/salitrex4.jpeg',
+            alt:'Logo Artemix',
+            source: '/assets/Colaboracion/LogoArtemis.png',
         },
+        
         {
             id: 5,
             alt:'Logo Salitrex',
-            source: '/assets/Colaboracion/salitrex4.jpeg',
+            source: '/assets/Colaboracion/salitrex.jpeg',
         },
+     
       
     ]
     
@@ -96,7 +104,7 @@ function Colaboracion() {
             </section>
 
             <section className='flex flex-col w-full max-w-screen-2xl mx-auto justify-center items-center gap-8 py-16 bg-white'>
-                <h1 className='w-11/12 lg:w-9/12 font-bold heading-1 text-left'>¿COMO QUIERES COLABORAR?</h1>
+                <h1 className='w-11/12 lg:w-9/12 lg:font-bold heading-1 lg:text-left font-semibold text-h1-m'>¿COMO QUIERES COLABORAR?</h1>
                 <Slider items={items} type={1} def={2.15} lg={3} md={3}></Slider>
             </section>
 

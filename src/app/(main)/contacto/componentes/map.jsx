@@ -51,7 +51,7 @@ function map(){
                             <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-5 lg:ml-5" href="@huellitas.ctgna">@huellitas.ctgna</a>
                         </div>
                         <div className="flex content-center">
-                            <Image className="w-[10%] lg:ml-[8%] lg:w-[13%]" src="/assets/logos/png/tiktokLogo2.png"  alt="faceboo" width={700} height={700} />
+                            <Image className="w-[10%] lg:ml-[8%] lg:w-[13%]" src="/assets/logos/png/tiktokLogo.png"  alt="faceboo" width={700} height={700} />
                             <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-5 lg:ml-5" href="@huellitascartagena ">@huellitascartagena</a>
                         </div>
                    </div>

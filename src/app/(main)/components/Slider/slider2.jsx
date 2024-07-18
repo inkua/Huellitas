@@ -6,7 +6,7 @@ import 'swiper/css'
 
 function Slider({ items, type, def, lg, md }) {
     return (
-        <Swiper slidesPerView={def} breakpoints={{ 1024: { slidesPerView: lg }, 768: { slidesPerView: md } }} spaceBetween={15} className='w-full lg:w-6/12 cursor-grab slide-image-reference' >
+        <Swiper slidesPerView={def} breakpoints={{ 1024: { slidesPerView: lg }, 768: { slidesPerView: md } }} spaceBetween={15} className='w-full lg:w-6/12 cursor-grab slide-image-reference ' >
                 {
                     items.map(item => (
                         <SwiperSlide key={item.id}>
