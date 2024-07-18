@@ -1,27 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { AdminProvider } from "@/components/AdminProvider";
 import Navigation from "./components/Navigation/Navigation";
+import RouterSecurity from "@/components/RouterSecurity";
 
 export default function layout({ children }) {
-    const [token, setToken] = useState("");
-
-    function getToken() {
-        if (localStorage.getItem("jwt")) {
-            setToken(localStorage.getItem("jwt"));
-        } else if (sessionStorage.getItem("jwt")) {
-            setToken(sessionStorage.getItem("jwt"));
-        } else {
-            window.location.replace("/auth");
-        }
-    }
-
-    useEffect(() => {
-        getToken();
-    }, []);
-
-    if (token) {
-        return (
+    return (
+        <RouterSecurity>
             <body>
                 <div className="min-h-full">
                     <Navigation />
@@ -32,8 +17,6 @@ export default function layout({ children }) {
                     </main>
                 </div>
             </body>
-        );
-    } else {
-        return <body></body>;
-    }
+        </RouterSecurity>
+    );
 }

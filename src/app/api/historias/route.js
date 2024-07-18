@@ -5,7 +5,7 @@ import {
     putElement,
     delElement,
     delImage,
-} from "../services";
+} from "../../../services/services";
 
 export async function GET() {
     try {

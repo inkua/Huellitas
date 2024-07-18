@@ -1,4 +1,4 @@
-import uploadImage from "@/app/api/services";
+import uploadImage from "@/services/services";
 
 function ModalAdd({ closeCallback, token, config }) {
     async function handleClick(e) {

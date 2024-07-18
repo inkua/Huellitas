@@ -15,6 +15,24 @@ import {
     deleteObject,
 } from "firebase/storage";
 
+// Get users by email
+export async function getUserByEmail(email, pass) {
+    const res = await getRef("admins");
+
+    const admins = res.docs.map((data) => {
+        return {
+            id: data.id,
+            data: data.data(),
+        };
+    });
+
+    const userFound = admins.find((user) => {
+        return user.data.email == email && user.data.contraseña == pass;
+    });
+
+    return userFound;
+}
+
 // Get docs refs
 export async function getRef(collectionName) {
     try {

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Table from "../components/Table/Table";
-import { collection } from "firebase/firestore";
 
 function Adopciones() {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;

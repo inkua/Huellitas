@@ -1,34 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { logIn } from "@/services/user.services";
+import { AdminContext } from "@/components/AdminProvider";
 
 function LoginForm() {
     const [remember, setRemember] = useState(false);
     const [showNoUserMessage, setShowNoUserMessage] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
+    const { updateUser } = useContext(AdminContext);
 
     function handleSubmit(e) {
         e.preventDefault();
-        logIn(e.target.email.value, e.target.password.value);
+        handleLogIng(e.target.email.value, e.target.password.value);
     }
 
-    async function logIn(email, pass) {
+    async function handleLogIng(email, pass) {
         try {
-            const response = await fetch("/api/auth", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    email: email,
-                    pass: pass,
-                }),
-            });
+            const user = await logIn(email, pass);
 
-            const data = await response.json();
-
-            if (data.status == 200) {
-                saveUser(data.data);
+            if (user) {
+                saveUser(user);
                 window.location.replace("/dashboard");
             } else {
                 setShowNoUserMessage(true);
@@ -39,11 +31,12 @@ function LoginForm() {
         }
     }
 
-    function saveUser(jwt) {
-        if (remember) {
-            localStorage.setItem("jwt", jwt);
-        } else {
-            sessionStorage.setItem("jwt", jwt);
+    function saveUser(user) {
+        try {
+            updateUser(user);
+            sessionStorage.setItem("user", JSON.stringify(user));
+        } catch (e) {
+            console.log(e);
         }
     }
 
