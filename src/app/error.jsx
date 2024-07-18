@@ -1,12 +1,12 @@
 'use client'
 
 function Error() {
-    {
-        return (
-            <div>
 
-            </div>
-        )
-    }
+    return (
+        <body>
+            <h1 className="text-black">Error page</h1>
+        </body>
+    )
+
 }
 export default Error

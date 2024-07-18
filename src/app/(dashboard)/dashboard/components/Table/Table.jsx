@@ -69,6 +69,7 @@ function Table({ data, refreshCallback, config }) {
                             </th>
                         </tr>
                     </thead>
+                    {data &&
                     <tbody className="">
                         {data?.map((item) => {
                             return (
@@ -110,6 +111,7 @@ function Table({ data, refreshCallback, config }) {
                             );
                         })}
                     </tbody>
+                    }
                 </table>
 
                 {isModalModActive && (

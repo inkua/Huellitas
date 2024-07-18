@@ -1,11 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import { AdminContext } from "@/components/AdminProvider"; 
+import { useContext } from "react";
 
 export default function Navigation() {
+    const {updateUser, user} = useContext(AdminContext)
+
     function handleLogout() {
-        localStorage.clear();
         sessionStorage.clear();
+        updateUser(null)
     }
 
     return (
@@ -35,6 +39,16 @@ export default function Navigation() {
                                 >
                                     SPONSORS
                                 </Link>
+                                {
+                                user&&
+                                user.role==='root'&&
+                                    <Link
+                                    href="/dashboard/users"
+                                    className="hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                    >
+                                        USUARIOS
+                                    </Link>
+                                }
                             </div>
                         </div>
                     </div>
@@ -76,6 +90,16 @@ export default function Navigation() {
                     >
                         SPONSORS
                     </Link>
+                    {
+                    user&&
+                    user.role==='root'&&
+                        <Link
+                        href="/dashboard/users"
+                        className="hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                        >
+                            USUARIOS
+                        </Link>
+                    }
                 </div>
                 <div>
                     <div className="mt-10 px-2 text-center">

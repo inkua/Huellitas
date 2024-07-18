@@ -1,12 +1,12 @@
-import Link from 'next/link'
+
 
 function NotFound() {
-    {
-        return (
-            <div>
 
-            </div>
-        )
-    }
+    return (
+        <body>
+            <h1 className="text-black">not found page</h1>
+        </body>
+    )
+
 }
 export default NotFound

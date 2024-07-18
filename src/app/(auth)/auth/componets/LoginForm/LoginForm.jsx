@@ -3,12 +3,14 @@
 import { useState, useContext } from "react";
 import { logIn } from "@/services/user.services";
 import { AdminContext } from "@/components/AdminProvider";
+import { useRouter } from "next/navigation";
 
 function LoginForm() {
     const [remember, setRemember] = useState(false);
     const [showNoUserMessage, setShowNoUserMessage] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     const { updateUser } = useContext(AdminContext);
+    const router = useRouter()
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -21,7 +23,7 @@ function LoginForm() {
 
             if (user) {
                 saveUser(user);
-                window.location.replace("/dashboard");
+                router.push('/dashboard')
             } else {
                 setShowNoUserMessage(true);
             }
