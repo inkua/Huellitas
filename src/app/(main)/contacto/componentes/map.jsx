@@ -3,8 +3,8 @@ import Image from "next/image";
 function map(){
 
     return(
-        <div className='w-full bg-tertiaryColor h-fit'>
-            <div className="w-full h-full max-w-screen-2xl mx-auto  grid grid-cols-1 gap-6 content-start  lg:grid-cols-2 lg:gap-0 shadow-2xl mb-3">          
+        <div className='w-full bg-tertiaryColor h-fit  drop-shadow-2xl'>
+            <div className="w-full h-full mx-auto max-w-screen-2xl grid grid-cols-1 gap-6 content-start  lg:grid-cols-2 lg:gap-0 mb-3 lg:mb-2 shadow-2xl lg:shadow-none">          
                 <div className='w-full  max-w-screen-2xl '>
                     <div className='grid grid-cols-1 ml-[10%]'>
                         <div>
@@ -43,16 +43,16 @@ function map(){
             </div>
             </div>
             <div className="bg-whitegrid grid-cols-1 gap-0 content-end bg-white">
-                    <p className='text-primaryFont mb-1 text-p3-m justify-end text-center mt-8'>Para llegar a más personas y poder seguir ayudando</p>
+                    <p className='text-primaryFont mb-1 text-p3-m justify-end text-center mt-8 lg:mt-12'>Para llegar a más personas y poder seguir ayudando</p>
                     <h1 className='text-2xl text-primaryFont font-bold text-h2-m justify-end  text-center'>¡NO TE OLVIDES DE SEGUIRNOS EN NUESTRAS REDES!</h1>
-                    <div className="grid-cols-1 content-end flex flex-col ml-[20%] gap-4 mb-4">
-                        <div className="flex content-center flex-row">
-                            <Image className="w-[10%]" src="/assets/logos/png/instagramLogo.png"  alt="faceboo" width={150} height={150} />
-                            <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1" href="@huellitas.ctgna">@huellitas.ctgna</a>
+                    <div className="grid grid-cols-1 content-end  ml-[20%] gap-4 mb-4 lg:grid-cols-2 lg:w-[50%] lg:mt-5 lg:mb-12 lg:gap-0 lg:ml-[25%] ">
+                        <div className="flex content-center ">
+                            <Image className="w-[10%] lg:ml-[50%] lg:w-[50%]" src="/assets/logos/png/instagramLogo.png"  alt="faceboo" width={700} height={700} />
+                            <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-5 lg:ml-5" href="@huellitas.ctgna">@huellitas.ctgna</a>
                         </div>
                         <div className="flex content-center">
-                            <Image className="w-[10%]" src="/assets/logos/png/tiktokLogo2.png"  alt="faceboo" width={150} height={150} />
-                            <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1" href="@huellitascartagena ">@huellitascartagena</a>
+                            <Image className="w-[10%] lg:ml-[8%] lg:w-[13%]" src="/assets/logos/png/tiktokLogo2.png"  alt="faceboo" width={700} height={700} />
+                            <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-5 lg:ml-5" href="@huellitascartagena ">@huellitascartagena</a>
                         </div>
                    </div>
                 
