@@ -48,11 +48,11 @@ function map(){
                     <div className="grid grid-cols-1 content-end  ml-[20%] gap-4 mb-4 lg:grid-cols-2 lg:w-[50%] lg:mt-5 lg:mb-12 lg:gap-0 lg:ml-[25%] ">
                         <div className="flex content-center ">
                             <Image className="w-[10%] lg:ml-[50%] lg:w-[50%]" src="/assets/logos/png/instagramLogo.png"  alt="faceboo" width={700} height={700} />
-                            <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-5 lg:ml-5" href="@huellitas.ctgna">@huellitas.ctgna</a>
+                            <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-3 lg:ml-5" href="@huellitas.ctgna">@huellitas.ctgna</a>
                         </div>
                         <div className="flex content-center">
                             <Image className="w-[10%] lg:ml-[8%] lg:w-[13%]" src="/assets/logos/png/tiktokLogo.png"  alt="faceboo" width={700} height={700} />
-                            <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-5 lg:ml-5" href="@huellitascartagena ">@huellitascartagena</a>
+                            <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-3 lg:ml-5" href="@huellitascartagena ">@huellitascartagena</a>
                         </div>
                    </div>
                 
