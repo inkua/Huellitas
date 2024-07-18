@@ -1,5 +1,7 @@
+import Image from "next/image";
 
 function map(){
+
     return(
         <div className='w-full bg-tertiaryColor h-fit'>
             <div className="w-full ml-[10%]  h-full max-w-screen-2xl mx-auto  grid grid-cols-1 gap-6 content-start  lg:grid-cols-2 lg:gap-0">          
@@ -39,7 +41,17 @@ function map(){
 
                 </div>
             </div>
-        </div>
+            </div>
+            <div className="bg-white text-cl">
+                
+                    <p className="text-black">jabkbwfjbwcjbwljbnljb</p>
+                    <Image className="bg-red-800" src="/assets/logos/svg/facebook.svg"  alt="faceboo" width={150} height={150} />
+                    <p className="text-black">bckjwbfljwelfnwlkenfknwefknwkf</p>
+                
+                
+            </div>
+                
+           
 
         </div>
 
