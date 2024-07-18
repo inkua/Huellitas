@@ -30,6 +30,7 @@ module.exports = {
         "tertiaryColor": "#F2F0FD",
         "activeButton": "#FF5490",
         "primaryFont": "#22202A",
+        "grayFont": "#6B6B6B",
 
       },
       screens: {
