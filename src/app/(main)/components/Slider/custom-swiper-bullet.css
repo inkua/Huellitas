@@ -3,3 +3,8 @@
     @apply text-white font-black px-8 py-8 rounded-full bg-primaryColor/70 shadow-lg shadow-gray-800;
     transform: scale(0.6);
 }
+
+.swiper-button-next:active,
+.swiper-button-prev:active {
+    @apply active:bg-violet-800/70 duration-200;
+}

@@ -1,29 +1,67 @@
+import Image from "next/image";
 
 function map(){
+
     return(
-        <div className='w-full bg-tertiaryColor h-full  lg:h-[600px]'>
-            <div className="w-full  max-w-screen-2xl mx-auto  grid grid-cols-1 gap-6 content-center lg:grid-cols-2 lg:gap-0  lg:flex lg:h-full">          
-                <div className='lg:flex lg:justify-end lg:w-full  w-10/12 h-2/5  max-w-screen-2xl relative mx-16 mt-8 lg:mb-12  lg:ml-8 lg:h-fit'>
-                    <iframe className='lg:w-4/5  w-4/5 h-[350px] lg:h-[500px] rounded-2xl lg:rounded-none content-center' width="100%" height="600" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Cartagena,%20Colombia+(Huellitas)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+        <div className='w-full bg-tertiaryColor h-fit  drop-shadow-2xl'>
+            <div className="w-full h-full mx-auto max-w-screen-2xl grid grid-cols-1 gap-6 content-start  lg:grid-cols-2 lg:gap-0 mb-3 lg:mb-2 shadow-2xl lg:shadow-none">          
+                <div className='w-full  max-w-screen-2xl '>
+                    <div className='grid grid-cols-1 ml-[10%]'>
+                        <div>
+                            <h1 className='text-2xl text-primaryFont text-h2-m font-bold mt-6 lg:mt-12'>¿DÓNE ESTAMOS?</h1>
+                            <p className='text-primaryFont mb-6 text-p3-m'>Av Cabildo 2578 , esq. Pedro Borra</p>
+                        </div>
+                        <iframe className='lg:w-[90%] w-[90%] h-[300px] lg:h-[400px] ' width="400" height="400" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Cartagena,%20Colombia+(Huellitas)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                        <div className="justify-start w-full">
+                            <h1 className='text-2xl text-primaryFont font-bold mt-6 lg:mt-12 text-h2-m'>TELÉFONO</h1>
+                            <p className='text-primaryFont mb-6 text-p3-m'>0000-0000</p>
+                        </div>
+                    </div>
                 </div>
-
-                <div className='w-4/5 max-w-screen-2xl relative ml-24 lg:ml-0 mb-6 grid grid-cols-1 gap-0 content-center lg:content-normal lg:mt-24 lg:h-4/6'>
-
-                    <div className='w-1/2 content-left border-t border-black '>
-                        <h1 className='text-2xl text-primaryFont text-h1-w font-bold mt-6 lg:mt-12'>TELÉFONO</h1>
-                        <p className='text-primaryFont mb-6'>0000-0000</p>
+            <div className="px-[10%]">
+                <h1 className='text-primaryFont text-h2-m mb-4 font-bold mt-6  mb:text-2xl text-base lg:mt-12'>¿Tienes alguna consulta?</h1>
+                <div className='grid grid-cols-1 mb-12 w-full gap-y-3'>
+                    <div>
+                        <label htmlFor="first_name" className="hidden  lg:block mb-2 text-base font-medium text-gray-900">Nombre</label>
+                        <input type="text" id="first_name" className="bg-gray-50  border-2 border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5" placeholder="Nombre y Apellido" required />
                     </div>
-                    <div className='w-1/2 content-left  border-t  border-black'>
-                        <h1 className='text-2xl text-primaryFont font-bold mt-6 lg:mt-12'>CONSULTAS</h1>
-                        <p className='text-primaryFont mb-6'>huellitascartagena@gmail.com</p>
+                    <div>
+                        <label htmlFor="PhoneNumber" className="hidden  lg:block mb-2 text-basefont-medium text-gray-900">Número de télefono</label>
+                        <input type="text" id="PhoneNumber" className="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5" placeholder="Télefono" required />
                     </div>
-                    <div className='w-1/2 content-left border-b border-t  border-black'>
-                        <h1 className='text-2xl  text-primaryFont font-bold mt-6 lg:mt-12'>DIRECCIÓN</h1>
-                        <p className='text-primaryFont mb-6'>Av Cabildo 2578 , esq. Pedro Borra</p> 
+                    <div>
+                        <label htmlFor="email" className="hidden  lg:block mb-2 text-base font-medium text-gray-900">Correo electrónico</label>
+                        <input type="text" id="email" className="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5" placeholder="Correo electrónico" required />
                     </div>
+                    <div>
+                        <label htmlFor="consulta" className="hidden  lg:block mb-2 text-base font-medium text-gray-900">Déjanos tu consulta</label>
+                        <textarea type="text" id="consulta" className="bg-gray-50 border-gray-300 text-gray-900  h-40 px-4 py-2 font-normal shadow-xs resize-none leading-relaxed border-2   text-sm rounded-lg   block w-full p-2.5 " placeholder="Dejanos aquí tu consulta" required />
+                    </div>
+                    <button className="bg-primaryColor text-white font-semibold rounded-lg p-2.5 lg:p-2 w-full lg:w-[40%] mt-4 ">Enviar Consulta</button>
 
                 </div>
             </div>
+            </div>
+            <div className="bg-whitegrid grid-cols-1 gap-0 content-end bg-white pb-[32px] md:pb-[82px] pt-[36px] mb:pt-[75px]">
+                    <p className='text-primaryFont mb-[23px] md:mb-[8px] text-p3-m justify-end text-center'>Para llegar a más personas y poder seguir ayudando</p>
+                    <h1 className='text-2xl text-primaryFont font-bold text-h2-m text-center px-4 mb-[23px]'>¡NO TE OLVIDES DE SEGUIRNOS EN NUESTRAS REDES!</h1>
+
+                    <div className="flex justify-center">
+                        <div className="flex flex-col md:flex-row md:justify-center w-[80%] gap-2 md:mt-[23px]">
+                            <div className="flex items-center justify-left px-4">
+                                <div className="bg-ig-mobile bg-no-repeat bg-contain w-[24px] h-[24px] md:w-[35px] md:h-[35px]"></div>
+                                <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-3 lg:ml-5 text-xs md:text-base" href="https://www.instagram.com/huellitas.ctgna/" target="_blank" rel="noreferrer">@huellitas.ctgna</a>
+                            </div>
+                            <div className="flex items-center justify-left px-4">
+                                <div className="bg-tk-mobile bg-no-repeat bg-contain w-[24px] h-[24px] md:w-[35px] md:h-[35px]"></div>
+                                <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-3 lg:ml-5 text-xs md:text-base" href="https://www.tiktok.com/@huellitascartagena" target="_blank" rel="noreferrer" >@huellitascartagena</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+            </div>
+                
 
         </div>
 
