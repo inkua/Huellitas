@@ -15,21 +15,21 @@ function Dashboard() {
 
     useEffect(() => {
         getData();
-        console.log('data en page', data)
+        //console.log('data en page', data)
     }, [refresh]);
 
     try {
         return (
             <div className="my-12">
-                {data?
+                {data ? (
                     <Table
                         data={data}
                         refreshCallback={refreshCallback}
                         config={{ collection: "historias" }}
                     />
-                :
+                ) : (
                     <h2>Ha ocurrido un error al cargar las historias.</h2>
-                }
+                )}
             </div>
         );
     } catch (e) {

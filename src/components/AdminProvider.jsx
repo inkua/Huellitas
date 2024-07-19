@@ -15,7 +15,7 @@ export function AdminProvider({ children }) {
 
     try {
         if (!user) {
-            const sessionUser = JSON.parse(sessionStorage.getItem("user"))
+            const sessionUser = JSON.parse(sessionStorage.getItem("user"));
 
             if (sessionUser) {
                 setUser(sessionUser);
