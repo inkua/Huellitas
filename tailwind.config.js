@@ -22,6 +22,8 @@ module.exports = {
         "gradient-one": "linear-gradient(to bottom, white 59%, #F0F1F0 41%)",
         "gradient-two": "linear-gradient(to bottom, white 52%, #F0F1F0 48%)",
         "gradient-three": "linear-gradient(to bottom, white 66%, #F0F1F0 34%)",
+        "ig-mobile": "url('/assets/Contacto/ig-img.png')",
+        "tk-mobile": "url('/assets/Contacto/tk-img.png')",
       },
       backgroundSize: {
         '1': '45%',
