@@ -22,19 +22,19 @@ function map(){
                 <h1 className='text-2xl text-primaryFont text-h2-m mb-4 font-bold mt-6 lg:mt-12'>¿Tienes alguna consulta?</h1>
                 <div className='grid grid-cols-1 mb-12 w-[80%] ] gap-y-3'>
                     <div>
-                        <label for="first_name" className="hidden  lg:block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
+                        <label htmlFor="first_name" className="hidden  lg:block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
                         <input type="text" id="first_name" className="bg-gray-50  border-2 border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="Nombre y Apellido" required />
                     </div>
                     <div>
-                        <label for="PhoneNumber" className="hidden  lg:block mb-2 text-sm font-medium text-gray-900 dark:text-white">Número de télefono</label>
+                        <label htmlFor="PhoneNumber" className="hidden  lg:block mb-2 text-sm font-medium text-gray-900 dark:text-white">Número de télefono</label>
                         <input type="text" id="PhoneNumber" className="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="Télefono" required />
                     </div>
                     <div>
-                        <label for="email" className="hidden  lg:block mb-2 text-sm font-medium text-gray-900 dark:text-white">Correo electrónico</label>
+                        <label htmlFor="email" className="hidden  lg:block mb-2 text-sm font-medium text-gray-900 dark:text-white">Correo electrónico</label>
                         <input type="text" id="email" className="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="Correo electrónico" required />
                     </div>
                     <div>
-                        <label for="consulta" className="hidden  lg:block mb-2 text-sm font-medium text-gray-900 dark:text-white">Déjanos tu consulta</label>
+                        <label htmlFor="consulta" className="hidden  lg:block mb-2 text-sm font-medium text-gray-900 dark:text-white">Déjanos tu consulta</label>
                         <textarea type="text" id="consulta" className="bg-gray-50 border-gray-300 text-gray-900  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white h-40 px-4 py-2 font-normal shadow-xs resize-none leading-relaxed border-2   text-sm rounded-lg   block w-full p-2.5 " placeholder="Dejanos aquí tu consulta" required />
                     </div>
                     <button className="bg-primaryColor text-white font-semibold rounded-lg p-2.5 lg:p-2 w-full lg:w-[40%] mt-4 ">Enviar Consulta</button>
@@ -54,12 +54,11 @@ function map(){
                             <Image className="w-[10%] lg:ml-[8%] lg:w-[13%]" src="/assets/logos/png/tiktokLogo.png"  alt="faceboo" width={700} height={700} />
                             <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-3 lg:ml-5" href="@huellitascartagena ">@huellitascartagena</a>
                         </div>
-                   </div>
+                    </div>
                 
                 
             </div>
                 
-           
 
         </div>
 
