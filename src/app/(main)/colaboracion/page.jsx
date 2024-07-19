@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react'
-import Image from 'next/image'
 import Modal from './components/Modal'
 import Slider from '../components/Slider/Slider'
 import Slider2 from '../components/Slider/slider2'
@@ -34,6 +33,7 @@ function Colaboracion() {
             id: 1,
             par: '',
             btn: 'ECONÓMICAS',
+            alt: 'donación economica',
             source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957518/huellitas/colaboraciones-comoquierescolaborar-1_do2ctq.png',
             action: () => openModal('donar_dinero'),
         },
@@ -41,6 +41,7 @@ function Colaboracion() {
             id: 2,
             par: '',
             btn: 'INSUMOS',
+            alt: 'donación insumos',
             source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957521/huellitas/colaboraciones-comoquierescolaborar-2_koocxt.png',
             action: () => openModal('donar_insumos'),
         },
@@ -48,37 +49,46 @@ function Colaboracion() {
             id: 3,
             par: '',
             btn: 'SERVICIOS',
+            alt: 'donación servicios',
             source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957517/huellitas/colaboraciones-comoquierescolaborar-3_kaagfo.png',
             action: () => openModal('donar_servicios'),
         },
     ]
     let itemsColab = [
         {
-            id: 1,
+            id: 0,
             alt:'Logo Artemix',
             source: '/assets/Colaboracion/LogoArtemis.png',
         },
-       
+        
+        {
+            id: 1,
+            alt:'Logo Salitrex',
+            source: '/assets/Colaboracion/salitrex.jpeg',
+        },
         {
             id: 2,
-            alt:'Logo Salitrex',
-            source: '/assets/Colaboracion/salitrex3.jpeg',
+            alt:'Logo Artemix',
+            source: '/assets/Colaboracion/LogoArtemis.png',
         },
+        
         {
             id: 3,
             alt:'Logo Salitrex',
-            source: '/assets/Colaboracion/salitrex4.jpeg',
+            source: '/assets/Colaboracion/salitrex.jpeg',
         },
         {
             id: 4,
-            alt:'Logo Salitrex',
-            source: '/assets/Colaboracion/salitrex4.jpeg',
+            alt:'Logo Artemix',
+            source: '/assets/Colaboracion/LogoArtemis.png',
         },
+        
         {
             id: 5,
             alt:'Logo Salitrex',
-            source: '/assets/Colaboracion/salitrex4.jpeg',
+            source: '/assets/Colaboracion/salitrex.jpeg',
         },
+     
       
     ]
     
@@ -96,7 +106,7 @@ function Colaboracion() {
             </section>
 
             <section className='flex flex-col w-full max-w-screen-2xl mx-auto justify-center items-center gap-8 py-16 bg-white'>
-                <h1 className='w-11/12 lg:w-9/12 font-bold heading-1 text-left'>¿COMO QUIERES COLABORAR?</h1>
+                <h1 className='w-11/12 lg:w-9/12 lg:font-bold heading-1 lg:text-left font-semibold text-h1-m'>¿COMO QUIERES COLABORAR?</h1>
                 <Slider items={items} type={1} def={2.15} lg={3} md={3}></Slider>
             </section>
 

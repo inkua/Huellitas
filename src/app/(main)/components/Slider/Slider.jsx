@@ -20,7 +20,7 @@ function Slider({ items, type, def, lg, md, nav = false, loop = false }) {
             {
                 items.map(item => (
                     <SwiperSlide key={item.id}>
-                        {createItem(type, item.source, item.par, item.btn, item.action)}
+                        {createItem(type, item.source, item.par, item.btn, item.action, item.alt)}
                     </SwiperSlide>
                 ))
             }

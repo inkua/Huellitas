@@ -1,0 +1,10 @@
+.titulo{
+    font-size: clamp(29px, 7vw, 55px);
+    color: black;
+    font-weight: 600;
+}
+@media (min-width: 768px) {
+    .titulo{
+        font-size: clamp(60px, 8vw, 120px);
+    }
+}
