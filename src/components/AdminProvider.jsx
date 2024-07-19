@@ -7,7 +7,6 @@ export const useAdminContext = () => useContext(AdminContext);
 
 export function AdminProvider({ children }) {
     const [user, setUser] = useState(null);
-    console.log("Admin provider", user);
 
     const updateUser = (anUser) => {
         setUser(anUser);

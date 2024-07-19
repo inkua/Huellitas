@@ -52,7 +52,7 @@ function Table({ data, refreshCallback, config }) {
                     Añadir
                 </button>
                 <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                    <thead className="text-xs h-14 text-tertiaryColor bg-primaryColor">
+                    <thead className="text-xs md:text-ms h-14 text-tertiaryColor bg-primaryColor">
                         <tr>
                             <th scope="col" className="px-6 py-3">
                                 Nombre

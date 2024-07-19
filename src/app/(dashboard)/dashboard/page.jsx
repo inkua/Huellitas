@@ -20,7 +20,7 @@ function Dashboard() {
 
     try {
         return (
-            <div className="my-12">
+            <div className="my-12 min-w-[830px]">
                 {data ? (
                     <Table
                         data={data}

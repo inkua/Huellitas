@@ -1,9 +1,9 @@
 function Loading() {
     {
         return (
-            <div>
+            <body>
 
-            </div>
+            </body>
         )
     }
 }
