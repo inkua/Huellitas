@@ -14,10 +14,11 @@ export function AdminProvider({ children }) {
 
     try {
         if (!user) {
-            const sessionUser = JSON.parse(sessionStorage.getItem("user"));
+            const sessionUserString = sessionStorage.getItem("user");
 
-            if (sessionUser) {
-                setUser(sessionUser);
+            if (sessionUserString) {
+                const sessionUser = JSON.parse(sessionUserString);
+                updateUser(sessionUser);
             }
         }
     } catch (e) {
