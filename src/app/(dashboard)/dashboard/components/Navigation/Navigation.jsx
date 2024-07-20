@@ -11,6 +11,7 @@ export default function Navigation() {
     const path = usePathname()
     
     function handleLogout() {
+        setLoading(true)
         sessionStorage.clear();
         updateUser(null)
     }
