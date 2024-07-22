@@ -1,15 +1,15 @@
 "use client";
 
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { logIn } from "@/services/user.services";
 import { AdminContext } from "@/components/AdminProvider";
-import { useRouter } from "next/navigation";
+import { useRouter, redirect } from "next/navigation";
 
 function LoginForm() {
     const [remember, setRemember] = useState(false);
     const [showNoUserMessage, setShowNoUserMessage] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
-    const { updateUser } = useContext(AdminContext);
+    const { updateUser, user } = useContext(AdminContext);
     const router = useRouter()
 
     function handleSubmit(e) {
@@ -45,6 +45,11 @@ function LoginForm() {
     function handleShowPassword() {
         setShowPassword(!showPassword);
     }
+    useEffect(()=>{
+        if(user){
+            redirect('/dashboard')
+        }
+    },[])
 
     return (
         <form

@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react'
-import Image from 'next/image'
 import Modal from './components/Modal'
 import Slider from '../components/Slider/Slider'
 import Slider2 from '../components/Slider/slider2'
@@ -34,6 +33,7 @@ function Colaboracion() {
             id: 1,
             par: '',
             btn: 'ECONÓMICAS',
+            alt: 'donación economica',
             source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957518/huellitas/colaboraciones-comoquierescolaborar-1_do2ctq.png',
             action: () => openModal('donar_dinero'),
         },
@@ -41,6 +41,7 @@ function Colaboracion() {
             id: 2,
             par: '',
             btn: 'INSUMOS',
+            alt: 'donación insumos',
             source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957521/huellitas/colaboraciones-comoquierescolaborar-2_koocxt.png',
             action: () => openModal('donar_insumos'),
         },
@@ -48,6 +49,7 @@ function Colaboracion() {
             id: 3,
             par: '',
             btn: 'SERVICIOS',
+            alt: 'donación servicios',
             source: 'https://res.cloudinary.com/dorljfo6v/image/upload/v1717957517/huellitas/colaboraciones-comoquierescolaborar-3_kaagfo.png',
             action: () => openModal('donar_servicios'),
         },

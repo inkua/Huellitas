@@ -1,6 +1,5 @@
 import "./globals.css";
 import { AdminProvider } from "@/components/AdminProvider";
-import RouterSecurity from "@/components/RouterSecurity";
 
 export const metadata = {
     title: "Huellitas",
