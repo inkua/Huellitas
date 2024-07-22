@@ -20,7 +20,7 @@ function map(){
       };
     
       const validateName = (name) => {
-        return name.trim().length > 0;
+        return name.trim().length > 1;
       };
     
       const validatePhone = (phone) => {
