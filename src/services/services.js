@@ -91,8 +91,8 @@ export async function delImage(imageUrl) {
         const storageRef = ref(storage, imageUrl);
         await deleteObject(storageRef);
     } catch (e) {
-        console.error("Error al eliminar el post: ", e);
-        throw new Error("Error al eliminar el post");
+        console.error("Error al eliminar la imagen: ", e);
+        throw new Error("Error al eliminar la imagen");
     }
 }
 

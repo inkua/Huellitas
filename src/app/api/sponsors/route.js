@@ -47,8 +47,8 @@ export async function DELETE(req) {
         const { token, item } = await req.json();
         // Use token to validate request
 
-        await delImage(item.data.imagen);
         const res = await delElement(item.id, "sponsors");
+        await delImage(item.data.imagen);
         return Response.json({ status: 200, data: res });
     } catch (e) {
         console.log(e);
