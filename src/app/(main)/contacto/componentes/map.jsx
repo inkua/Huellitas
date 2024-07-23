@@ -1,6 +1,51 @@
+"use client";
 import Image from "next/image";
+import { useState } from 'react';
+
 
 function map(){
+    const [email, setEmail] = useState('');
+    const [emailValid, setEmailValid] = useState(true);
+  
+    const [name, setName] = useState('');
+    const [nameValid, setNameValid] = useState(true);
+  
+    const [phone, setPhone] = useState('');
+    const [phoneValid, setPhoneValid] = useState(true);
+
+
+    const validateEmail = (email) => {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+      };
+    
+      const validateName = (name) => {
+        return name.trim().length > 1;
+      };
+    
+      const validatePhone = (phone) => {
+        const regex = /^[0-9\s\+\-\(\)]{7,}$/;
+        return regex.test(phone);
+      };
+    
+      const handleEmailChange = (e) => {
+        const value = e.target.value;
+        setEmail(value);
+        setEmailValid(validateEmail(value));
+      };
+    
+      const handleNameChange = (e) => {
+        const value = e.target.value;
+        setName(value);
+        setNameValid(validateName(value));
+      };
+    
+      const handlePhoneChange = (e) => {
+        const value = e.target.value;
+        setPhone(value);
+        setPhoneValid(validatePhone(value));
+      };
+
 
     return(
         <div className='w-full bg-tertiaryColor h-fit  drop-shadow-2xl'>
@@ -20,18 +65,47 @@ function map(){
                 </div>
             <div className="px-[10%]">
                 <h1 className='text-primaryFont text-h2-m mb-4 font-bold mt-6  mb:text-2xl text-base lg:mt-12'>¿Tienes alguna consulta?</h1>
-                <div className='grid grid-cols-1 mb-12 w-full gap-y-3'>
+                <div className='grid grid-cols-1 mb-12 w-full gap-y-3'>    
+         
                     <div>
-                        <label htmlFor="first_name" className="hidden  lg:block mb-2 text-base font-medium text-gray-900">Nombre</label>
-                        <input type="text" id="first_name" className="bg-gray-50  border-2 border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5" placeholder="Nombre y Apellido" required />
+                        <label htmlFor="first_name" className="hidden lg:block mb-2 text-base font-medium text-gray-900">Nombre</label>
+                        <input
+                        type="text"
+                        id="first_name"
+                        value={name}
+                        onChange={handleNameChange}
+                        className={`bg-gray-50 border-2 ${nameValid ? 'border-gray-300' : 'border-red-500'} text-gray-900 text-sm rounded-lg block w-full p-2.5`}
+                        placeholder="Nombre y Apellido"
+                        required
+                        />
+                        {!nameValid && <p className="text-red-500 text-sm mt-1">Nombre no válido</p>}
+                    </div>
+
+                    <div>
+                        <label htmlFor="PhoneNumber" className="hidden lg:block mb-2 text-base font-medium text-gray-900">Número de teléfono</label>
+                        <input
+                        type="text"
+                        id="PhoneNumber"
+                        value={phone}
+                        onChange={handlePhoneChange}
+                        className={`bg-gray-50 border-2 ${phoneValid ? 'border-gray-300' : 'border-red-500'} text-gray-900 text-sm rounded-lg block w-full p-2.5`}
+                        placeholder="Teléfono"
+                        required
+                        />
+                        {!phoneValid && <p className="text-red-500 text-sm mt-1">Número de teléfono no válido</p>}
                     </div>
                     <div>
-                        <label htmlFor="PhoneNumber" className="hidden  lg:block mb-2 text-basefont-medium text-gray-900">Número de télefono</label>
-                        <input type="text" id="PhoneNumber" className="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5" placeholder="Télefono" required />
-                    </div>
-                    <div>
-                        <label htmlFor="email" className="hidden  lg:block mb-2 text-base font-medium text-gray-900">Correo electrónico</label>
-                        <input type="text" id="email" className="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5" placeholder="Correo electrónico" required />
+                        <label htmlFor="email" className="hidden lg:block mb-2 text-base font-medium text-gray-900">Correo electrónico</label>
+                        <input
+                        type="text"
+                        id="email"
+                        value={email}
+                        onChange={handleEmailChange}
+                        className={`bg-gray-50 border-2 ${emailValid ? 'border-gray-300' : 'border-red-500'} text-gray-900 text-sm rounded-lg block w-full p-2.5`}
+                        placeholder="Correo electrónico"
+                        required
+                        />
+                        {!emailValid && <p className="text-red-500 text-sm mt-1">Correo electrónico no válido</p>}
                     </div>
                     <div>
                         <label htmlFor="consulta" className="hidden  lg:block mb-2 text-base font-medium text-gray-900">Déjanos tu consulta</label>
@@ -70,3 +144,4 @@ function map(){
 }
 
 export default map
+
