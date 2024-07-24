@@ -1,6 +1,51 @@
+"use client";
 import Image from "next/image";
+import { useState } from 'react';
+
 
 function map(){
+    const [email, setEmail] = useState('');
+    const [emailValid, setEmailValid] = useState(true);
+  
+    const [name, setName] = useState('');
+    const [nameValid, setNameValid] = useState(true);
+  
+    const [phone, setPhone] = useState('');
+    const [phoneValid, setPhoneValid] = useState(true);
+
+
+    const validateEmail = (email) => {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+      };
+    
+      const validateName = (name) => {
+        return name.trim().length > 1;
+      };
+    
+      const validatePhone = (phone) => {
+        const regex = /^[0-9\s\+\-\(\)]{7,}$/;
+        return regex.test(phone);
+      };
+    
+      const handleEmailChange = (e) => {
+        const value = e.target.value;
+        setEmail(value);
+        setEmailValid(validateEmail(value));
+      };
+    
+      const handleNameChange = (e) => {
+        const value = e.target.value;
+        setName(value);
+        setNameValid(validateName(value));
+      };
+    
+      const handlePhoneChange = (e) => {
+        const value = e.target.value;
+        setPhone(value);
+        setPhoneValid(validatePhone(value));
+      };
+
 
     return(
         <div className='w-full bg-tertiaryColor h-fit  drop-shadow-2xl'>
@@ -18,41 +63,73 @@ function map(){
                         </div>
                     </div>
                 </div>
-            <div className="ml-[10%]">
-                <h1 className='text-2xl text-primaryFont text-h2-m mb-4 font-bold mt-6 lg:mt-12'>¿Tienes alguna consulta?</h1>
-                <div className='grid grid-cols-1 mb-12 w-[80%] ] gap-y-3'>
+            <div className="px-[10%]">
+                <h1 className='text-primaryFont text-h2-m mb-4 font-bold mt-6  mb:text-2xl text-base lg:mt-12'>¿Tienes alguna consulta?</h1>
+                <div className='grid grid-cols-1 mb-12 w-full gap-y-3'>    
+         
                     <div>
-                        <label htmlFor="first_name" className="hidden  lg:block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
-                        <input type="text" id="first_name" className="bg-gray-50  border-2 border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="Nombre y Apellido" required />
+                        <label htmlFor="first_name" className="hidden lg:block mb-2 text-base font-medium text-gray-900">Nombre</label>
+                        <input
+                        type="text"
+                        id="first_name"
+                        value={name}
+                        onChange={handleNameChange}
+                        className={`bg-gray-50 border-2 ${nameValid ? 'border-gray-300' : 'border-red-500'} text-gray-900 text-sm rounded-lg block w-full p-2.5`}
+                        placeholder="Nombre y Apellido"
+                        required
+                        />
+                        {!nameValid && <p className="text-red-500 text-sm mt-1">Nombre no válido</p>}
+                    </div>
+
+                    <div>
+                        <label htmlFor="PhoneNumber" className="hidden lg:block mb-2 text-base font-medium text-gray-900">Número de teléfono</label>
+                        <input
+                        type="text"
+                        id="PhoneNumber"
+                        value={phone}
+                        onChange={handlePhoneChange}
+                        className={`bg-gray-50 border-2 ${phoneValid ? 'border-gray-300' : 'border-red-500'} text-gray-900 text-sm rounded-lg block w-full p-2.5`}
+                        placeholder="Teléfono"
+                        required
+                        />
+                        {!phoneValid && <p className="text-red-500 text-sm mt-1">Número de teléfono no válido</p>}
                     </div>
                     <div>
-                        <label htmlFor="PhoneNumber" className="hidden  lg:block mb-2 text-sm font-medium text-gray-900 dark:text-white">Número de télefono</label>
-                        <input type="text" id="PhoneNumber" className="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="Télefono" required />
+                        <label htmlFor="email" className="hidden lg:block mb-2 text-base font-medium text-gray-900">Correo electrónico</label>
+                        <input
+                        type="text"
+                        id="email"
+                        value={email}
+                        onChange={handleEmailChange}
+                        className={`bg-gray-50 border-2 ${emailValid ? 'border-gray-300' : 'border-red-500'} text-gray-900 text-sm rounded-lg block w-full p-2.5`}
+                        placeholder="Correo electrónico"
+                        required
+                        />
+                        {!emailValid && <p className="text-red-500 text-sm mt-1">Correo electrónico no válido</p>}
                     </div>
                     <div>
-                        <label htmlFor="email" className="hidden  lg:block mb-2 text-sm font-medium text-gray-900 dark:text-white">Correo electrónico</label>
-                        <input type="text" id="email" className="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="Correo electrónico" required />
-                    </div>
-                    <div>
-                        <label htmlFor="consulta" className="hidden  lg:block mb-2 text-sm font-medium text-gray-900 dark:text-white">Déjanos tu consulta</label>
-                        <textarea type="text" id="consulta" className="bg-gray-50 border-gray-300 text-gray-900  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white h-40 px-4 py-2 font-normal shadow-xs resize-none leading-relaxed border-2   text-sm rounded-lg   block w-full p-2.5 " placeholder="Dejanos aquí tu consulta" required />
+                        <label htmlFor="consulta" className="hidden  lg:block mb-2 text-base font-medium text-gray-900">Déjanos tu consulta</label>
+                        <textarea type="text" id="consulta" className="bg-gray-50 border-gray-300 text-gray-900  h-40 px-4 py-2 font-normal shadow-xs resize-none leading-relaxed border-2   text-sm rounded-lg   block w-full p-2.5 " placeholder="Dejanos aquí tu consulta" required />
                     </div>
                     <button className="bg-primaryColor text-white font-semibold rounded-lg p-2.5 lg:p-2 w-full lg:w-[40%] mt-4 ">Enviar Consulta</button>
 
                 </div>
             </div>
             </div>
-            <div className="bg-whitegrid grid-cols-1 gap-0 content-end bg-white">
-                    <p className='text-primaryFont mb-1 text-p3-m justify-end text-center mt-8 lg:mt-12'>Para llegar a más personas y poder seguir ayudando</p>
-                    <h1 className='text-2xl text-primaryFont font-bold text-h2-m justify-end  text-center'>¡NO TE OLVIDES DE SEGUIRNOS EN NUESTRAS REDES!</h1>
-                    <div className="grid grid-cols-1 content-end  ml-[20%] gap-4 mb-4 lg:grid-cols-2 lg:w-[50%] lg:mt-5 lg:mb-12 lg:gap-0 lg:ml-[25%] ">
-                        <div className="flex content-center ">
-                            <Image className="w-[10%] lg:ml-[50%] lg:w-[50%]" src="/assets/logos/png/instagramLogo.png"  alt="faceboo" width={700} height={700} />
-                            <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-3 lg:ml-5" href="@huellitas.ctgna">@huellitas.ctgna</a>
-                        </div>
-                        <div className="flex content-center">
-                            <Image className="w-[10%] lg:ml-[8%] lg:w-[13%]" src="/assets/logos/png/tiktokLogo.png"  alt="faceboo" width={700} height={700} />
-                            <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-3 lg:ml-5" href="@huellitascartagena ">@huellitascartagena</a>
+            <div className="bg-whitegrid grid-cols-1 gap-0 content-end bg-white pb-[32px] md:pb-[82px] pt-[36px] mb:pt-[75px]">
+                    <p className='text-primaryFont mb-[23px] md:mb-[8px] text-p3-m justify-end text-center'>Para llegar a más personas y poder seguir ayudando</p>
+                    <h1 className='text-2xl text-primaryFont font-bold text-h2-m text-center px-4 mb-[23px]'>¡NO TE OLVIDES DE SEGUIRNOS EN NUESTRAS REDES!</h1>
+
+                    <div className="flex justify-center">
+                        <div className="flex flex-col md:flex-row md:justify-center w-[80%] gap-2 md:mt-[23px]">
+                            <div className="flex items-center justify-left px-4">
+                                <div className="bg-ig-mobile bg-no-repeat bg-contain w-[24px] h-[24px] md:w-[35px] md:h-[35px]"></div>
+                                <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-3 lg:ml-5 text-xs md:text-base" href="https://www.instagram.com/huellitas.ctgna/" target="_blank" rel="noreferrer">@huellitas.ctgna</a>
+                            </div>
+                            <div className="flex items-center justify-left px-4">
+                                <div className="bg-tk-mobile bg-no-repeat bg-contain w-[24px] h-[24px] md:w-[35px] md:h-[35px]"></div>
+                                <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-3 lg:ml-5 text-xs md:text-base" href="https://www.tiktok.com/@huellitascartagena" target="_blank" rel="noreferrer" >@huellitascartagena</a>
+                            </div>
                         </div>
                     </div>
                 
@@ -67,3 +144,4 @@ function map(){
 }
 
 export default map
+

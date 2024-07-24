@@ -2,17 +2,25 @@
 
 import Link from "next/link";
 import { AdminContext } from "@/components/AdminProvider"; 
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Navigation() {
     const {updateUser, user} = useContext(AdminContext)
+    const [loading, setLoading] = useState(true)
     const path = usePathname()
     
     function handleLogout() {
+        setLoading(true)
         sessionStorage.clear();
         updateUser(null)
     }
+
+    useEffect(()=>{
+        if(user){
+            setLoading(false)
+        }
+    })
     
     return (
         <nav className="bg-primaryColor text-tertiaryColor">
@@ -42,7 +50,9 @@ export default function Navigation() {
                                     SPONSORS
                                 </Link>
                                 {
-                                user&&
+                                loading?
+                                <div></div>
+                                :
                                 user.role==='root'&&
                                     <Link
                                     href="/dashboard/users"
@@ -100,7 +110,9 @@ export default function Navigation() {
                         SPONSORS
                     </Link>
                     {
-                    user&&
+                    loading?
+                    <div></div>
+                    :
                     user.role==='root'&&
                         <Link
                         href="/dashboard/users"
@@ -131,3 +143,4 @@ export default function Navigation() {
         </nav>
     );
 }
+

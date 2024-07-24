@@ -1,3 +1,5 @@
+import { uploadImage, delImage } from "@/services/services";
+
 function ModalMod({ item, closeCallback, config }) {
     async function handleClick(e) {
         try {
@@ -7,6 +9,11 @@ function ModalMod({ item, closeCallback, config }) {
                 nombre: e.target.title.value,
             };
 
+            let imageUrl;
+            if (config.collection != "admins" && e.target.image.files[0]) {
+                imageUrl = await uploadImage(e.target.image.files[0]);
+                data.imagen = imageUrl;
+            }
             if (config.collection != "sponsors") {
                 data.descripcion = e.target.description.value;
             }
@@ -20,6 +27,7 @@ function ModalMod({ item, closeCallback, config }) {
                 }),
             });
 
+            await delImage(item.data.imagen);
             closeCallback();
         } catch (e) {
             console.log(e.message);
@@ -80,6 +88,7 @@ function ModalMod({ item, closeCallback, config }) {
                                         className="border border-gray-300 text-[#6b6b6b] text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                                         placeholder="Nombre"
                                         required
+                                        defaultValue={item.data.nombre}
                                     ></input>
                                 </div>
                                 {config.collection != "sponsors" && (
@@ -96,7 +105,24 @@ function ModalMod({ item, closeCallback, config }) {
                                             className="block p-2.5 w-full text-sm text-[#6b6b6b] rounded-lg"
                                             placeholder="Descripción"
                                             required
+                                            defaultValue={item.data.descripcion}
                                         ></textarea>
+                                    </div>
+                                )}
+                                {config.collection != "admins" && (
+                                    <div className="col-span-2">
+                                        <label
+                                            htmlFor="image"
+                                            className="block mb-2 text-sm font-medium text-[#6b6b6b]"
+                                        >
+                                            Imagen
+                                        </label>
+                                        <input
+                                            className="block mb-2 text-sm font-medium text-[#6b6b6b]"
+                                            type="file"
+                                            name="image"
+                                            id="image"
+                                        />
                                     </div>
                                 )}
                             </div>
