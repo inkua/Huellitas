@@ -72,7 +72,7 @@ function Adopcion() {
                 </div>
             </section>
 
-            <section className="flex w-full max-w-screen-2xl mx-auto justify-center items-center py-8 md:py-10 lg:py-16" role='section'>
+            <section id='buscamos' className="flex w-full max-w-screen-2xl mx-auto justify-center items-center py-8 md:py-10 lg:py-16" role='section'>
                 <div className="flex flex-col w-[90%] lg:w-9/12 gap-y-20">
                     <h1 className="hidden lg:block font-bold heading-1">BUSCAMOS UN HOGAR CON AMOR</h1>
                     <div className="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-3 lg:px-0 gap-x-4 lg:gap-x-16 gap-y-20" role='list'>
@@ -91,7 +91,7 @@ function Adopcion() {
                 </div>
             </section>
             
-            <section className='bg-tertiaryColor py-8 md:py-10 lg:py-16' role='section'>
+            <section id='faq' className='bg-tertiaryColor py-8 md:py-10 lg:py-16' role='section'>
                     <FAQ_Adopcion items={faq} />
             </section>
         </main>

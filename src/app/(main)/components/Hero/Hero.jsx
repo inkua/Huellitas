@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function Hero() {
     return (
         <section className='flex flex-col relative w-full h-80 lg:h-96 max-w-screen-2xl mx-auto bg-hero-banner-sm lg:bg-hero-banner-lg bg-cover' role="banner">
@@ -5,7 +7,7 @@ function Hero() {
                 <div className='flex flex-col w-full lg:w-2/4 gap-4 lg:items-start'>
                     <h1 className='font-bold heading-1 !text-white'>CONÓCENOS</h1>
                     <p className='hidden lg:block font-medium par-3 !text-white text-center lg:text-left md:text-left'>Somos una fundación dedicada al rescate de animales domésticos y la educación social sobre esta problemática. Nuestra misión es crear conciencia para mitigar el hambre, abandono, maltrato y la sobrepoblación animal.</p>
-                    <button className='w-fit secondary-btn !text-white !border-white'>SABER MÁS...</button>
+                    <button className='w-fit secondary-btn !text-white !border-white'><Link href="/fundacion">SABER MÁS...</Link></button>
                 </div>
             </div>
         </section>

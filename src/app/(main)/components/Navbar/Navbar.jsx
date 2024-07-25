@@ -104,18 +104,13 @@ function Navbar() {
                                 <ul className="absolute left-0 top-full w-[200px] bg-white shadow-lg rounded-2xl hidden md:group-hover:block p-6 z-10">
 
                                     <li className="hover:text-gray-800 py-2">
-                                        <Link href="/adopcion" onClick={handleLinkClick}>
+                                        <Link href="/adopcion#buscamos" onClick={handleLinkClick}>
                                             QUIERO ADOPTAR
                                         </Link>
                                     </li>
                                     <li className="hover:text-gray-800 py-2">
-                                        <Link href="/adopcion" onClick={handleLinkClick}>
+                                        <Link href="/adopcion#faq" onClick={handleLinkClick}>
                                             REQUISITOS
-                                        </Link>
-                                    </li>
-                                    <li className="hover:text-gray-800 py-2">
-                                        <Link href="/adopcion" onClick={handleLinkClick}>
-                                            ELLOS BUSCAN HOGAR
                                         </Link>
                                     </li>
                                 </ul>
@@ -143,7 +138,9 @@ function Navbar() {
                             type="button"
                             className="primary-btn hidden md:block"
                         >
-                            DONÁ AHORA
+                            <Link href="/colaboracion" onClick={handleLinkClick}>
+                                DONÁ AHORA
+                            </Link>
                         </button>
 
                         <button
