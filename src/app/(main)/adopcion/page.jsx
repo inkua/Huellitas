@@ -62,8 +62,8 @@ let faq = [
 function Adopcion() {
     return (
         <main>
-            <section className='w-full h-72 lg:bg-tertiaryColor' role='section'>
-                <div className="flex w-full h-full max-w-screen-2xl mx-auto items-end lg:justify-center lg:items-center p-8 lg:p-0 lg:py-16 bg-adoption-banner lg:bg-none bg-cover bg-opacity-80">
+            <section className='w-full h-72 lg:bg-tertiaryColor shadow-[0_6px_6px_-2px_rgba(0,0,0,0.3)]' role='section'>
+                <div className="flex w-full h-full max-w-screen-2xl mx-auto items-end lg:justify-center lg:items-center p-8 lg:p-0 lg:py-16 bg-adoption-banner lg:bg-none bg-cover bg-opacity-80 ">
                     <div className="flex flex-col w-[60%] lg:w-9/12 gap-8">
                         <h1 className="font-bold heading-1 !text-white lg:!text-primaryFont">ADOPTALOS</h1>
                         <p className="hidden lg:block font-normal par-3 text-justify">
