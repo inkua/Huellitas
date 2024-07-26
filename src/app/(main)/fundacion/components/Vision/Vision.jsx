@@ -1,6 +1,6 @@
 export const Vision = () => {
     return (
-        <section className="py-10 bg-tertiaryColor mb-4">
+        <section className="py-10 bg-tertiaryColor mb-4 shadow-[0_6px_6px_-2px_rgba(0,0,0,0.3)]">
 
             <div className="flex flex-col w-[80%] mx-auto max-w-screen-2xl" >
                 <div className="md:w-[90%] lg:w-9/12 m-auto">
