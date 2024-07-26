@@ -61,13 +61,22 @@ function Navbar() {
                         <ul className="w-full flex justify-center items-center md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-primaryFont font-semibold">
                             <li className="relative group">
                                 <Link
-                                    className={`flex items-center md:text-sm lg:text-base duration-200 hover:text-primaryColor ${currentPath=='/fundacion'? 'text-primaryColor':'text-primaryFont'}`}
+                                    className={`flex items-center md:text-sm lg:text-base duration-200 hover:text-primaryColor ${currentPath == '/' ? 'text-primaryColor' : 'text-primaryFont'}`}
+                                    href="/"
+                                    onClick={handleLinkClick}
+                                >
+                                    INICIO
+                                </Link>
+                            </li>
+                            <li className="relative group">
+                                <Link
+                                    className={`flex items-center md:text-sm lg:text-base duration-200 hover:text-primaryColor ${currentPath == '/fundacion' ? 'text-primaryColor' : 'text-primaryFont'}`}
                                     href="/fundacion"
                                     onClick={handleLinkClick}
                                 >
                                     FUNDACIÓN
                                     <div className="group-hover:rotate-180 transition-transform duration-300 hidden md:block ">
-                                        <ArrowDropMenu color={`${currentPath=='/fundacion'? '#6C5CE7':'black'}`} />
+                                        <ArrowDropMenu color={`${currentPath == '/fundacion' ? '#6C5CE7' : 'black'}`} />
                                     </div>
                                 </Link>
 
@@ -92,13 +101,13 @@ function Navbar() {
                             </li>
                             <li className="relative group">
                                 <Link
-                                    className={`flex items-center duration-200 hover:text-primaryColor md:text-sm lg:text-base ${currentPath=='/adopcion'? 'text-primaryColor':'text-primaryFont'}`}
+                                    className={`flex items-center duration-200 hover:text-primaryColor md:text-sm lg:text-base ${currentPath == '/adopcion' ? 'text-primaryColor' : 'text-primaryFont'}`}
                                     href="/adopcion"
                                     onClick={handleLinkClick}
                                 >
                                     ADOPCIÓN
                                     <div className="group-hover:rotate-180 transition-transform duration-300 hidden md:block">
-                                        <ArrowDropMenu color={`${currentPath=='/adopcion'? '#6C5CE7':'black'}`}/>
+                                        <ArrowDropMenu color={`${currentPath == '/adopcion' ? '#6C5CE7' : 'black'}`} />
                                     </div>
                                 </Link>
                                 {/* ----OPCIONES ----- */}
@@ -116,18 +125,8 @@ function Navbar() {
                                     </li>
                                 </ul>
                             </li>
-                            <li className="relative group">
-                                <Link
-                                    className={`flex items-center duration-200 hover:text-primaryColor md:text-sm lg:text-base ${currentPath=='/colaboracion'? 'text-primaryColor':'text-primaryFont'}`}
-                                    href="/colaboracion"
-                                    onClick={handleLinkClick}
-                                >
-                                    COLABORACIÓN
-                                </Link>
-
-                            </li>
                             <li>
-                                <Link className={`flex items-center duration-200 hover:text-primaryColor md:text-sm lg:text-base ${currentPath=='/contacto'? 'text-primaryColor':'text-primaryFont'}`} href="/contacto" onClick={handleLinkClick}>
+                                <Link className={`flex items-center duration-200 hover:text-primaryColor md:text-sm lg:text-base ${currentPath == '/contacto' ? 'text-primaryColor' : 'text-primaryFont'}`} href="/contacto" onClick={handleLinkClick}>
                                     CONTACTO
                                 </Link>
                             </li>
@@ -135,21 +134,21 @@ function Navbar() {
                     </div>
 
                     <div className="flex flex-grow basis-0 justify-end">
-                        <button
-                            type="button"
-                            className="primary-btn hidden md:block"
-                        >
-                            <Link href="/colaboracion" onClick={handleLinkClick}>
+                        <Link href="/colaboracion" onClick={handleLinkClick}>
+                            <button
+                                type="button"
+                                className="primary-btn hidden md:block"
+                            >
                                 DONÁ AHORA
-                            </Link>
-                        </button>
+                            </button>
 
-                        <button
-                            type="button"
-                            className="bg-primaryColor py-3 px-4 rounded-full text-white hover:bg-secondaryColor shadow-grey-400 shadow-md block md:hidden"
-                        >
-                            DONÁ
-                        </button>
+                            <button
+                                type="button"
+                                className="bg-primaryColor py-3 px-4 rounded-full text-white hover:bg-secondaryColor shadow-grey-400 shadow-md block md:hidden"
+                            >
+                                DONÁ
+                            </button>
+                        </Link>
                     </div>
                 </nav>
             </div>
