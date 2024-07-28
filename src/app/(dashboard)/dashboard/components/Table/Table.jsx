@@ -3,10 +3,13 @@
 import { useState } from "react";
 import ModalAdd from "./Modals/ModalAdd";
 import ModalMod from "./Modals/ModalMod";
+import StoriesModal from "../StoriesModal/StoriesModal";
 
-function Table({ data, refreshCallback, config }) {
+function Table({ data, refreshCallback, config, stories=false }) {
+
     const [isModalAddActive, setIsModalAddActive] = useState(false);
     const [isModalModActive, setIsModalModActive] = useState(false);
+    const [storiesModal, setStoriesModal] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
 
     function handleModify(item) {
@@ -42,14 +45,28 @@ function Table({ data, refreshCallback, config }) {
 
     return (
         <>
+            
+            
+
             <div className="relative overflow-x-auto pb-10">
-                <button
-                    onClick={handleCreate}
-                    type="button"
-                    className="bg-primaryColor px-4 py-2 rounded-md my-4"
-                >
-                    Añadir
-                </button>
+                {
+                    stories ?
+                        <button
+                            onClick={()=>setStoriesModal(true)}
+                            type="button"
+                            className="bg-primaryColor px-4 py-2 rounded-md my-4"
+                        >
+                            Añadir
+                        </button>
+                        :
+                        <button
+                            onClick={handleCreate}
+                            type="button"
+                            className="bg-primaryColor px-4 py-2 rounded-md my-4"
+                        >
+                            Añadir
+                        </button>
+                }
                 <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <thead className="text-xs md:text-ms h-14 text-tertiaryColor bg-primaryColor">
                         <tr>
@@ -151,7 +168,10 @@ function Table({ data, refreshCallback, config }) {
                         config={config}
                     />
                 )}
+
+                {storiesModal && <StoriesModal isOpen={{storiesModal, setStoriesModal}} />}
             </div>
+            
         </>
     );
 }
