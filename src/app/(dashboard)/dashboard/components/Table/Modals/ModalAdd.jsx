@@ -5,11 +5,6 @@ function ModalAdd({ closeCallback, config }) {
         try {
             e.preventDefault();
 
-            let imageUrl;
-            if (config.collection != "admins") {
-                imageUrl = await uploadImage(e.target.image.files[0]);
-            }
-
             const data = {
                 nombre: e.target.title.value,
             };
@@ -21,12 +16,12 @@ function ModalAdd({ closeCallback, config }) {
             ) {
                 data.descripcion = e.target.description.value;
             }
+
             // Admins is the only who has no image so...
             if (config.collection != "admins") {
+                const imageUrl = await uploadImage(e.target.image.files[0]);
                 data.imagen = imageUrl;
-            }
-
-            if (config.collection == "admins") {
+            } else {
                 data.email = e.target.email.value;
                 data.contraseña = e.target.pass.value;
                 data.estado = true;

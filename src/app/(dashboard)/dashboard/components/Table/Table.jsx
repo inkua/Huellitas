@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ModalAdd from "./Modals/ModalAdd";
 import ModalMod from "./Modals/ModalMod";
-import { collection } from "firebase/firestore";
 
 function Table({ data, refreshCallback, config }) {
     const [isModalAddActive, setIsModalAddActive] = useState(false);
@@ -43,7 +42,7 @@ function Table({ data, refreshCallback, config }) {
 
     return (
         <>
-            <div className="relative overflow-x-auto">
+            <div className="relative overflow-x-auto pb-10">
                 <button
                     onClick={handleCreate}
                     type="button"
@@ -83,7 +82,7 @@ function Table({ data, refreshCallback, config }) {
                                 return (
                                     <tr
                                         key={item.id}
-                                        className="bg-white border-b odd:bg-[#6c5ce71d]"
+                                        className="bg-white border-b h-32 odd:bg-[#6c5ce71d]"
                                     >
                                         <th
                                             scope="row"
@@ -93,11 +92,11 @@ function Table({ data, refreshCallback, config }) {
                                         </th>
                                         {config.collection != "sponsors" &&
                                             (config.collection == "admins" ? (
-                                                <td className="px-6 py-4">
+                                                <td className="flex items-center whitespace-nowrap px-6 py-4 h-32 max-w-60 overflow-scroll">
                                                     {item.data.email}
                                                 </td>
                                             ) : (
-                                                <td className="px-6 py-4">
+                                                <td className="flex items-center whitespace-nowrap px-6 py-4 h-32 max-w-60 overflow-scroll">
                                                     {item.data.descripcion}
                                                 </td>
                                             ))}
