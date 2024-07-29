@@ -4,7 +4,6 @@ function Sumate() {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
-      const handleNameChange = (e) => {
 
     const [isSubmitted, setIsSubmitted] = useState(false);
 
