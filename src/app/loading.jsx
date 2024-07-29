@@ -1,8 +1,9 @@
+import styles from "./(main)/components/styles/loading.module.css"
 function Loading() {
 
     return (
-        <body>
-            <h1 className="text-lg text-red-950">Loading ....</h1>
+        <body className={styles.body}>
+            <div className={styles.loadingBox}></div>
         </body>
     )
 

@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import { useState } from 'react';
 
 
@@ -49,7 +49,7 @@ function map(){
 
     return(
         <div className='w-full bg-tertiaryColor h-fit  drop-shadow-2xl'>
-            <div className="w-full h-full mx-auto max-w-screen-2xl grid grid-cols-1 gap-6 content-start  lg:grid-cols-2 lg:gap-0 mb-3 lg:mb-2 shadow-2xl lg:shadow-none">          
+            <div className="w-full h-full mx-auto max-w-screen-2xl grid grid-cols-1 gap-6 content-start  lg:grid-cols-2 lg:gap-0 lg:mb-2 shadow-2xl lg:shadow-none">          
                 <div className='w-full  max-w-screen-2xl '>
                     <div className='grid grid-cols-1 ml-[10%]'>
                         <div>
@@ -124,11 +124,11 @@ function map(){
                         <div className="flex flex-col md:flex-row md:justify-center w-[80%] gap-2 md:mt-[23px]">
                             <div className="flex items-center justify-left px-4">
                                 <div className="bg-ig-mobile bg-no-repeat bg-contain w-[24px] h-[24px] md:w-[35px] md:h-[35px]"></div>
-                                <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-3 lg:ml-5 text-xs md:text-base" href="https://www.instagram.com/huellitas.ctgna/" target="_blank" rel="noreferrer">@huellitas.ctgna</a>
+                                <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:ml-5 text-xs md:text-base" href="https://www.instagram.com/huellitas.ctgna/" target="_blank" rel="noreferrer">@huellitas.ctgna</a>
                             </div>
                             <div className="flex items-center justify-left px-4">
                                 <div className="bg-tk-mobile bg-no-repeat bg-contain w-[24px] h-[24px] md:w-[35px] md:h-[35px]"></div>
-                                <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:mt-3 lg:ml-5 text-xs md:text-base" href="https://www.tiktok.com/@huellitascartagena" target="_blank" rel="noreferrer" >@huellitascartagena</a>
+                                <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:ml-5 text-xs md:text-base" href="https://www.tiktok.com/@huellitascartagena" target="_blank" rel="noreferrer" >@huellitascartagena</a>
                             </div>
                         </div>
                     </div>
