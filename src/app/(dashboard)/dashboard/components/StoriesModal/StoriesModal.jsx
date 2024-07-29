@@ -1,41 +1,47 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from "react"
-import RichTextEditor from "../RichTextEditor/RichTextEditor"
-import InputImg from "../InputImg/InputImg"
-import Loading from "../Loading/Loading"
+import { useEffect, useState } from "react";
+import RichTextEditor from "../RichTextEditor/RichTextEditor";
+import InputImg from "../InputImg/InputImg";
+import Loading from "../Loading/Loading";
 
-export default function StoriesModal({ isOpen, add=true, info=null }) {
-    const { setStoriesModal } = isOpen
-    const [loading, setLoading] = useState(false)
+export default function StoriesModal({ isOpen, add = true, info = null }) {
+    // const { setStoriesModalAdd, setStoriesModalMod } = isOpen;
+    const [loading, setLoading] = useState(false);
 
-    const [entradilla, setEntradilla] = useState('')
-    const [nombre, setNombre] = useState('')
+    const [entradilla, setEntradilla] = useState("");
+    const [nombre, setNombre] = useState("");
     const [editorState, setEditorState] = useState(null);
-    const [imageUrl, setImageUrl] = useState(null) // url de la imagen subida a firebase-storage
+    const [imageUrl, setImageUrl] = useState(null); // url de la imagen subida a firebase-storage
     const [selectedImage, setSelectedImage] = useState(null); // imagen seleccionada desde el input
 
-    if(!add){
-        setLoading(true)
-    }
-
-
     const handleclose = () => {
-        setStoriesModal(false)
-    }
-
-
-
-    useEffect(()=>{
-        if(info){
-            setNombre(info.setNombre)
-            setEntradilla(info.entradilla)
-            setEditorState(info.article)
-            setImageUrl(info.imageUrl)
-
-            setLoading(false)
+        if (add) {
+            isOpen.setStoriesModalAdd(false);
+        } else {
+            isOpen.setStoriesModalMod(false);
         }
-    },[])
+    };
+
+    useEffect(() => {
+        if (!add) {
+            setLoading(true);
+        }
+
+        if (info) {
+            // setNombre(info.setNombre)
+            // setEntradilla(info.entradilla)
+            // setEditorState(info.article)
+            // setImageUrl(info.imageUrl)
+
+            setNombre("Un nombre");
+            setEntradilla("Una entradilla");
+            setEditorState("Articulo");
+            setImageUrl("www.kkajsjd.com");
+
+            setLoading(false);
+        }
+    }, []);
 
     return (
         <div
@@ -46,7 +52,7 @@ export default function StoriesModal({ isOpen, add=true, info=null }) {
                 <div className="relative bg-[#f2f0fd] rounded-xl shadow ">
                     <div className="flex items-center rounded-t-xl border-2 border-primaryColor justify-between p-4 md:p-5">
                         <h3 className="text-lg font-semibold text-[#6b6b6b]">
-                            {add?"Añadir Nueva":"Modificar"}
+                            {add ? "Añadir Nueva" : "Modificar"}
                         </h3>
                         <button
                             onClick={() => handleclose()}
@@ -71,72 +77,86 @@ export default function StoriesModal({ isOpen, add=true, info=null }) {
                             <span className="sr-only">Close modal</span>
                         </button>
                     </div>
-                    {loading?
-                    <Loading />
-                    :
-                    <form className="border-2 border-t-0 rounded-b-xl border-primaryColor p-4 md:p-5" >
-                        <div className="grid gap-4 mb-4 grid-cols-2">
-                            <div className="col-span-2">
-                                <label
-                                    htmlFor="title"
-                                    className="block mb-2 text-sm font-medium text-[#6b6b6b]"
-                                >
-                                    Nombre
-                                </label>
-                                <input
-                                    type="text"
-                                    name="title"
-                                    id="title"
-                                    className="border border-gray-300 text-[#6b6b6b] text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                    placeholder="Nombre"
-                                    required
-                                    value={nombre}
-                                    onChange={(e) => setNombre(e.target.value)}
-                                ></input>
-                            </div>
-                            <div className="col-span-2">
-                                <label
-                                    htmlFor="entradilla"
-                                    className="block mb-2 text-sm font-medium text-[#6b6b6b]"
-                                >
-                                    Entradilla <span className="text-[11px] font-thin text-black">* {`${entradilla.length}`} caracteres</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    name="entradilla"
-                                    id="entradilla"
-                                    className="border border-gray-300 text-[#6b6b6b] text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                    placeholder="min50-max160 caracteres"
-                                    required
-                                    pattern=".{50,160}"
-                                    value={entradilla}
-                                    onChange={(e) => setEntradilla(e.target.value)}
-                                ></input>
-                            </div>
+                    {loading ? (
+                        <Loading />
+                    ) : (
+                        <form className="border-2 border-t-0 rounded-b-xl border-primaryColor p-4 md:p-5">
+                            <div className="grid gap-4 mb-4 grid-cols-2">
+                                <div className="col-span-2">
+                                    <label
+                                        htmlFor="title"
+                                        className="block mb-2 text-sm font-medium text-[#6b6b6b]"
+                                    >
+                                        Nombre
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="title"
+                                        id="title"
+                                        className="border border-gray-300 text-[#6b6b6b] text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                        placeholder="Nombre"
+                                        required
+                                        value={nombre}
+                                        onChange={(e) =>
+                                            setNombre(e.target.value)
+                                        }
+                                    ></input>
+                                </div>
+                                <div className="col-span-2">
+                                    <label
+                                        htmlFor="entradilla"
+                                        className="block mb-2 text-sm font-medium text-[#6b6b6b]"
+                                    >
+                                        Entradilla{" "}
+                                        <span className="text-[11px] font-thin text-black">
+                                            * {`${entradilla.length}`}{" "}
+                                            caracteres
+                                        </span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="entradilla"
+                                        id="entradilla"
+                                        className="border border-gray-300 text-[#6b6b6b] text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                        placeholder="min50-max160 caracteres"
+                                        required
+                                        pattern=".{50,160}"
+                                        value={entradilla}
+                                        onChange={(e) =>
+                                            setEntradilla(e.target.value)
+                                        }
+                                    ></input>
+                                </div>
 
-                            <div className="col-span-2">
-                                <label
-                                    htmlFor="articulo"
-                                    className="block mb-2 text-sm font-medium text-[#6b6b6b]"
-                                >
-                                    Artículo
-                                </label>
-                                <RichTextEditor data={{ editorState, setEditorState }} />
-                            </div>
+                                <div className="col-span-2">
+                                    <label
+                                        htmlFor="articulo"
+                                        className="block mb-2 text-sm font-medium text-[#6b6b6b]"
+                                    >
+                                        Artículo
+                                    </label>
+                                    <RichTextEditor
+                                        data={{ editorState, setEditorState }}
+                                    />
+                                </div>
 
-                            <div className="col-span-2">
-                                <InputImg data={{selectedImage, setSelectedImage}} />
+                                <div className="col-span-2">
+                                    <InputImg
+                                        data={{
+                                            selectedImage,
+                                            setSelectedImage,
+                                        }}
+                                    />
+                                </div>
                             </div>
-
-                        </div>
-                        <button
-                            type="button"
-                            className="text-white inline-flex items-center bg-primaryColor hover:bg-secondaryColor focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                        >
-                            Guardar
-                        </button>
-                    </form>
-                    }
+                            <button
+                                type="button"
+                                className="text-white inline-flex items-center bg-primaryColor hover:bg-secondaryColor focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                            >
+                                Guardar
+                            </button>
+                        </form>
+                    )}
                 </div>
             </div>
         </div>
