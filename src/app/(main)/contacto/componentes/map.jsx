@@ -111,7 +111,7 @@ function map(){
                         <label htmlFor="consulta" className="hidden  lg:block mb-2 text-base font-medium text-gray-900">Déjanos tu consulta</label>
                         <textarea type="text" id="consulta" className="bg-gray-50 border-gray-300 text-gray-900  h-40 px-4 py-2 font-normal shadow-xs resize-none leading-relaxed border-2   text-sm rounded-lg   block w-full p-2.5 " placeholder="Dejanos aquí tu consulta" required />
                     </div>
-                    <button className="bg-primaryColor text-white font-semibold rounded-lg p-2.5 lg:p-2 w-full lg:w-[40%] mt-4 ">Enviar Consulta</button>
+                    <button className="bg-primaryColor text-white font-semibold rounded-lg p-2.5 lg:p-2 w-full lg:w-[40%] mt-4 uppercase primary-btn"> Enviar consulta</button>
 
                 </div>
             </div>
