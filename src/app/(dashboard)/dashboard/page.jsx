@@ -26,6 +26,7 @@ function Dashboard() {
                         data={data}
                         refreshCallback={refreshCallback}
                         config={{ collection: "historias" }}
+                        stories={true}
                     />
                 ) : (
                     <h2>Ha ocurrido un error al cargar las historias.</h2>
