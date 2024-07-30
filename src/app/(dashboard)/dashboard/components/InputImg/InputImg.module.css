@@ -1,0 +1,29 @@
+.layout {
+    width: 100%;
+    height: auto;
+    max-height: 190px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+    padding: 16px;
+    overflow-x: hidden;
+}
+.boxWrapper{
+    width: 200px;
+    height: auto;
+}
+.wrapper{
+    position: relative;
+    width: 70px;
+    aspect-ratio: 1/1;
+    margin: 0rem auto;
+}
+.inputBox{
+    width: fit-content;
+}
+@media (min-width: 700px) {
+    .wrapper{
+        width: 150px;
+    }
+}
