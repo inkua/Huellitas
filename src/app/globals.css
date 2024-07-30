@@ -8,11 +8,13 @@
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
 }
+
 /* no tocar */
-.slide-image-reference .swiper-wrapper{
-  display: flex;
-  align-items: center;
+.slide-image-reference .swiper-wrapper {
+    display: flex;
+    align-items: center;
 }
+
 /* no tocar */
 
 @media (prefers-color-scheme: dark) {
@@ -22,6 +24,7 @@
         --background-end-rgb: 0, 0, 0;
     }
 }
+
 body {
     color: rgb(var(--foreground-rgb));
     background: rgb(var(--foreground-rgb));
@@ -46,11 +49,13 @@ body {
         scrollbar-width: none;
     }
 }
+
 @layer base {
     html {
         font-family: "Poppins", sans-serif;
     }
 }
+
 @layer base {
     html {
         font-family: "Poppins", sans-serif;
@@ -89,3 +94,56 @@ body {
     @apply text-p3-m lg:text-p3-w md:text-p3-w px-4 py-4 lg:py-1 md:py-1 font-medium text-black hover:bg-gray-100 rounded-full transition-all duration-150 active:bg-gray-200;
     @apply text-p3-m lg:text-p3-w md:text-p3-w px-4 py-4 lg:py-1 md:py-1 font-medium text-black hover:bg-gray-100 rounded-full transition-all duration-150 active:bg-gray-200;
 }
+
+/* Estilos de editor de textos */
+
+.public-DraftStyleDefault-block {
+    margin: 0;
+}
+
+.public-DraftStyleDefault-block.header-one {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.67em 0;
+}
+
+.public-DraftStyleDefault-block.header-two {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0.75em 0;
+}
+
+.public-DraftStyleDefault-block.header-three {
+    font-size: 1.17em;
+    font-weight: bold;
+    margin: 0.83em 0;
+}
+
+.public-DraftStyleDefault-block.header-four {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 1.12em 0;
+}
+
+@layer base {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: revert;
+        font-weight: revert;
+    }
+}
+
+.blockquote .public-DraftStyleDefault-block  {
+    border-left: 5px solid #ddd !important;
+    color: #555 !important;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    margin: 16px 0;
+    padding: 10px 20px;
+}
+
