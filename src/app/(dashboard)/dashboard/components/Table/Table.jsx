@@ -73,18 +73,28 @@ function Table({ data, refreshCallback, config, stories = false }) {
                             <th scope="col" className="px-6 py-3">
                                 Nombre
                             </th>
+                            {/* Fields only for admins page */}
                             {config.collection == "admins" && (
                                 <th scope="col" className="px-6 py-3">
                                     Email
                                 </th>
                             )}
 
+                            {/* Fields only for adoptions page */}
                             {config.collection == "adopciones" && (
                                 <th scope="col" className="px-6 py-3">
                                     Características
                                 </th>
                             )}
 
+                            {/* Fields only for stories page */}
+                            {config.collection == "historias" && (
+                                <th scope="col" className="px-6 py-3">
+                                    Entradilla
+                                </th>
+                            )}
+
+                            {/* Fields for all pages except admins */}
                             {config.collection != "admins" && (
                                 <th scope="col" className="px-6 py-3">
                                     Imagen
@@ -124,6 +134,13 @@ function Table({ data, refreshCallback, config, stories = false }) {
                                             </td>
                                         )}
 
+                                        {/* Fields only for stories page */}
+                                        {config.collection == "historias" && (
+                                            <td className="flex items-center whitespace-nowrap px-6 py-4 h-32 max-w-60 overflow-scroll">
+                                                {item.data.entradilla}
+                                            </td>
+                                        )}
+
                                         {/* Fields for all pages except admins */}
                                         {config.collection != "admins" && (
                                             <td className="px-6 min-w-[10rem] py-2">
@@ -134,6 +151,7 @@ function Table({ data, refreshCallback, config, stories = false }) {
                                                 />
                                             </td>
                                         )}
+
                                         <td className="px-6 py-4 text-right min-w-[15rem]">
                                             {config.collection != "admins" && (
                                                 <button
