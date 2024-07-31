@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import RichTextEditor from "../RichTextEditor/RichTextEditor";
 import InputImg from "../InputImg/InputImg";
 import Loading from "../Loading/Loading";
-import uploadImage from "@/services/services";
-import { convertToHTML } from "draft-convert";
+import uploadImage, { delImage } from "@/services/services";
+import { convertToHTML, convertFromHTML } from "draft-convert";
 
 export default function StoriesModal({ isOpen, add = true, item }) {
     const [loading, setLoading] = useState(false);
@@ -63,7 +63,7 @@ export default function StoriesModal({ isOpen, add = true, item }) {
                 data.imagen = imageUrl;
             }
 
-            await fetch("/api/" + config.collection, {
+            await fetch("/api/historias", {
                 method: "PUT",
                 body: JSON.stringify({
                     token: "",
@@ -110,7 +110,10 @@ export default function StoriesModal({ isOpen, add = true, item }) {
         if (item) {
             setNombre(item.data.nombre);
             setEntradilla(item.data.entradilla);
-            setEditorState(item.data.articulo);
+
+            // Not working, maybe it updates after setting this
+            //setEditorState(convertFromHTML(item.data.articulo));
+
             setLoading(false);
         }
     }, []);
