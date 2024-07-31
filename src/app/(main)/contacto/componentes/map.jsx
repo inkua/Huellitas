@@ -5,9 +5,8 @@ import { useState } from 'react';
 
 function map(){
     const [email, setEmail] = useState('');
-  
+
     const [name, setName] = useState('');
-  
     const [phone, setPhone] = useState('');
 
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -18,10 +17,8 @@ function map(){
 
         const form = e.target;
         if (form.checkValidity()) {
-            // Form is valid, handle form submission (e.g., send data to the server)
             console.log('Form submitted');
         } else {
-            // Form is invalid, show validation messages
             console.log('Form has errors');
         }
     };
@@ -47,7 +44,7 @@ function map(){
             <div className="px-[10%]">
                 <h1 className='text-primaryFont text-h2-m mb-4 font-bold mt-6  mb:text-2xl text-base lg:mt-12'>¿Tienes alguna consulta?</h1>
                 <div className='grid grid-cols-1 mb-12 w-full gap-y-3'>    
-        <form noValidate onSubmit={handleSubmit}>
+        <form  onSubmit={handleSubmit}>
         <div>
                 <label htmlFor="first_name" className="hidden lg:block mb-2 text-base font-medium text-gray-900">Nombre</label>
                 <input
@@ -55,13 +52,12 @@ function map(){
                     id="first_name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className={`bg-gray-50 border-2 ${isSubmitted && !name ? 'border-red-500' : 'border-gray-300'} text-gray-900 text-sm rounded-lg block w-full p-2.5`}
+                    className={`bg-gray-50 border-2  text-gray-900 text-sm rounded-lg block w-full p-2.5`}
                     placeholder="Nombre y Apellido"
-                    required
+                    required = {true}
                     minLength="2"
                 />
-                {isSubmitted && !name && <p className="text-red-500 text-sm mt-1">Nombre no válido</p>}
-            </div>
+                </div>
 
             <div>
                 <label htmlFor="PhoneNumber" className="hidden lg:block mb-2 text-base font-medium text-gray-900">Número de teléfono</label>
@@ -70,12 +66,11 @@ function map(){
                     id="PhoneNumber"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className={`bg-gray-50 border-2 ${isSubmitted && !phone.match(/[0-9\s\+\-\(\)]{7,}/) ? 'border-red-500' : 'border-gray-300'} text-gray-900 text-sm rounded-lg block w-full p-2.5`}
+                    className={`bg-gray-50 border-2  text-gray-900 text-sm rounded-lg block w-full p-2.5`}
                     placeholder="Teléfono"
-                    required
-                    pattern="[0-9\s\+\-\(\)]{7,}"
+                    required = {true}
+                    pattern="[0-9\s\+\-\(\)]{10,}"
                 />
-                {isSubmitted && !phone.match(/[0-9\s\+\-\(\)]{7,}/) && <p className="text-red-500 text-sm mt-1">Número de teléfono no válido</p>}
             </div>
             
             <div>
@@ -85,11 +80,11 @@ function map(){
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className={`bg-gray-50 border-2 ${isSubmitted && !email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) ? 'border-red-500' : 'border-gray-300'} text-gray-900 text-sm rounded-lg block w-full p-2.5`}
+                    className={`bg-gray-50 border-2 text-gray-900 text-sm rounded-lg block w-full p-2.5`}
                     placeholder="Correo electrónico"
-                    required
+                    pattern="[^\s@]+@[^\s@]+.[^\s@]+"
+                    required = {true}
                 />
-                {isSubmitted && !email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) && <p className="text-red-500 text-sm mt-1">Correo electrónico no válido</p>}
             </div>
             <div>
                 <label htmlFor="consulta" className="hidden lg:block mb-2 text-base font-medium text-gray-900">Déjanos tu consulta</label>
