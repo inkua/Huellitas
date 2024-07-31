@@ -20,7 +20,13 @@ function Slider({ items, type, def, lg, md, nav = false, loop = false }) {
             {
                 items.map(item => (
                     <SwiperSlide key={item.id}>
-                        {createItem(type, item.source, item.par, item.btn, item.action, item.alt)}
+                        {/** Si es una historia, la informacion viene en un formato diferente / type 0 es una historia */}
+                        {type == 0 ? 
+                        createItem(type, item.data.imagen, item.data.entradilla, "SABER MAS...", item.action, item.alt) 
+                        : 
+                        createItem(type, item.source, item.par, item.btn, item.action, item.alt)
+                        }
+                        
                     </SwiperSlide>
                 ))
             }
