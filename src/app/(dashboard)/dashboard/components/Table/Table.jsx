@@ -165,7 +165,7 @@ function Table({ data, refreshCallback, config, stories = false }) {
                     <StoriesModal
                         isOpen={{ setStoriesModalMod }}
                         add={false}
-                        info={selectedItem}
+                        item={selectedItem}
                     />
                 )}
 

@@ -34,7 +34,10 @@ function ModalMod({ item, closeCallback, config }) {
                 }),
             });
 
-            await delImage(item.data.imagen);
+            if (e.target.image.files[0]) {
+                await delImage(item.data.imagen);
+            }
+
             closeCallback();
         } catch (e) {
             console.log(e.message);

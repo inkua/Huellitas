@@ -4,16 +4,87 @@ import { useEffect, useState } from "react";
 import RichTextEditor from "../RichTextEditor/RichTextEditor";
 import InputImg from "../InputImg/InputImg";
 import Loading from "../Loading/Loading";
+import uploadImage from "@/services/services";
+import { convertToHTML } from "draft-convert";
 
-export default function StoriesModal({ isOpen, add = true, info = null }) {
-    // const { setStoriesModalAdd, setStoriesModalMod } = isOpen;
+export default function StoriesModal({ isOpen, add = true, item }) {
     const [loading, setLoading] = useState(false);
-
     const [entradilla, setEntradilla] = useState("");
     const [nombre, setNombre] = useState("");
     const [editorState, setEditorState] = useState(null);
-    const [imageUrl, setImageUrl] = useState(null); // url de la imagen subida a firebase-storage
     const [selectedImage, setSelectedImage] = useState(null); // imagen seleccionada desde el input
+
+    const handleAdd = async (e) => {
+        try {
+            e.preventDefault();
+
+            const data = {
+                nombre: nombre,
+                entradilla: entradilla,
+                articulo: convertToHTML(editorState.getCurrentContent()),
+            };
+
+            console.log(selectedImage);
+
+            const imageUrl = await uploadImage(selectedImage);
+            data.imagen = imageUrl;
+
+            await fetch("/api/historias", {
+                method: "POST",
+                body: JSON.stringify({
+                    token: "",
+                    data: data,
+                }),
+            });
+
+            //This Does not refresh the table
+            handleclose();
+
+            //so meanwhile...
+            location.reload();
+        } catch (e) {
+            console.log(e.message);
+        }
+    };
+
+    const handleMod = async (e) => {
+        try {
+            e.preventDefault();
+
+            const data = {
+                nombre: nombre,
+                entradilla: entradilla,
+                articulo: convertToHTML(editorState.getCurrentContent()),
+            };
+
+            let imageUrl;
+            if (e.target.image.files[0]) {
+                imageUrl = await uploadImage(selectedImage);
+                data.imagen = imageUrl;
+            }
+
+            await fetch("/api/" + config.collection, {
+                method: "PUT",
+                body: JSON.stringify({
+                    token: "",
+                    id: item.id,
+                    data: data,
+                }),
+            });
+
+            if (selectedImage) {
+                await delImage(item.data.imagen);
+            }
+
+            //This Does not refresh the table
+            handleclose();
+
+            //so meanwhile...
+            location.reload();
+        } catch (e) {
+            console.log(e.message);
+        }
+    };
 
     const handleclose = () => {
         if (add) {
@@ -23,22 +94,23 @@ export default function StoriesModal({ isOpen, add = true, info = null }) {
         }
     };
 
+    const handleSubmit = (e) => {
+        if (add) {
+            handleAdd(e);
+        } else {
+            handleMod(e);
+        }
+    };
+
     useEffect(() => {
         if (!add) {
             setLoading(true);
         }
 
-        if (info) {
-            // setNombre(info.setNombre)
-            // setEntradilla(info.entradilla)
-            // setEditorState(info.article)
-            // setImageUrl(info.imageUrl)
-
-            setNombre("Un nombre");
-            setEntradilla("Una entradilla");
-            setEditorState("Articulo");
-            setImageUrl("www.kkajsjd.com");
-
+        if (item) {
+            setNombre(item.data.nombre);
+            setEntradilla(item.data.entradilla);
+            setEditorState(item.data.articulo);
             setLoading(false);
         }
     }, []);
@@ -80,7 +152,10 @@ export default function StoriesModal({ isOpen, add = true, info = null }) {
                     {loading ? (
                         <Loading />
                     ) : (
-                        <form className="border-2 border-t-0 rounded-b-xl border-primaryColor p-4 md:p-5">
+                        <form
+                            onSubmit={handleSubmit}
+                            className="border-2 border-t-0 rounded-b-xl border-primaryColor p-4 md:p-5"
+                        >
                             <div className="grid gap-4 mb-4 grid-cols-2">
                                 <div className="col-span-2">
                                     <label
@@ -150,7 +225,7 @@ export default function StoriesModal({ isOpen, add = true, info = null }) {
                                 </div>
                             </div>
                             <button
-                                type="button"
+                                type="submit"
                                 className="text-white inline-flex items-center bg-primaryColor hover:bg-secondaryColor focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                             >
                                 Guardar
