@@ -71,28 +71,27 @@ body {
 }
 
 .par-1 {
-    @apply text-p1-m lg:text-p1-w md:text-p1-w text-primaryFont;
+    @apply text-p1-m lg:text-p1-w md:text-p1-w font-normal text-primaryFont;
 }
 
 .par-2 {
-    @apply text-p2-m lg:text-p2-w md:text-p2-w text-primaryFont;
+    @apply text-p2-m lg:text-p2-w md:text-p2-w font-normal text-primaryFont;
 }
 
 .par-3 {
-    @apply text-p3-m lg:text-p3-w md:text-p3-w text-primaryFont;
+    @apply text-p3-m lg:text-p3-w md:text-p3-w font-normal text-primaryFont;
 }
 
 .primary-btn {
-    @apply text-p3-m lg:text-p3-w md:text-p3-w px-4 py-4 lg:py-1 md:py-1 font-medium text-white bg-primaryColor hover:bg-secondaryColor rounded-full shadow-md transition-all duration-150 active:bg-activeButton;
+    @apply uppercase text-p3-m lg:text-p3-w md:text-p3-w px-4 py-4 lg:py-1 md:py-1 font-medium text-white bg-primaryColor hover:bg-secondaryColor rounded-full shadow-md transition-all duration-150 active:bg-activeButton;
 }
 
 .secondary-btn {
-    @apply px-4 py-1 text-sm text-primaryColor border-solid border-2 border-primaryColor rounded-2xl hover:text-white hover:bg-primaryColor hover:border-violet-900 transition-all duration-150 active:bg-violet-600;
+    @apply uppercase px-4 py-1 text-sm text-primaryColor border-solid border-2 border-primaryColor rounded-2xl hover:text-white hover:bg-primaryColor hover:border-violet-900 transition-all duration-150 active:bg-violet-600;
 }
 
 .close-btn {
-    @apply text-p3-m lg:text-p3-w md:text-p3-w px-4 py-4 lg:py-1 md:py-1 font-medium text-black hover:bg-gray-100 rounded-full transition-all duration-150 active:bg-gray-200;
-    @apply text-p3-m lg:text-p3-w md:text-p3-w px-4 py-4 lg:py-1 md:py-1 font-medium text-black hover:bg-gray-100 rounded-full transition-all duration-150 active:bg-gray-200;
+    @apply uppercase text-p3-m lg:text-p3-w md:text-p3-w px-4 py-4 lg:py-1 md:py-1 font-medium text-black hover:bg-gray-100 rounded-full transition-all duration-150 active:bg-gray-200;
 }
 
 /* Estilos de editor de textos */

@@ -4,41 +4,41 @@ import Accord from "../Accordion/Accordion";
 let items = [
   {
     id: 1,
-    title: "¿Que hacemos?",
+    title: "¿Qué hacemos?",
     par: "Rescatamos animales en condiciones vulnerables, los rehabilitamos y entregamos a hogares/familias seguros y responsables.",
   },
   {
     id: 2,
-    title: "¿Cómo lo logró?",
-    par: "Con la disposición del equipo Huellitas, amor y dedicación. Nuestro modelo de 6 Pasos para Una Final Feliz hace posible transformar la historia de los animales rescatados. Lo más importante para lograrlo son las donaciones y apoyo de nuestra familia Huellitas, sin ellos nada de eso sería posible.",
+    title: "¿Cómo lo logramos?",
+    par: "Con la disposición del equipo de Huellitas, amor y dedicación. Nuestro modelo de 6 pasos para un final feliz hace posible transformar la historia de los animales rescatados. Lo más importante para lograrlo son las donaciones y apoyo de nuestra familia Huellitas. Sin ellos nada de eso sería posible.",
   },
   {
     id: 3,
     title: "¿Cuáles son los 6 pasos?",
     par: <ol className="flex flex-col gap-2">
       <ul>
-        <p><span className="font-bold">PASO 1 RESCATE:</span> Nos alertamos de algún peludo que necesita ayuda y acudimos a rescatarlo en el lugar que se encuentre. (ENTRE $20.000,00 HASTA 120.000.00) SI ES FUERA DE LA CIUDAD VARÍA EL VALOR</p>
+        <p><span className="font-bold">PASO 1 RESCATE:</span> Cuando nos alertan de algún peludo que necesita ayuda, acudimos a su rescate.</p>
       </ul>
       <ul>
-        <p> <span className="font-bold">PASO 2 INGRESO A LA VETERINARIA:</span> Nos encargamos que el peludo sea ingresado en nuestras veterinarias de confianza, siendo atendido.</p>
+        <p> <span className="font-bold">PASO 2 INGRESO A LA VETERINARIA:</span> Ingresamos al peludo sea en una de nuestras veterinarias de confianza para ser atendido.</p>
       </ul>
       <ul>
-        <p><span className="font-bold">PASO 3 REHABILITACIÓN:</span> A partir de aquí empieza un tiempo de rehabilitación donde el peludo recibe atención médica necesaria que lo ayude a recuperarse tanto físicamente como mentalmente.</p>
+        <p><span className="font-bold">PASO 3 REHABILITACIÓN:</span> De acuerdo con las indicaciones del veterinario, comienza el tratamiento médico y la rehabilitación física y mental del peludo.</p>
       </ul>
       <ul>
-        <p><span className="font-bold">PASO 4 ADOPCIÓN:</span> Empezamos el proceso de adopción, con la toma de material gráfico, difusión de este, donde las familias interesadas deberán diligenciar un formulario y posterior a eso una entrevista virtual o presencial, dado el caso. Finalmente deben firmar un acuerdo de adopción y compromiso de esterilización, dado el caso.</p>
+        <p><span className="font-bold">PASO 4 ADOPCIÓN:</span> Difundimos imágenes e información del rescatado, a la espera de una familia interesada, la que deberá diligenciar un formulario, mantener una entrevista (virtual o presencial según el caso) y firmar un acuerdo de adopción y compromiso de esterilización.</p>
       </ul>
       <ul>
-        <p><span className="font-bold">PASO 5 ENTREGA:</span> Una vez confirmada la adopción se hace entrega del peludo en el domicilio del adoptante.</p>
+        <p><span className="font-bold">PASO 5 ENTREGA:</span> Una vez confirmada la adopción, se hace entrega del peludo en el domicilio del adoptante.</p>
       </ul>
       <ul>
-        <p><span className="font-bold">PASO 6 SEGUIMIENTO:</span> Una vez entregada la mascota iniciamos procesos de seguimiento para comprobar el estado en el que se encuentra la mascota. </p>
+        <p><span className="font-bold">PASO 6 SEGUIMIENTO:</span> Una vez entregada la mascota iniciamos un proceso de seguimiento para comprobar el estado en el que se encuentra la mascota.</p>
       </ul>
     </ol>,
   },
   {
     id: 4,
-    title: "¿Qué necesito para lograrlo?",
+    title: "¿Qué necesitamos para lograrlo?",
     par: "Voluntarios que deseen unirse a las actividades pro fondos de la fundación y padrinos que deseen donar una donación mensual de $10.000,00 para costear los insumos de nuestro modelo. Esto financia: Transporte, atención veterinaria, tratamiento médico, vacunas, alimento, entrenador/educador.",
   },
 ];
@@ -49,7 +49,7 @@ function FAQ_Adopcion() {
       <div className="w-full max-w-screen-2xl mx-auto h-full">
         <div className="w-[90%] lg:w-9/12 m-auto">
           <div className="text-left my-4 mt-6 ">
-            <h2 className="text-lg text-primaryFont py-2">Adopción</h2>
+            <h2 className="par-2">Adopción</h2>
             <h1 className="text-lg lg:text-3xl font-semibold text-primaryFont">
               PREGUNTAS FRECUENTES
             </h1>
