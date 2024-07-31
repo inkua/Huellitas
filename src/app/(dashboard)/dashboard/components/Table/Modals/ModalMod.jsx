@@ -14,8 +14,15 @@ function ModalMod({ item, closeCallback, config }) {
                 imageUrl = await uploadImage(e.target.image.files[0]);
                 data.imagen = imageUrl;
             }
-            if (config.collection != "sponsors") {
-                data.descripcion = e.target.description.value;
+
+            if (config.collection == "adopciones") {
+                data.caracteristicas = e.target.characteristics.value;
+                data.edad = e.target.age.value;
+
+                const gender = parseInt(e.target.gender.value);
+                data.genero = gender;
+
+                data.historia = e.target.story.value;
             }
 
             await fetch("/api/" + config.collection, {
@@ -27,7 +34,10 @@ function ModalMod({ item, closeCallback, config }) {
                 }),
             });
 
-            await delImage(item.data.imagen);
+            if (e.target.image.files[0]) {
+                await delImage(item.data.imagen);
+            }
+
             closeCallback();
         } catch (e) {
             console.log(e.message);
@@ -91,24 +101,75 @@ function ModalMod({ item, closeCallback, config }) {
                                         defaultValue={item.data.nombre}
                                     ></input>
                                 </div>
-                                {config.collection != "sponsors" && (
-                                    <div className="col-span-2">
-                                        <label
-                                            htmlFor="description"
-                                            className="block mb-2 text-sm font-medium text-[#6b6b6b]"
-                                        >
-                                            Descripcion
-                                        </label>
-                                        <textarea
-                                            id="description"
-                                            rows="4"
-                                            className="block p-2.5 w-full text-sm text-[#6b6b6b] rounded-lg"
-                                            placeholder="Descripción"
-                                            required
-                                            defaultValue={item.data.descripcion}
-                                        ></textarea>
-                                    </div>
+
+                                {config.collection == "adopciones" && (
+                                    <>
+                                        <div className="col-span-2">
+                                            <label
+                                                htmlFor="characteristics"
+                                                className="block mb-2 text-sm font-medium text-[#6b6b6b]"
+                                            >
+                                                Características
+                                            </label>
+                                            <textarea
+                                                id="characteristics"
+                                                rows="4"
+                                                className="border border-gray-300 text-[#6b6b6b] text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                                placeholder="Características"
+                                                required
+                                            ></textarea>
+                                        </div>
+                                        <div className="col-span-2">
+                                            <label
+                                                htmlFor="age"
+                                                className="block mb-2 text-sm font-medium text-[#6b6b6b]"
+                                            >
+                                                Edad
+                                            </label>
+                                            <input
+                                                type="number"
+                                                id="age"
+                                                className="border border-gray-300 text-[#6b6b6b] text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                                placeholder="0"
+                                                required
+                                            ></input>
+                                        </div>
+                                        <div className="col-span-2">
+                                            <label
+                                                htmlFor="gender"
+                                                className="block mb-2 text-sm font-medium text-[#6b6b6b]"
+                                            >
+                                                Género
+                                            </label>
+                                            <select
+                                                className="block py-2 px-4 mb-2 text-sm font-medium text-[#6b6b6b] bg-white"
+                                                name="gender"
+                                                id="gender"
+                                            >
+                                                <option value="1">Macho</option>
+                                                <option value="0">
+                                                    Hembra
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div className="col-span-2">
+                                            <label
+                                                htmlFor="story"
+                                                className="block mb-2 text-sm font-medium text-[#6b6b6b]"
+                                            >
+                                                Historia
+                                            </label>
+                                            <textarea
+                                                id="story"
+                                                rows="4"
+                                                className="border border-gray-300 text-[#6b6b6b] text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                                placeholder="Historia"
+                                                required
+                                            ></textarea>
+                                        </div>
+                                    </>
                                 )}
+
                                 {config.collection != "admins" && (
                                     <div className="col-span-2">
                                         <label
