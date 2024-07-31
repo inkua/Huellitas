@@ -73,16 +73,18 @@ function Table({ data, refreshCallback, config, stories = false }) {
                             <th scope="col" className="px-6 py-3">
                                 Nombre
                             </th>
-                            {config.collection != "sponsors" &&
-                                (config.collection == "admins" ? (
-                                    <th scope="col" className="px-6 py-3">
-                                        Email
-                                    </th>
-                                ) : (
-                                    <th scope="col" className="px-6 py-3">
-                                        Descripción
-                                    </th>
-                                ))}
+                            {config.collection == "admins" && (
+                                <th scope="col" className="px-6 py-3">
+                                    Email
+                                </th>
+                            )}
+
+                            {config.collection == "adopciones" && (
+                                <th scope="col" className="px-6 py-3">
+                                    Características
+                                </th>
+                            )}
+
                             {config.collection != "admins" && (
                                 <th scope="col" className="px-6 py-3">
                                     Imagen
@@ -107,17 +109,22 @@ function Table({ data, refreshCallback, config, stories = false }) {
                                         >
                                             {item.data.nombre}
                                         </th>
-                                        {config.collection != "sponsors" &&
-                                            (config.collection == "admins" ? (
-                                                <td className="flex items-center whitespace-nowrap px-6 py-4 h-32 max-w-60 overflow-scroll">
-                                                    {item.data.email}
-                                                </td>
-                                            ) : (
-                                                <td className="flex items-center whitespace-nowrap px-6 py-4 h-32 max-w-60 overflow-scroll">
-                                                    {item.data.descripcion}
-                                                </td>
-                                            ))}
 
+                                        {/* Fields only for admins page */}
+                                        {config.collection == "admins" && (
+                                            <td className="flex items-center whitespace-nowrap px-6 py-4 h-32 max-w-60 overflow-scroll">
+                                                {item.data.email}
+                                            </td>
+                                        )}
+
+                                        {/* Fields only for adoptions page */}
+                                        {config.collection == "adopciones" && (
+                                            <td className="flex items-center whitespace-nowrap px-6 py-4 h-32 max-w-60 overflow-scroll">
+                                                {item.data.caracteristicas}
+                                            </td>
+                                        )}
+
+                                        {/* Fields for all pages except admins */}
                                         {config.collection != "admins" && (
                                             <td className="px-6 min-w-[10rem] py-2">
                                                 <img
