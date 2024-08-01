@@ -7,7 +7,7 @@ const DonaInsumosContent = ({ onClose }) => {
           <p className="w-full par-3 mt-4">
             Amoxidal, Metronidazol, Cefalexina, Prendisona, Furosemide, Enalapril, Tramadol (comprimidos o inyectable), Farmaconal, Ondasetron, Previcox, Karsivan, Morfina.
           </p>
-        </div>
+      </div>
 
         <div className="w-full">
           <h2 className="heading-2">MEDICAMENTOS</h2>
