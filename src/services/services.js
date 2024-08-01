@@ -80,7 +80,7 @@ export async function delElement(id, collectionName) {
 
 // Upload an image
 export async function uploadImage(file) {
-    const storageRef = ref(storage, `images/${file.name}`);
+    const storageRef = ref(storage, `images/${file.name + "_" + Date.now()}`); //Even if the image is duplicated, will be saved
     await uploadBytes(storageRef, file);
     return await getDownloadURL(storageRef);
 }
