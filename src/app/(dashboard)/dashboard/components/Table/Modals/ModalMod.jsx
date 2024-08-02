@@ -5,6 +5,10 @@ function ModalMod({ item, closeCallback, config }) {
         try {
             e.preventDefault();
 
+            const htmlTag = document.getElementsByTagName("html")[0];
+            htmlTag.classList.add("!cursor-wait");
+            htmlTag.classList.add("pointer-events-none");
+
             const data = {
                 nombre: e.target.title.value,
             };
@@ -38,9 +42,14 @@ function ModalMod({ item, closeCallback, config }) {
                 await delImage(item.data.imagen);
             }
 
+            htmlTag.classList.remove("!cursor-wait");
+            htmlTag.classList.remove("pointer-events-none");
+
             closeCallback();
         } catch (e) {
             console.log(e.message);
+            htmlTag.classList.remove("!cursor-wait");
+            htmlTag.classList.remove("pointer-events-none");
         }
     }
 
