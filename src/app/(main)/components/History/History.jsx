@@ -17,8 +17,6 @@ function History() {
         setData();
     }, []);
 
-    console.log(items);
-
     return (
         <section className='flex flex-col w-full max-w-screen-2xl mx-auto justify-center items-center gap-8 py-8 md:py-10 lg:py-16 bg-white'>
             <h1 className='w-[90%] lg:w-9/12 font-bold heading-1 text-left'>SIGUE SUS HISTORIAS</h1>

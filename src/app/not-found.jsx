@@ -11,7 +11,7 @@ function NotFound() {
                             <h1 className='text-6xl md:text-7xl font-bold text-primaryFont lg:text-white'>PÁGINA</h1>
                             <h2 className='text-4xl md:text-5xl font-bold text-primaryFont lg:text-white'>NO ENCONTRADA</h2>
                             <h3 className='text-2xl md:text-3xl font-bold text-primaryFont lg:text-white'>Error 404</h3>
-                            <button className='text-lg font-bold text-primaryFont lg:text-white underline mt-32 hidden lg:block'><Link href="/">Volver al inicio</Link></button>
+                            <button className='primary-btn !p-3 mt-32 hidden lg:block'><Link href="/">Volver al inicio</Link></button>
                         </div>
 
                         <div className='flex w-full lg:w-6/12 h-[30%] lg:h-full justify-center items-center'>
@@ -19,7 +19,7 @@ function NotFound() {
                         </div>
 
                         <div className='flex w-full h-[35%] justify-center items-center lg:hidden'>
-                            <button className='primary-btn !bg-primaryFont'><Link href="/">Volver al inicio</Link></button>
+                            <button className='primary-btn'><Link href="/">Volver al inicio</Link></button>
                         </div>
                     </section>
                 </main>
