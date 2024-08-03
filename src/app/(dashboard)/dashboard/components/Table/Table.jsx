@@ -1,5 +1,7 @@
 "use client";
 
+import styles from "@/app/(main)/components/styles/loading.module.css"
+
 import { useState } from "react";
 import ModalAdd from "./Modals/ModalAdd";
 import ModalMod from "./Modals/ModalMod";
@@ -37,18 +39,32 @@ function Table({ data, refreshCallback, config, stories = false }) {
     }
 
     async function handleRemove(item) {
-        await fetch("/api/" + config.collection, {
-            method: "DELETE",
-            body: JSON.stringify({
-                token: "",
-                item: item,
-            }),
-        });
-        refreshCallback(Date.now());
+        try {
+            const htmlTag = document.getElementsByTagName("html")[0];
+            htmlTag.classList.add("!cursor-wait");
+            htmlTag.classList.add("pointer-events-none");
+
+            await fetch("/api/" + config.collection, {
+                method: "DELETE",
+                body: JSON.stringify({
+                    token: "",
+                    item: item,
+                }),
+            });
+
+            htmlTag.classList.remove("!cursor-wait");
+            htmlTag.classList.remove("pointer-events-none");
+
+            refreshCallback(Date.now());
+        } catch (error) {
+            console.log(e);
+            htmlTag.classList.remove("!cursor-wait");
+            htmlTag.classList.remove("pointer-events-none");
+        }
     }
 
     return (
-        <>
+        <div>
             <div className="relative overflow-x-auto pb-10">
                 {stories ? (
                     <button
@@ -73,16 +89,28 @@ function Table({ data, refreshCallback, config, stories = false }) {
                             <th scope="col" className="px-6 py-3">
                                 Nombre
                             </th>
-                            {config.collection != "sponsors" &&
-                                (config.collection == "admins" ? (
-                                    <th scope="col" className="px-6 py-3">
-                                        Email
-                                    </th>
-                                ) : (
-                                    <th scope="col" className="px-6 py-3">
-                                        Descripción
-                                    </th>
-                                ))}
+                            {/* Fields only for admins page */}
+                            {config.collection == "admins" && (
+                                <th scope="col" className="px-6 py-3">
+                                    Email
+                                </th>
+                            )}
+
+                            {/* Fields only for adoptions page */}
+                            {config.collection == "adopciones" && (
+                                <th scope="col" className="px-6 py-3">
+                                    Características
+                                </th>
+                            )}
+
+                            {/* Fields only for stories page */}
+                            {config.collection == "historias" && (
+                                <th scope="col" className="px-6 py-3">
+                                    Entradilla
+                                </th>
+                            )}
+
+                            {/* Fields for all pages except admins */}
                             {config.collection != "admins" && (
                                 <th scope="col" className="px-6 py-3">
                                     Imagen
@@ -107,17 +135,29 @@ function Table({ data, refreshCallback, config, stories = false }) {
                                         >
                                             {item.data.nombre}
                                         </th>
-                                        {config.collection != "sponsors" &&
-                                            (config.collection == "admins" ? (
-                                                <td className="flex items-center whitespace-nowrap px-6 py-4 h-32 max-w-60 overflow-scroll">
-                                                    {item.data.email}
-                                                </td>
-                                            ) : (
-                                                <td className="flex items-center whitespace-nowrap px-6 py-4 h-32 max-w-60 overflow-scroll">
-                                                    {item.data.descripcion}
-                                                </td>
-                                            ))}
 
+                                        {/* Fields only for admins page */}
+                                        {config.collection == "admins" && (
+                                            <td className="flex items-center whitespace-nowrap px-6 py-4 h-32 max-w-60 overflow-scroll">
+                                                {item.data.email}
+                                            </td>
+                                        )}
+
+                                        {/* Fields only for adoptions page */}
+                                        {config.collection == "adopciones" && (
+                                            <td className="flex items-center whitespace-nowrap px-6 py-4 h-32 max-w-60 overflow-scroll">
+                                                {item.data.caracteristicas}
+                                            </td>
+                                        )}
+
+                                        {/* Fields only for stories page */}
+                                        {config.collection == "historias" && (
+                                            <td className="flex items-center whitespace-nowrap px-6 py-4 h-32 max-w-60 overflow-scroll">
+                                                {item.data.entradilla}
+                                            </td>
+                                        )}
+
+                                        {/* Fields for all pages except admins */}
                                         {config.collection != "admins" && (
                                             <td className="px-6 min-w-[10rem] py-2">
                                                 <img
@@ -127,6 +167,7 @@ function Table({ data, refreshCallback, config, stories = false }) {
                                                 />
                                             </td>
                                         )}
+
                                         <td className="px-6 py-4 text-right min-w-[15rem]">
                                             {config.collection != "admins" && (
                                                 <button
@@ -158,7 +199,7 @@ function Table({ data, refreshCallback, config, stories = false }) {
                     <StoriesModal
                         isOpen={{ setStoriesModalMod }}
                         add={false}
-                        info={selectedItem}
+                        item={selectedItem}
                     />
                 )}
 
@@ -181,7 +222,8 @@ function Table({ data, refreshCallback, config, stories = false }) {
                     <StoriesModal isOpen={{ setStoriesModalAdd }} />
                 )}
             </div>
-        </>
+            {!data && <div className={styles.loadingBox + " " + "mx-auto"}></div>}
+        </div>
     );
 }
 

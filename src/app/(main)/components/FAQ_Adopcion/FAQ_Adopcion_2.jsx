@@ -7,7 +7,7 @@ function FAQ_Adopcion_2({ items }) {
             <div className="w-full max-w-screen-2xl mx-auto h-full">
                 <div className="w-[90%] lg:w-9/12 m-auto">
                     <div className="text-left my-4 mt-6 ">
-                        <h2 className="text-lg text-primaryFont py-2">Adopción</h2>
+                        <h2 className="par-2">Adopción</h2>
                         <h1 className="text-lg lg:text-3xl font-semibold text-primaryFont">
                             PREGUNTAS FRECUENTES
                         </h1>

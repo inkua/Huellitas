@@ -19,19 +19,19 @@ function Footer() {
 
           <div className="hidden md:flex py-6 md:py-0 w-auto min-w-52  text-center justify-center">
             <ul className="flex flex-col gap-2">
-              <li className="hover:font-bold">
+              <li className="hover:font-bold duration-200">
                 <Link href="/fundacion">FUNDACIÓN</Link>
               </li>
-              <li className="hover:font-bold">
+              <li className="hover:font-bold duration-200">
                 <Link href="/adopcion">ADOPCIÓN</Link>
               </li>
-              <li className="hover:font-bold">
+              <li className="hover:font-bold duration-200">
                 <Link href="/colaboracion">COLABORACIÓN</Link>
               </li>
-              <li className="hover:font-bold">
+              <li className="hover:font-bold duration-200">
                 <Link href="/adopcion#preguntas-frecuentes">PREGUNTAS FRECUENTES</Link>
               </li>
-              <li className="hover:font-bold">
+              <li className="hover:font-bold duration-200">
                 <Link href="/contacto">CONTACTO</Link>
               </li>
             </ul>
@@ -40,16 +40,16 @@ function Footer() {
           <div className="flex flex-col flex-grow basis-0 justify-start">
             <div className="text-center">
               <p className="text-sm font-medium">
-                Síguenos en nustras redes sociales
+                Síguenos en nuestras redes sociales
               </p>
-              <div className="flex justify-center items-center gap-4 mt-9">
+              <div className="flex justify-center items-center gap-4 mt-9 duration-200">
                 <Link
                   href="https://www.instagram.com/huellitas.ctgna/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Image
-                    className="hover:scale-125 h-8 w-8"
+                    className="hover:scale-125 h-8 w-8 duration-200"
                     src={"/assets/logos/svg/instagram.svg"}
                     alt="Instagram"
                     height={80}
@@ -63,7 +63,7 @@ function Footer() {
                   rel="noopener noreferrer"
                 >
                   <Image
-                    className="hover:scale-125 h-8 w-8"
+                    className="hover:scale-125 h-8 w-8 duration-200"
                     src={"/assets/logos/svg/facebook.svg"}
                     alt="Facebook"
                     height={80}
@@ -77,7 +77,7 @@ function Footer() {
                   rel="noopener noreferrer"
                 >
                   <Image
-                    className="hover:scale-125 h-8 w-8"
+                    className="hover:scale-125 h-8 w-8 duration-200"
                     src={"/assets/logos/svg/x.svg"}
                     alt="X"
                     height={80}
@@ -95,7 +95,7 @@ function Footer() {
           Diseño y Programación:
           <Link
             href="https://inkua.de/"
-            className="font-bold hover:text-[#034C8C] hover:bg-white rounded-bl-3xl rounded-tr-3xl px-3"
+            className="font-bold hover:text-[#034C8C] hover:bg-white rounded-bl-3xl rounded-tr-3xl px-3 duration-200"
             target="_blank"
             rel="noopener noreferrer"
           >

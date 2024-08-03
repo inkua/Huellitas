@@ -10,7 +10,7 @@ function Slider({ items, type, def, lg, md }) {
                 {
                     items.map(item => (
                         <SwiperSlide key={item.id}>
-                            {createItem(type, item.source, item.alt)}
+                            {createItem(type, item.data.imagen, "Sponsor de nombre: " + item.data.nombre)}
                         </SwiperSlide>
                     ))
                 }

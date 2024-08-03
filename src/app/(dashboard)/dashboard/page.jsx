@@ -21,16 +21,12 @@ function Dashboard() {
     try {
         return (
             <div className="my-12">
-                {data ? (
                     <Table
                         data={data}
                         refreshCallback={refreshCallback}
                         config={{ collection: "historias" }}
                         stories={true}
                     />
-                ) : (
-                    <h2>Ha ocurrido un error al cargar las historias.</h2>
-                )}
             </div>
         );
     } catch (e) {
