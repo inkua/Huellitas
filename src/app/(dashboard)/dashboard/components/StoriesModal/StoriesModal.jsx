@@ -18,6 +18,10 @@ export default function StoriesModal({ isOpen, add = true, item }) {
         try {
             e.preventDefault();
 
+            const htmlTag = document.getElementsByTagName("html")[0];
+            htmlTag.classList.add("!cursor-wait");
+            htmlTag.classList.add("pointer-events-none");
+
             const data = {
                 nombre: nombre,
                 entradilla: entradilla,
@@ -44,12 +48,18 @@ export default function StoriesModal({ isOpen, add = true, item }) {
             location.reload();
         } catch (e) {
             console.log(e.message);
+            htmlTag.classList.remove("!cursor-wait");
+            htmlTag.classList.remove("pointer-events-none");
         }
     };
 
     const handleMod = async (e) => {
         try {
             e.preventDefault();
+
+            const htmlTag = document.getElementsByTagName("html")[0];
+            htmlTag.classList.add("!cursor-wait");
+            htmlTag.classList.add("pointer-events-none");
 
             const data = {
                 nombre: nombre,
@@ -83,6 +93,8 @@ export default function StoriesModal({ isOpen, add = true, item }) {
             location.reload();
         } catch (e) {
             console.log(e.message);
+            htmlTag.classList.remove("!cursor-wait");
+            htmlTag.classList.remove("pointer-events-none");
         }
     };
 

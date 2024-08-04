@@ -1,5 +1,7 @@
 "use client";
 
+import styles from "@/app/(main)/components/styles/loading.module.css"
+
 import { useState } from "react";
 import ModalAdd from "./Modals/ModalAdd";
 import ModalMod from "./Modals/ModalMod";
@@ -37,18 +39,32 @@ function Table({ data, refreshCallback, config, stories = false }) {
     }
 
     async function handleRemove(item) {
-        await fetch("/api/" + config.collection, {
-            method: "DELETE",
-            body: JSON.stringify({
-                token: "",
-                item: item,
-            }),
-        });
-        refreshCallback(Date.now());
+        try {
+            const htmlTag = document.getElementsByTagName("html")[0];
+            htmlTag.classList.add("!cursor-wait");
+            htmlTag.classList.add("pointer-events-none");
+
+            await fetch("/api/" + config.collection, {
+                method: "DELETE",
+                body: JSON.stringify({
+                    token: "",
+                    item: item,
+                }),
+            });
+
+            htmlTag.classList.remove("!cursor-wait");
+            htmlTag.classList.remove("pointer-events-none");
+
+            refreshCallback(Date.now());
+        } catch (error) {
+            console.log(e);
+            htmlTag.classList.remove("!cursor-wait");
+            htmlTag.classList.remove("pointer-events-none");
+        }
     }
 
     return (
-        <>
+        <div>
             <div className="relative overflow-x-auto pb-10">
                 {stories ? (
                     <button
@@ -206,7 +222,8 @@ function Table({ data, refreshCallback, config, stories = false }) {
                     <StoriesModal isOpen={{ setStoriesModalAdd }} />
                 )}
             </div>
-        </>
+            {!data && <div className={styles.loadingBox + " " + "mx-auto"}></div>}
+        </div>
     );
 }
 
