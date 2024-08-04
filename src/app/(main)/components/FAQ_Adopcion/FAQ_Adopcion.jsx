@@ -20,7 +20,7 @@ let items = [
         <p><span className="font-bold">PASO 1 RESCATE:</span> Cuando nos alertan de algún peludo que necesita ayuda, acudimos a su rescate.</p>
       </ul>
       <ul>
-        <p> <span className="font-bold">PASO 2 INGRESO A LA VETERINARIA:</span> Ingresamos al peludo sea en una de nuestras veterinarias de confianza para ser atendido.</p>
+        <p> <span className="font-bold">PASO 2 INGRESO A LA VETERINARIA:</span> Ingresamos al peludo en una de nuestras veterinarias de confianza para ser atendido.</p>
       </ul>
       <ul>
         <p><span className="font-bold">PASO 3 REHABILITACIÓN:</span> De acuerdo con las indicaciones del veterinario, comienza el tratamiento médico y la rehabilitación física y mental del peludo.</p>
