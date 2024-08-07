@@ -75,7 +75,7 @@ function Footer() {
                 </Link>
 
                 <Link
-                  href="https://x.com/huellitasctg2"
+                  href="https://www.tiktok.com/@huellitascartagena?_t=8ogYd9BjdQr&_r=1"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

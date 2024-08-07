@@ -6,23 +6,23 @@ import Link from "next/link";
 
 function Card({ name, age, source, characteristics, gender, story }) {
     const [info, setInfo] = useState(false)
-    const [copy, setCopy] = useState(false)
     let type = 1  //Variable auxiliar para testear edades
+    // const [copy, setCopy] = useState(false)
 
-    const copyToClipboard = async ({ name }) => {
-        let message = ''
-        try {
-            message = '¡Hola! Me gustaría adoptar a ' + name + '.'
-            setCopy(true)
-            await navigator.clipboard.writeText(message);
-            setTimeout(() => {
-                //window.open('https://www.instagram.com/direct/t/17843808839770123', '_blank')
-                setCopy(false)
-            }, 2000)
-        } catch (err) {
-            console.error('Error al copiar el texto: ', err)
-        }
-    };
+    // const copyToClipboard = async ({ name }) => {
+    //     let message = ''
+    //     try {
+    //         message = '¡Hola! Me gustaría adoptar a ' + name + '.'
+    //         setCopy(true)
+    //         await navigator.clipboard.writeText(message);
+    //         setTimeout(() => {
+    //             window.open('https://www.instagram.com/direct/t/17843808839770123', '_blank')
+    //             setCopy(false)
+    //         }, 2000)
+    //     } catch (err) {
+    //         console.error('Error al copiar el texto: ', err)
+    //     }
+    // };
 
     return (
         <div role="listItem">
@@ -100,7 +100,13 @@ function Card({ name, age, source, characteristics, gender, story }) {
                                         </div>
                                     </div> */}
 
-                                    <Link href={`mailto:${'gonzaarp2020@gmail.com'}?subject=${encodeURIComponent('ADOPCION ' + name.toUpperCase())}&body=${encodeURIComponent('Me gustaria adoptar a ' + name + '.')}`} target='_blank'>
+                                    {/* <Link href={`mailto:${'gonzaarp2020@gmail.com'}?subject=${encodeURIComponent('ADOPCION ' + name.toUpperCase())}&body=${encodeURIComponent('Me gustaria adoptar a ' + name + '.')}`} target='_blank'>
+                                        <button type="button" className="primary-btn">
+                                            QUIERO ADOPTARLO
+                                        </button>
+                                    </Link> */}
+
+                                    <Link href={'https://docs.google.com/forms/d/e/1FAIpQLSfb-E2A6MtG0pbYgTzPyPjR_DnZxS26YR-DMcvt9gTHOI_XCA/viewform'} target='_blank'>
                                         <button type="button" className="primary-btn">
                                             QUIERO ADOPTARLO
                                         </button>

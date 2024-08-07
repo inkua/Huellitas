@@ -6,6 +6,7 @@ import { Vision } from "./components/Vision/Vision.jsx";
 function Fundacion() {
     return (
         <main>
+            <title>Fundacion</title> 
             <NuestraHistoria />
             <Mision />
             <Vision />

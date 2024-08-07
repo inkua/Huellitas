@@ -1,4 +1,4 @@
-import FAQ_Adopcion from "../components/FAQ_Adopcion/FAQ_Adopcion_2";
+import FAQ_Adoption from "../components/FAQ_Adopcion/FAQ_Adoption";
 import CardWrapper from "./components/CardWrapper/CardWrapper";
 
 let faq = [
@@ -22,6 +22,7 @@ let faq = [
 function Adopcion() {
     return (
         <main>
+            <title>Adopcion</title> 
             <section
                 className="w-full h-72 lg:bg-tertiaryColor shadow-[0_6px_6px_-2px_rgba(0,0,0,0.3)]"
                 role="section"
@@ -61,12 +62,8 @@ function Adopcion() {
                 </div>
             </section>
 
-            <section
-                id="faq"
-                className="bg-tertiaryColor py-8 md:py-10 lg:py-16"
-                role="section"
-            >
-                <FAQ_Adopcion items={faq} />
+            <section id="faq" className="bg-tertiaryColor" role="section">
+                <FAQ_Adoption items={faq} />
             </section>
         </main>
     );
