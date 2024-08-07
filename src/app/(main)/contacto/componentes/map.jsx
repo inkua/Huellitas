@@ -8,14 +8,13 @@ function Map() {
   const [phone, setPhone] = useState('');
   const [comment, setComment] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
-
+  const subject='Consulta desde el formulario de contacto';
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitted(true);
 
     const form = e.target;
     if (form.checkValidity()) {
-      // Retrieve data from sessionStorage
       const additionalData = sessionStorage.getItem('additionalData') || '';
 
       try {
@@ -24,13 +23,12 @@ function Map() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ name, phone, email, comment, additionalData }),
+          body: JSON.stringify({ name, phone, email, comment, subject, additionalData }),
         });
 
         if (response.ok) {
           console.log('Email sent successfully');
           alert('Consulta enviada con éxito!');
-          // Reset form fields
           setEmail('');
           setName('');
           setPhone('');
