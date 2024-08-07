@@ -2,10 +2,27 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 function Card({ name, age, source, characteristics, gender, story }) {
-    const [info, setInfo] = useState(false);
+    const [info, setInfo] = useState(false)
+    const [copy, setCopy] = useState(false)
     let type = 1  //Variable auxiliar para testear edades
+
+    const copyToClipboard = async ({ name }) => {
+        let message = ''
+        try {
+            message = '¡Hola! Me gustaría adoptar a ' + name + '.'
+            setCopy(true)
+            await navigator.clipboard.writeText(message);
+            setTimeout(() => {
+                //window.open('https://www.instagram.com/direct/t/17843808839770123', '_blank')
+                setCopy(false)
+            }, 2000)
+        } catch (err) {
+            console.error('Error al copiar el texto: ', err)
+        }
+    };
 
     return (
         <div role="listItem">
@@ -67,13 +84,28 @@ function Card({ name, age, source, characteristics, gender, story }) {
                                         {story}
                                     </span>
                                 </p>
-                                <div className="flex gap-2">
-                                    <button
-                                        type="button"
-                                        className="primary-btn"
-                                    >
+                                <div className="flex gap-2 relative items-center">
+                                    {/* <button type="button" className="primary-btn" onClick={() => copyToClipboard({ name })}>
                                         QUIERO ADOPTARLO
                                     </button>
+                                    <p className={`par-3 !text-primaryColor ${copy ? 'block' : 'hidden'}`}>Mensaje copiado</p> */}
+
+                                    {/* <button type="button" className="primary-btn z-20" onClick={() => copyToClipboard({ name })}>
+                                        QUIERO ADOPTARLO
+                                    </button>
+                                    <div className="relative w-auto h-full">
+                                        <div className={`absolute flex h-full items-center aspect-square gap-2 duration-100 z-10 ${copy ? 'left-0' : 'left-[-100px]'}`}>
+                                            <Image src={'assets/Footer/instagram.svg'} width={100} height={100} alt="Logo Instagram" className="h-8 lg:h-full" />
+                                            <Image src={'assets/Footer/whatsapp.svg'} width={100} height={100} alt="Logo Instagram" className="h-8 lg:h-full" />
+                                        </div>
+                                    </div> */}
+
+                                    <Link href={`mailto:${'gonzaarp2020@gmail.com'}?subject=${encodeURIComponent('ADOPCION ' + name.toUpperCase())}&body=${encodeURIComponent('Me gustaria adoptar a ' + name + '.')}`} target='_blank'>
+                                        <button type="button" className="primary-btn">
+                                            QUIERO ADOPTARLO
+                                        </button>
+                                    </Link>
+
                                 </div>
                             </div>
                             <div className="absolute top-2 right-4 heading-2 cursor-pointer hover:text-primaryColor duration-200" onClick={() => setInfo(!info)}>✖</div>

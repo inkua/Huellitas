@@ -81,8 +81,8 @@ function Footer() {
                 >
                   <Image
                     className="hover:scale-125 h-8 w-8 duration-200"
-                    src={"/assets/logos/svg/x.svg"}
-                    alt="X"
+                    src={"/assets/Footer/tiktok.svg"}
+                    alt="TikTok"
                     height={80}
                     width={80}
                   />
@@ -97,7 +97,7 @@ function Footer() {
         <p className="par-3 !text-white !font-medium">
           Diseño y desarrollo de este sitio Web: {' '}
           <span className="!font-bold">
-            <Link href="https://inkua.de/" target="_blank" rel="noopener noreferrer">
+            <Link href="https://inkua.de/" target="_blank" rel="noopener noreferrer" className="hover:underline">
               InkuA
             </Link>
             {' - '}
