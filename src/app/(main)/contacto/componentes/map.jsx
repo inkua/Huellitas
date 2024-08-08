@@ -7,23 +7,23 @@ function Map() {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [comment, setComment] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const subject='Consulta desde el formulario de contacto';
+  const [isSubmitting, setIsSubmitting] = useState(false); // Track if the form is being submitted
+
+  const subject = 'Consulta desde el formulario de contacto';
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsSubmitting(true); // Disable the submit button
 
     const form = e.target;
     if (form.checkValidity()) {
-      const additionalData = sessionStorage.getItem('additionalData') || '';
-
       try {
         const response = await fetch('/api/send-email', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ name, phone, email, comment, subject, additionalData }),
+          body: JSON.stringify({ name, phone, email, comment, subject }),
         });
 
         if (response.ok) {
@@ -40,9 +40,12 @@ function Map() {
       } catch (error) {
         console.error('Error:', error);
         alert('Error al enviar la consulta.');
+      } finally {
+        setIsSubmitting(false); // Re-enable the submit button after submission
       }
     } else {
       console.log('Form has errors');
+      setIsSubmitting(false); // Re-enable the submit button if there are form errors
     }
   };
 
@@ -55,7 +58,7 @@ function Map() {
               <h1 className='text-2xl text-primaryFont text-h2-m font-bold mt-6 lg:mt-12'>¿DÓNDE ESTAMOS?</h1>
               <p className='text-primaryFont mb-6 text-p3-m'>Av Cabildo 2578 , esq. Pedro Borra</p>
             </div>
-            <iframe className='lg:w-[90%] w-[90%] h-[300px] lg:h-[400px] ' width="400" height="400" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Cartagena,%20Colombia+(Huellitas)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            <iframe className='lg:w-[90%] w-[90%] h-[300px] lg:h-[400px]' width="400" height="400" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Cartagena,%20Colombia+(Huellitas)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
             <div className="justify-start w-full">
               <h1 className='text-2xl text-primaryFont font-bold mt-6 lg:mt-12 text-h2-m'>TELÉFONO</h1>
               <p className='text-primaryFont mb-6 text-p3-m'>0000-0000</p>
@@ -116,23 +119,29 @@ function Map() {
                   required
                 ></textarea>
               </div>
-              <button type="submit" className="bg-primaryColor text-white font-semibold rounded-lg p-2.5 lg:p-2 w-full lg:w-[40%] mt-4 uppercase primary-btn">Enviar consulta</button>
+              <button 
+                type="submit" 
+                className="bg-primaryColor text-white font-semibold rounded-lg p-2.5 lg:p-2 w-full lg:w-[40%] mt-4 uppercase primary-btn"
+                disabled={isSubmitting} // Disable the button while submitting
+              >
+                Enviar consulta
+              </button>
             </form>
           </div>
         </div>
       </div>
-      <div className="bg-whitegrid grid-cols-1 gap-0 content-end bg-white pb-[32px] md:pb-[82px] pt-[36px] mb:pt-[75px]">
+      <div className="bg-white grid grid-cols-1 gap-0 content-end bg-white pb-[32px] md:pb-[82px] pt-[36px] mb:pt-[75px]">
         <p className='text-primaryFont mb-[23px] md:mb-[8px] text-p3-m justify-end text-center'>Para llegar a más personas y poder seguir ayudando</p>
         <h1 className='text-2xl text-primaryFont font-bold text-h2-m text-center px-4 mb-[23px]'>¡NO TE OLVIDES DE SEGUIRNOS EN NUESTRAS REDES!</h1>
         <div className="flex justify-center">
           <div className="flex flex-col md:flex-row md:justify-center w-[80%] gap-2 md:mt-[23px]">
             <div className="flex items-center justify-left px-4">
               <div className="bg-ig-mobile bg-no-repeat bg-contain w-[24px] h-[24px] md:w-[35px] md:h-[35px]"></div>
-              <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:ml-5 text-xs md:text-base" href="https://www.instagram.com/huellitas.ctgna/" target="_blank" rel="noreferrer">@huellitas.ctgna</a>
+              <a className="text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:ml-5 text-xs md:text-base" href="https://www.instagram.com/huellitas.ctgna/" target="_blank" rel="noreferrer">@huellitas.ctgna</a>
             </div>
             <div className="flex items-center justify-left px-4">
               <div className="bg-ig-mobile bg-no-repeat bg-contain w-[24px] h-[24px] md:w-[35px] md:h-[35px]"></div>
-              <a className=" text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:ml-5 text-xs md:text-base" href="https://www.instagram.com/huellitas.ctgna/" target="_blank" rel="noreferrer">@huellitas.ctgna</a>
+              <a className="text-grayFont mb-1 text-p3-m ml-2 mt-1 lg:ml-5 text-xs md:text-base" href="https://www.instagram.com/huellitas.ctgna/" target="_blank" rel="noreferrer">@huellitas.ctgna</a>
             </div>
           </div>
         </div>
