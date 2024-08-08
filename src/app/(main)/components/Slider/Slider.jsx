@@ -14,12 +14,12 @@ function Slider({ items, type, def, lg, md, nav = false, loop = false }) {
         <Swiper modules={[Navigation]}
             navigation={nav}
             slidesPerView={def} breakpoints={{ 1024: { slidesPerView: lg }, 768: { slidesPerView: md } }}
-            spaceBetween={15}
+            spaceBetween={20}
             loop={loop}
-            className='w-full lg:w-9/12 cursor-grab !px-[5%] lg:!px-0' >
+            className='w-full lg:w-9/12 cursor-grab !px-[5%] lg:!px-0 h-auto' >
             {
                 items.map(item => (
-                    <SwiperSlide key={item.id}>
+                    <SwiperSlide key={item.id} className='!h-auto'>
                         {/** Si es una historia, la informacion viene en un formato diferente / type 0 es una historia */}
                         {type == 0 ? 
                         createItem(type, item.data.imagen, item.data.entradilla, "SABER MAS...", item.action, item.alt) 
@@ -36,7 +36,7 @@ function Slider({ items, type, def, lg, md, nav = false, loop = false }) {
 
 const createItem = (type, source, par, btn, action, alt) => {
     const card = [
-        <CardH source={source} par={par} btn={btn} />,
+        <CardH source={source} par={par} btn={btn} className='h-[100%]' />,
         <CardC source={source} btn_txt={btn} onButtonClick={action} />,
         <CardColab source={source} alt={alt} />, 
     ]
