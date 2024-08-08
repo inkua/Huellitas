@@ -67,51 +67,51 @@ function Map() {
           <div className='grid grid-cols-1 mb-12 w-full gap-y-3'>
             <form onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="first_name" className="hidden lg:block mb-2 text-base font-medium text-gray-900">Nombre</label>
+                <label htmlFor="first_name" className="hidden lg:block mb-2 text-base font-light text-gray-900">Nombre</label>
                 <input
                   type="text"
                   id="first_name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="bg-gray-50 border-2 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                  className="bg-gray-50 border-2 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-5 sm:mb-2"
                   placeholder="Nombre y Apellido"
                   required
                   minLength="2"
                 />
               </div>
               <div>
-                <label htmlFor="PhoneNumber" className="hidden lg:block mb-2 text-base font-medium text-gray-900">Número de teléfono</label>
+                <label htmlFor="PhoneNumber" className="hidden lg:block mb-2 text-base font-light text-gray-900 ">Número de teléfono</label>
                 <input
                   type="text"
                   id="PhoneNumber"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="bg-gray-50 border-2 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                  className="bg-gray-50 border-2 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-5 sm:mb-2"
                   placeholder="Teléfono"
                   required
                   pattern="[0-9\s\+\-\(\)]{10,}"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="hidden lg:block mb-2 text-base font-medium text-gray-900">Correo electrónico</label>
+                <label htmlFor="email" className="hidden lg:block mb-2 text-base font-light text-gray-900">Correo electrónico</label>
                 <input
                   type="email"
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="bg-gray-50 border-2 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                  className="bg-gray-50 border-2 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-5 sm:mb-2"
                   placeholder="Correo electrónico"
                   pattern="[^\s@]+@[^\s@]+.[^\s@]+"
                   required
                 />
               </div>
               <div>
-                <label htmlFor="consulta" className="hidden lg:block mb-2 text-base font-medium text-gray-900">Déjanos tu consulta</label>
+                <label htmlFor="consulta" className="hidden lg:block mb-2 text-base font-light text-gray-900">Déjanos tu consulta</label>
                 <textarea
                   id="consulta"
                   value={comment}
                   onChange={(e) => setComment(e.target.value)}
-                  className="bg-gray-50 border-2 border-gray-300 text-gray-900 h-40 px-4 py-2 font-normal shadow-xs resize-none leading-relaxed text-sm rounded-lg block w-full p-2.5"
+                  className="bg-gray-50 border-2 border-gray-300 text-gray-900 h-40 px-4 py-2 font-normal shadow-xs resize-none leading-relaxed text-sm rounded-lg block w-full p-2.5 mb-5 sm:mb-2"
                   placeholder="Déjanos aquí tu consulta"
                   required
                 ></textarea>
