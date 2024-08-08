@@ -3,9 +3,8 @@
 import Image from "next/image";
 import { useState } from "react";
 
-function Card({ name, age, source, characteristics, gender, story }) {
+function Card({ name, age, source, characteristics, gender, story,type }) {
     const [info, setInfo] = useState(false);
-    let type = 1  //Variable auxiliar para testear edades
 
     return (
         <div role="listItem">
