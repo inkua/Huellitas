@@ -31,14 +31,10 @@ function map(){
                 <div className='w-full  max-w-screen-2xl '>
                     <div className='grid grid-cols-1 ml-[10%]'>
                         <div>
-                            <h1 className='text-2xl text-primaryFont text-h2-m font-bold mt-6 lg:mt-12'>¿DÓNE ESTAMOS?</h1>
-                            <p className='text-primaryFont mb-6 text-p3-m'>Av Cabildo 2578 , esq. Pedro Borra</p>
+                            <h1 className='text-2xl text-primaryFont text-h2-m font-bold mt-6 lg:mt-12'>¿DÓNdE ESTAMOS?</h1>
+                            <p className='text-primaryFont mb-6 text-p3-m'>Cartagena de Indias, Colombia</p>
                         </div>
                         <iframe className='lg:w-[90%] w-[90%] h-[300px] lg:h-[400px] ' width="400" height="400" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Cartagena,%20Colombia+(Huellitas)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-                        <div className="justify-start w-full">
-                            <h1 className='text-2xl text-primaryFont font-bold mt-6 lg:mt-12 text-h2-m'>TELÉFONO</h1>
-                            <p className='text-primaryFont mb-6 text-p3-m'>0000-0000</p>
-                        </div>
                     </div>
                 </div>
             <div className="px-[10%]">
