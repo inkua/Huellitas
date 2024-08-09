@@ -68,7 +68,7 @@ function Colaboracion() {
 
     return (
         <main className="relative">
-            <title>Colaboración</title>
+            <title>Colaboración | Huellitas Cartagena</title>
             <section
                 className="flex flex-col relative w-full h-80 lg:h-96 max-w-screen-2xl mx-auto bg-colab-banner bg-cover bg-center"
                 role="banner"
