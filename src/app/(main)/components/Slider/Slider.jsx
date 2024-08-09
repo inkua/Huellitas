@@ -22,7 +22,7 @@ function Slider({ items, type, def, lg, md, nav = false, loop = false }) {
                     <SwiperSlide key={item.id} className='!h-auto'>
                         {/** Si es una historia, la informacion viene en un formato diferente / type 0 es una historia */}
                         {type == 0 ? 
-                        createItem(type, item.data.imagen, item.data.entradilla, "SABER MAS...", item.action, item.alt) 
+                        createItem(type, item.data.imagen, item.data.entradilla, "SABER MAS...", item.action, item.alt, item.id) 
                         : 
                         createItem(type, item.source, item.par, item.btn, item.action, item.alt)
                         }
@@ -34,9 +34,9 @@ function Slider({ items, type, def, lg, md, nav = false, loop = false }) {
     )
 }
 
-const createItem = (type, source, par, btn, action, alt) => {
+const createItem = (type, source, par, btn, action, alt, id) => {
     const card = [
-        <CardH source={source} par={par} btn={btn} className='h-[100%]' />,
+        <CardH source={source} par={par} btn={btn} id={id} className='h-[100%]' />,
         <CardC source={source} btn_txt={btn} onButtonClick={action} />,
         <CardColab source={source} alt={alt} />, 
     ]

@@ -98,6 +98,18 @@ export async function delImage(imageUrl) {
 
 export default uploadImage;
 
+
+export const getStoryById = async (id) => {
+    const docRef = doc(db, 'historias', id);
+    const response = await getDoc(docRef);
+    const story = {
+        id: response.id,
+        data: response.data()
+    }
+
+    return story
+}
+
 // Adapt docs format to use them easily
 export function formatData(res) {
     return res.docs.map((doc) => {

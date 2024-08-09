@@ -6,6 +6,7 @@ import InputImg from "../InputImg/InputImg";
 import Loading from "../Loading/Loading";
 import uploadImage, { delImage } from "@/services/services";
 import { convertToHTML, convertFromHTML } from "draft-convert";
+import { EditorState } from "draft-js";
 
 export default function StoriesModal({ isOpen, add = true, item }) {
     const [loading, setLoading] = useState(false);
@@ -27,8 +28,6 @@ export default function StoriesModal({ isOpen, add = true, item }) {
                 entradilla: entradilla,
                 articulo: convertToHTML(editorState.getCurrentContent()),
             };
-
-            console.log(selectedImage);
 
             const imageUrl = await uploadImage(selectedImage);
             data.imagen = imageUrl;
@@ -119,14 +118,16 @@ export default function StoriesModal({ isOpen, add = true, item }) {
             setLoading(true);
         }
 
+
         if (item) {
             setNombre(item.data.nombre);
             setEntradilla(item.data.entradilla);
 
-            // Not working, maybe it updates after setting this
-            //setEditorState(convertFromHTML(item.data.articulo));
-
+            const value = EditorState.createWithContent(convertFromHTML(item.data.articulo))
+            setEditorState(value);
             setLoading(false);
+        } else {
+            setEditorState(EditorState.createEmpty());
         }
     }, []);
 
