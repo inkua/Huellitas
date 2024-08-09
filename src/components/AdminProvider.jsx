@@ -22,7 +22,11 @@ export function AdminProvider({ children }) {
             }
         }
     } catch (e) {
-        console.log(e);
+        if (e instanceof ReferenceError && e.message.includes("sessionStorage is not defined")) {
+            console.log('Could not executate sessionStorage in server side');
+        } else {
+            console.log(e);
+        }
     }
 
     return (
