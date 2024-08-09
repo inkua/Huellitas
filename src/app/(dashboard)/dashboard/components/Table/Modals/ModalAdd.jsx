@@ -18,6 +18,7 @@ function ModalAdd({ closeCallback, config }) {
                 data.edad = e.target.age.value;
                 data.genero = e.target.gender.value;
                 data.historia = e.target.story.value;
+                data.type = parseInt(e.target.anio.value);
             }
 
             if (config.collection != "admins") {
@@ -173,6 +174,16 @@ function ModalAdd({ closeCallback, config }) {
                                                 placeholder="0"
                                                 required
                                             ></input>
+                                            <select
+                                                className="block py-2 mr-0 px-4 mt-4 mb-2 text-sm font-medium text-[#6b6b6b] bg-white"
+                                                name="anio"
+                                                id="anio"
+                                            >
+                                                <option value="0">Años</option>
+                                                <option value="1">
+                                                    Meses
+                                                </option>
+                                            </select>
                                         </div>
                                         <div className="col-span-2">
                                             <label
