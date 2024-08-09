@@ -36,7 +36,7 @@ function Slider({ items, type, def, lg, md, nav = false, loop = false }) {
 
 const createItem = (type, source, par, btn, action, alt, id) => {
     const card = [
-        <CardH source={source} par={par} btn={btn} id={id} className='h-[100%]' />,
+        <CardH source={source} par={par} btn={btn} className='h-[100%]' />,
         <CardC source={source} btn_txt={btn} onButtonClick={action} />,
         <CardColab source={source} alt={alt} />, 
     ]

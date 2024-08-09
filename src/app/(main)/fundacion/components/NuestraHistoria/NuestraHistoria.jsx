@@ -3,9 +3,9 @@ import Image from "next/image";
 export const NuestraHistoria = () => {
     return (
         <section className="bg-tertiaryColor py-10 mb-4 shadow-[0_6px_6px_-2px_rgba(0,0,0,0.3)]">
-            <div className="flex flex-col w-[80%] mx-auto max-w-screen-2xl">
-                <div className="flex flex-col-reverse md:flex-row md:gap-8 mx-auto md:w-[90%] lg:w-9/12">
-                    <div className="max-w-[560px]">
+            <div className="flex flex-col w-full mx-auto max-w-screen-2xl">
+                <div className="flex flex-col-reverse md:flex-row md:gap-8 mx-auto w-[90%] lg:w-[75%]">
+                    <div className="">
 
                         <h1
                             className="text-primaryFont font-bold mb-6 heading-1"
