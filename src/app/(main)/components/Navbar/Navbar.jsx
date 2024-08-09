@@ -34,7 +34,7 @@ function Navbar() {
     return (
         <div className={`relative z-10 w-full bg-white h-[80px] duration-500 md:h-[135px] ${isScrolled ? 'h-[80px] md:h-[70px] shadow-lg' : 'shadow-none'}`}>
             <div className={`fixed w-full h-[80px] md:h-[135px] duration-500 bg-white ${isScrolled ? 'h-[80px] md:h-[70px] shadow-lg' : 'shadow-none'}`}>
-                <nav className='flex w-[100%] h-full lg:w-[80%] max-w-screen-2xl duration-500 justify-between items-center  px-4 mx-auto bg-white'>
+                <nav className='flex w-[100%] h-full lg:w-[75%] max-w-screen-2xl duration-500 justify-between items-center px-4 md:px-[5%] lg:px-0 mx-auto bg-white'>
                     <div className="md:hidden flex flex-grow basis-0">
                         <button
                             onClick={() => setShowMenu(!showMenu)}

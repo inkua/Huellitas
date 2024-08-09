@@ -11,13 +11,15 @@ function Footer() {
       <div className="w-full bg-primaryColor ">
         <div className="flex justify-around items-center max-w-screen-2xl mx-auto flex-col md:flex-row h-full md:h-[250px]  gap-4 py-16 md:gap-0 md:py-0">
           <div className="hidden md:flex flex-col flex-grow basis-0 items-center">
-            <Image
-              className="py-4 pointer-events-none w-[300px] "
-              src={"https://res.cloudinary.com/dorljfo6v/image/upload/v1718048248/huellitas/logo2_b5nm5v.svg"}
-              alt="logo"
-              height={700}
-              width={700}
-            />
+            <Link href='/'>
+              <Image
+                className="py-4 pointer-events-none w-[300px] cursor-pointer"
+                src={"https://res.cloudinary.com/dorljfo6v/image/upload/v1718048248/huellitas/logo2_b5nm5v.svg"}
+                alt="logo"
+                height={700}
+                width={700}
+              />
+            </Link>
           </div>
 
           <div className="hidden md:flex py-6 md:py-0 w-auto min-w-52  text-center justify-center">
