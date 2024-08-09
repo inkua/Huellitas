@@ -139,14 +139,14 @@ function Navbar() {
                                 type="button"
                                 className="primary-btn hidden md:block"
                             >
-                                DONÁ AHORA
+                                DONA AHORA
                             </button>
 
                             <button
                                 type="button"
                                 className="bg-primaryColor py-3 px-4 rounded-full text-white hover:bg-secondaryColor shadow-grey-400 shadow-md block md:hidden"
                             >
-                                DONÁ
+                                DONA
                             </button>
                         </Link>
                     </div>

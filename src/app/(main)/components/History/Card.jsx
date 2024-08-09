@@ -1,6 +1,7 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
-function Card({ source, par, btn }) {
+function Card({ source, par, btn, id }) {
     return (
         // <div className='flex flex-col gap-4 snap-center !mb-0 justify-between h-[100%]' role='listItem'>
             <div className='flex flex-col gap-4 snap-center !mb-0 justify-between h-[100%]' role='listItem'> 

@@ -4,9 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 
-function Card({ name, age, source, characteristics, gender, story }) {
+function Card({ name, age, source, characteristics, gender, story, type }) {
     const [info, setInfo] = useState(false)
-    let type = 0
 
     return (
         <div role="listItem">
@@ -23,22 +22,27 @@ function Card({ name, age, source, characteristics, gender, story }) {
                 <h1 className="text-center uppercase par-3 md:par-2 !font-semibold text-nowrap">
                     <span>{name + " - "}</span>
                     <span className="hidden lg:inline-block">{(gender ? " MACHO" : "HEMBRA") + " - "}</span>
-                    <span>{" " + age + (type == 0 ? (age != 1 ? " años" : " año") : (age != 1 ? ' meses' : ' mes'))}</span>
+                    <span>{" " + age + (type == 0 ? (age != 1 ? " años" : " año") : age != 1 ? " meses" : " mes")}</span>
                 </h1>
-                <button
-                    type="button"
-                    onClick={() => setInfo(!info)}
-                    className="w-full primary-btn"
-                >
+                <button type="button" onClick={() => setInfo(!info)} className="w-full primary-btn">
                     SABER MÁS
                 </button>
             </div>
 
             {info && (
                 <div className="flex fixed inset-0 w-full h-full bg-black bg-opacity-50 backdrop-blur-sm z-50">
-                    <div className="flex fixed inset-0 max-w-screen-2xl mx-auto justify-center items-center gap-8 z-50" role="section">
-                        <div className="max-w-screen-2xl max-h-[95%] overflow-hidden mx-auto overflow-y-auto no-scrollbar grid md:grid-cols-[25%_1fr] w-10/12 md:w-[90%] lg:w-9/12 gap-4 lg:gap-14 p-6 lg:p-10 bg-white rounded-3xl shadow-lg relative" role="contentInfo">
-                            <div className="flex w-[50%] md:w-full h-full aspect-square md:aspect-[9/12] items-center overflow-hidden rounded-3xl relative" role="presentation">
+                    <div
+                        className="flex fixed inset-0 max-w-screen-2xl mx-auto justify-center items-center gap-8 z-50"
+                        role="section"
+                    >
+                        <div
+                            className="max-w-screen-2xl max-h-[95%] overflow-hidden mx-auto overflow-y-auto no-scrollbar grid md:grid-cols-[25%_1fr] w-10/12 md:w-[90%] lg:w-9/12 gap-4 lg:gap-14 p-6 lg:p-10 bg-white rounded-3xl shadow-lg relative"
+                            role="contentInfo"
+                        >
+                            <div
+                                className="flex w-[50%] md:w-full h-full aspect-square md:aspect-[9/12] items-center overflow-hidden rounded-3xl relative"
+                                role="presentation"
+                            >
                                 <Image
                                     src={source}
                                     alt="Foto del perrito"
