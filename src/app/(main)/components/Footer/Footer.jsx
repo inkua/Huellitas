@@ -97,6 +97,7 @@ function Footer() {
 
       <div className="h-[40px] bg-[#585564] flex justify-center items-center">
         <p className="par-3 !text-white !font-medium !text-center">
+
           Diseño y desarrollo de este sitio Web: {' '}
           <span className="!font-bold">
             <Link href="https://inkua.de/" target="_blank" rel="noopener noreferrer" className="hover:underline">
