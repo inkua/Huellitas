@@ -1,7 +1,7 @@
 export const Mision = () => {
     return (
-        <section className="flex flex-col w-[80%] mx-auto py-4 md:py-8 max-w-screen-2xl mb-4">
-            <div className="mx-auto md:w-[90%] lg:w-9/12">
+        <section className="flex flex-col w-full mx-auto py-4 md:py-8 max-w-screen-2xl mb-4">
+            <div className="mx-auto w-[90%] lg:w-[75%]">
                 <h2 className="text-primaryFont font-bold mb-6 heading-1" id="mision">MISIÓN</h2>
                 <p className="text-primaryFont font-normal par-3">
                     Nuestra misión es rescatar, rehabilitar y encontrar hogares amorosos

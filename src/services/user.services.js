@@ -1,7 +1,12 @@
 import { getUserByEmail } from "./services";
 
 const logIn = async (email, pass) => {
-    const user = await getUserByEmail(email, pass);
+    let user
+    try {
+        user = await getUserByEmail(email, pass);
+    } catch (error) {
+        user = false
+    }
 
     if (user) {
         return {
