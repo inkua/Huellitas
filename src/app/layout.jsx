@@ -2,7 +2,7 @@ import "./globals.css";
 import { AdminProvider } from "@/components/AdminProvider";
 
 export const metadata = {
-    title: "Huellitas",
+    title: "Huellitas Cartagena",
     description:
         "Huellitas es una fundación que se dedica al rescate y cuidado de animales en la ciudad de Cartagena de Indias",
 };

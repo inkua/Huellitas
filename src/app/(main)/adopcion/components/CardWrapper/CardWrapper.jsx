@@ -28,6 +28,7 @@ export default function CardWrapper() {
                         story={animal.data.historia}
                         characteristics={animal.data.caracteristicas}
                         source={animal.data.imagen}
+                        type={animal.data.type}
                         role={"listItem"}
                     />
                 ))}

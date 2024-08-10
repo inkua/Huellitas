@@ -6,7 +6,7 @@ import { Vision } from "./components/Vision/Vision.jsx";
 function Fundacion() {
     return (
         <main>
-            <title>Fundacion</title> 
+            <title>Fundación | Huellitas Cartagena</title> 
             <NuestraHistoria />
             <Mision />
             <Vision />

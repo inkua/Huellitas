@@ -22,7 +22,6 @@ let faq = [
 function Adopcion() {
     return (
         <main>
-            <title>Adopcion</title> 
             <section
                 className="w-full h-72 lg:bg-tertiaryColor shadow-[0_6px_6px_-2px_rgba(0,0,0,0.3)]"
                 role="section"

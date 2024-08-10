@@ -11,13 +11,15 @@ function Footer() {
       <div className="w-full bg-primaryColor ">
         <div className="flex justify-around items-center max-w-screen-2xl mx-auto flex-col md:flex-row h-full md:h-[250px]  gap-4 py-16 md:gap-0 md:py-0">
           <div className="hidden md:flex flex-col flex-grow basis-0 items-center">
-            <Image
-              className="py-4 pointer-events-none w-[300px] "
-              src={"https://res.cloudinary.com/dorljfo6v/image/upload/v1718048248/huellitas/logo2_b5nm5v.svg"}
-              alt="logo"
-              height={700}
-              width={700}
-            />
+            <Link href='/'>
+              <Image
+                className="py-4 pointer-events-none w-[300px] cursor-pointer"
+                src={"https://res.cloudinary.com/dorljfo6v/image/upload/v1718048248/huellitas/logo2_b5nm5v.svg"}
+                alt="logo"
+                height={700}
+                width={700}
+              />
+            </Link>
           </div>
 
           <div className="hidden md:flex py-6 md:py-0 w-auto min-w-52  text-center justify-center">
@@ -94,7 +96,8 @@ function Footer() {
       </div>
 
       <div className="h-[40px] bg-[#585564] flex justify-center items-center">
-        <p className="par-3 !text-white !font-medium">
+        <p className="par-3 !text-white !font-medium !text-center">
+
           Diseño y desarrollo de este sitio Web: {' '}
           <span className="!font-bold">
             <Link href="https://inkua.de/" target="_blank" rel="noopener noreferrer" className="hover:underline">

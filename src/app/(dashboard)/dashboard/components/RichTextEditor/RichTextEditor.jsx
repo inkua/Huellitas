@@ -28,7 +28,7 @@ const RichTextEditor = ({data}) => {
     useEffect(() => {
         // Initialize the editor state once the component mounts on the client
         import('draft-js').then(mod => {
-            setEditorState(mod.EditorState.createEmpty());
+            //setEditorState(mod.EditorState.createEmpty());
             setRichUtils(mod.RichUtils);
         });
     }, []);

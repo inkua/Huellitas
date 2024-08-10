@@ -2,7 +2,7 @@ import Map from "./componentes/map.jsx"
 function Contacto() {
     return (
         <main className="">
-            <title>Contacto</title> 
+            <title>Contacto | Huellitas Cartagena</title> 
             <Map/>
         </main>
     )
