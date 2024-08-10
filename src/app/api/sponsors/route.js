@@ -12,7 +12,7 @@ export async function GET() {
         const ref = await getRef("sponsors");
         return Response.json(formatData(ref));
     } catch (e) {
-        return Response.json({ msg: e });
+        return Response.json(false);
     }
 }
 
