@@ -5,13 +5,13 @@ function Sumate() {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
-    const [isSubmitting, setIsSubmitting] = useState(false); // State to track if the form is submitting
+    const [isSubmitting, setIsSubmitting] = useState(false); 
     const [subject, setSubject] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        setIsSubmitting(true); // Disable buttons
+        setIsSubmitting(true); 
         setSubject(subject);
 
         const form = e.target;
@@ -40,11 +40,11 @@ function Sumate() {
                 console.error('Error:', error);
                 alert('Error al enviar la solicitud.');
             } finally {
-                setIsSubmitting(false); // Re-enable buttons
+                setIsSubmitting(false); 
             }
         } else {
             console.log('Form has errors');
-            setIsSubmitting(false); // Re-enable buttons if the form has errors
+            setIsSubmitting(false); 
         }
     };
 
@@ -95,14 +95,14 @@ function Sumate() {
                                     <button
                                         onClick={() => setSubject("Quiero ser voluntario")}
                                         className="secondary-btn !text-white !border-white w-fit"
-                                        disabled={isSubmitting} // Disable if submitting
+                                        disabled={isSubmitting} 
                                     >
                                         QUIERO SER VOLUNTARIO
                                     </button>
                                     <button
                                         onClick={() => setSubject("Quiero ser padrino")}
                                         className="secondary-btn !text-white !border-white w-fit"
-                                        disabled={isSubmitting} // Disable if submitting
+                                        disabled={isSubmitting} 
                                     >
                                         QUIERO SER PADRINO
                                     </button>

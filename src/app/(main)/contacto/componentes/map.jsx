@@ -7,13 +7,12 @@ function Map() {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [comment, setComment] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false); // Track if the form is being submitted
-
+  const [isSubmitting, setIsSubmitting] = useState(false); 
   const subject = 'Consulta desde el formulario de contacto';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true); // Disable the submit button
+    setIsSubmitting(true); 
 
     const form = e.target;
     if (form.checkValidity()) {
@@ -41,11 +40,11 @@ function Map() {
         console.error('Error:', error);
         alert('Error al enviar la consulta.');
       } finally {
-        setIsSubmitting(false); // Re-enable the submit button after submission
+        setIsSubmitting(false); 
       }
     } else {
       console.log('Form has errors');
-      setIsSubmitting(false); // Re-enable the submit button if there are form errors
+      setIsSubmitting(false); 
     }
   };
 
@@ -122,7 +121,7 @@ function Map() {
               <button 
                 type="submit" 
                 className="bg-primaryColor text-white font-semibold rounded-lg p-2.5 lg:p-2 w-full lg:w-[40%] mt-4 uppercase primary-btn"
-                disabled={isSubmitting} // Disable the button while submitting
+                disabled={isSubmitting} 
               >
                 Enviar consulta
               </button>
