@@ -16,8 +16,10 @@
     "draft-convert": "^2.1.13",
     "draft-js": "^0.11.7",
     "firebase": "^10.12.3",
+    "huellitas": "file:",
     "immutable": "^4.3.7",
     "next": "^14.2.3",
+    "nodemailer": "^6.9.14",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.1",
@@ -30,6 +32,8 @@
     "@iconify/tailwind": "^1.1.1",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "tailwindcss-important": "^1.0.0"
+    "tailwindcss-important": "^1.0.0",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
   }
 }
