@@ -24,6 +24,7 @@ module.exports = {
         "gradient-three": "linear-gradient(to bottom, white 66%, #F0F1F0 34%)",
         "ig-mobile": "url('/assets/Contacto/ig-img.png')",
         "tk-mobile": "url('/assets/Contacto/tk-img.png')",
+        "error-icon": "url('/assets/Error/errorIcon.svg')",
       },
       backgroundSize: {
         '1': '45%',

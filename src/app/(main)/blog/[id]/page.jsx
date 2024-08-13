@@ -1,7 +1,7 @@
-import Image from "next/image";
-import History from "../../components/History/History";
-
 import { getStoryById } from "@/services/services";
+import Image from "next/image";
+
+import History from "../../components/History/History";
 
 async function Story({ params }) {
    const { id } = params;
@@ -18,7 +18,8 @@ async function Story({ params }) {
                         className="rounded-3xl object-cover object-center mb-[11px]"
                         src={story.data.imagen}
                         fill
-                        alt="pet image"
+                        alt="Imagen de historia"
+                        sizes="100%"
                      />
                   </figure>
                   <span className="italic text-[11px] md:text-[20px]">
@@ -31,12 +32,12 @@ async function Story({ params }) {
                   className="w-[90%] lg:w-9/12 mx-auto mt-[27px]"
                   dangerouslySetInnerHTML={{ __html: story.data.articulo }}
                >
-                  {/* se renderiza el articulo */}
                </article>
             </>
          ) : (
-            <section className="w-[90%] lg:w-9/12 mx-auto">
-               <h1>Historia no encontrada {":("}</h1>
+            <section className="w-[90%] lg:w-9/12 mx-auto flex items-center  gap-x-[5px]">
+               <div className="w-[24px] aspect-square bg-error-icon bg-contain bg-no-repeat"></div>
+               <h1 className="text-[#A90000] font-[Poppins] font-normal text-xl">Historia no encontrada</h1>
             </section>
          )}
 
