@@ -8,7 +8,7 @@ function Map() {
   const [phone, setPhone] = useState('');
   const [comment, setComment] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false); 
-  const subject = 'Consulta desde el formulario de contacto';
+  const subject = 'Consulta';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -129,7 +129,7 @@ function Map() {
           </div>
         </div>
       </div>
-      <div className="bg-white grid grid-cols-1 gap-0 content-end bg-white pb-[32px] md:pb-[82px] pt-[36px] mb:pt-[75px]">
+      <div className="bg-white grid grid-cols-1 gap-0 content-end pb-[32px] md:pb-[82px] pt-[36px] mb:pt-[75px]">
         <p className='text-primaryFont mb-[23px] md:mb-[8px] text-p3-m justify-end text-center'>Para llegar a más personas y poder seguir ayudando</p>
         <h1 className='text-2xl text-primaryFont font-bold text-h2-m text-center px-4 mb-[23px]'>¡NO TE OLVIDES DE SEGUIRNOS EN NUESTRAS REDES!</h1>
         <div className="flex justify-center">
