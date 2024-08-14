@@ -3,6 +3,23 @@ import Image from "next/image";
 
 import History from "../../components/History/History";
 
+
+export async function generateMetadata({ params }) {
+   const id = params.id
+   const story = await getStoryById(id);
+   let metadata = {}
+
+   if (story.data) {
+      metadata = {
+         title: `${story.data.nombre} | Huellitas Cartagena`,
+         description: story.data.entradilla,
+      }
+   }
+
+   return metadata
+}
+
+
 async function Story({ params }) {
    const { id } = params;
 
