@@ -48,7 +48,7 @@ export const NuestraHistoria = () => {
                         {/* Imagen grande */}
                         <Image
                             src={
-                                "/assets/fundation/image2.png"
+                                "/assets/Fundation/image2.png"
                             }
                             alt="Imagen grande"
                             className="h-auto mb-4 rounded-lg"

@@ -12,7 +12,7 @@ function Contacto() {
                 <Map />
             </section>
             <section className="w-full">
-                <div className="w-full h-full mx-auto max-w-screen-2xl flex justify-center py-14 md:py-18 lg:py-22">
+                <div className="w-full h-full mx-auto max-w-screen-2xl flex justify-center py-14 md:py-18 lg:py-24">
                     <div className="w-[75%] flex flex-col gap-6">
                         <div>
                             <p className='text-primaryFont text-p3-m text-center mb-2'>Para llegar a más personas y poder seguir ayudando</p>
