@@ -7,7 +7,7 @@ function Footer() {
   const [team, setTeam] = useState(false);
 
   return (
-    <footer className="w-full mt-auto mx-auto ">
+    <footer className="w-full mt-auto mx-auto overflow-hidden">
       <div className="w-full bg-primaryColor ">
         <div className="flex justify-around items-center max-w-screen-2xl mx-auto flex-col md:flex-row h-full md:h-[250px]  gap-4 py-16 md:gap-0 md:py-0">
           <div className="hidden md:flex flex-col flex-grow basis-0 items-center">
