@@ -57,7 +57,7 @@ function Map() {
                                 <h1 className='heading-2 mb-1'>¿DÓNDE ESTAMOS?</h1>
                                 <p className='par-3 mb-4'>Cartagena de Indias, Colombia</p>
                             </div>
-                            <iframe className='w-full lg:w-[80%] aspect-[14/9] md:aspect-square h-auto' width="400" height="400" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Cartagena,%20Colombia+(Huellitas)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                            <iframe className='w-full lg:w-[85%] aspect-[14/9] md:aspect-square h-auto' width="400" height="400" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Cartagena,%20Colombia+(Huellitas)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                         </div>
                     </div>
 
