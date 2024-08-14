@@ -48,7 +48,7 @@ export const NuestraHistoria = () => {
                         {/* Imagen grande */}
                         <Image
                             src={
-                                "https://res.cloudinary.com/dorljfo6v/image/upload/v1717957500/huellitas/fundacion-1_qshmej.png"
+                                "/assets/fundation/image2.png"
                             }
                             alt="Imagen grande"
                             className="h-auto mb-4 rounded-lg"
@@ -60,7 +60,7 @@ export const NuestraHistoria = () => {
                             {/* Imágenes pequeñas */}
                             <Image
                                 src={
-                                    "https://res.cloudinary.com/dorljfo6v/image/upload/v1717957497/huellitas/fundacion-2_ttio9m.png"
+                                    "/assets/fundation/image3.png"
                                 }
                                 alt="Imagen pequeña 1"
                                 className="w-[32%] h-auto mb-4 rounded-lg"
@@ -70,7 +70,7 @@ export const NuestraHistoria = () => {
 
                             <Image
                                 src={
-                                    "https://res.cloudinary.com/dorljfo6v/image/upload/v1717957498/huellitas/fundacion-3_i5u3lf.png"
+                                    "/assets/fundation/image4.png"
                                 }
                                 alt="Imagen pequeña 2"
                                 className="w-[32%] h-auto mb-4 rounded-lg"
@@ -80,7 +80,7 @@ export const NuestraHistoria = () => {
 
                             <Image
                                 src={
-                                    "https://res.cloudinary.com/dorljfo6v/image/upload/v1717957499/huellitas/fundacion-4_erflhp.png"
+                                    "/assets/fundation/image5.png"
                                 }
                                 alt="Imagen pequeña 3"
                                 className="w-[32%] h-auto mb-4 rounded-lg"

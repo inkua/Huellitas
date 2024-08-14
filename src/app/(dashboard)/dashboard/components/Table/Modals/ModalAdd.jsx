@@ -1,5 +1,7 @@
 import uploadImage from "@/services/services";
 
+import { successMessage, errorMessage } from "@/services/notify";
+
 function ModalAdd({ closeCallback, config }) {
    async function handleClick(e) {
       try {
@@ -36,13 +38,15 @@ function ModalAdd({ closeCallback, config }) {
                token: "",
                data: data,
             }),
-         });
+         }).finally(()=>successMessage("Operación exitosa!"))
 
          htmlTag.classList.remove("!cursor-wait");
          htmlTag.classList.remove("pointer-events-none");
 
          closeCallback();
       } catch (e) {
+         errorMessage('Algo salió mal, intente más tarde')
+
          console.log(e.message);
          htmlTag.classList.remove("!cursor-wait");
          htmlTag.classList.remove("pointer-events-none");

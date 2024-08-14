@@ -1,17 +1,18 @@
 "use client";
 import React, { useState } from 'react';
+import { successMessage, errorMessage } from '@/services/notify';
 
 function Sumate() {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
-    const [isSubmitting, setIsSubmitting] = useState(false); 
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [subject, setSubject] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        setIsSubmitting(true); 
+        setIsSubmitting(true);
         setSubject(subject);
 
         const message = "Estoy interesado(a) en formar parte de Huellitas - "
@@ -23,29 +24,26 @@ function Sumate() {
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ name, phone, email, subject, comment:`${message} ${subject} :)` }),
+                    body: JSON.stringify({ name, phone, email, subject, comment: `${message} ${subject} :)` }),
                 });
 
                 if (response.ok) {
-                    console.log('Email sent successfully');
-                    alert('Solicitud enviada con éxito!');
+                    successMessage("Correo enviado con éxito!")
+
                     setEmail('');
                     setName('');
                     setPhone('');
                     setSubject('');
                 } else {
-                    console.log('Failed to send email');
-                    alert('Error al enviar la solicitud.');
+                    errorMessage('No se puedo enviar, intente más tarde.')
                 }
             } catch (error) {
-                console.error('Error:', error);
-                alert('Error al enviar la solicitud.');
+                errorMessage('No se puedo enviar, intente más tarde.')
             } finally {
-                setIsSubmitting(false); 
+                setIsSubmitting(false);
             }
         } else {
-            console.log('Form has errors');
-            setIsSubmitting(false); 
+            setIsSubmitting(false);
         }
     };
 
@@ -57,50 +55,50 @@ function Sumate() {
                     <div className="flex items-center w-full">
                         <form className="flex-1 mt-4 lg:py-4" onSubmit={(e) => handleSubmit(e)}>
                             <div className="w-full  rounded-lg mb-6  grid  grid-cols-1 grid-rows-1 relative top-3">{/*  */}
-                                    <input
-                                        className="w-8/12 sm:w-6/12 p-2 bg-white rounded-full border border-gray-300 placeholder-gray-500 text-primaryFont par-3 mb-[13px] md:mb-4"
-                                        type="text"
-                                        placeholder="Nombre completo"
-                                        value={name}
-                                        onChange={(e) => setName(e.target.value)}
-                                        required={true}
-                                        minLength="2"
-                                    />
+                                <input
+                                    className="w-8/12 sm:w-6/12 p-2 bg-white rounded-full border border-gray-300 placeholder-gray-500 text-primaryFont par-3 mb-[13px] md:mb-4"
+                                    type="text"
+                                    placeholder="Nombre completo"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    required={true}
+                                    minLength="2"
+                                />
 
                                 <div className='mb-[13px] md:mb-4 flex flex-col lg:flex-row gap-4'>
-                                        <input
-                                            className="w-6/12 sm:w-4/12  p-2 bg-white rounded-full border border-gray-300 mr-2 placeholder-gray-500 text-primaryFont par-3"
-                                            type="text"
-                                            placeholder="Celular"
-                                            value={phone}
-                                            onChange={(e) => setPhone(e.target.value)}
-                                            required={true}
-                                            pattern="[0-9\s\+\-\(\)]{10,}"
-                                        />
+                                    <input
+                                        className="w-6/12 sm:w-4/12  p-2 bg-white rounded-full border border-gray-300 mr-2 placeholder-gray-500 text-primaryFont par-3"
+                                        type="text"
+                                        placeholder="Celular"
+                                        value={phone}
+                                        onChange={(e) => setPhone(e.target.value)}
+                                        required={true}
+                                        pattern="[0-9\s\+\-\(\)]{10,}"
+                                    />
 
-                                        <input
-                                            className="w-6/12 sm:w-4/12  p-2 bg-white rounded-full border border-gray-300 mr-2 placeholder-gray-500 text-primaryFont par-3"
-                                            type="email"
-                                            placeholder="Correo"
-                                            pattern="[^\s@]+@[^\s@]+.[^\s@]+"
-                                            value={email}
-                                            onChange={(e) => setEmail(e.target.value)}
-                                            required={true}
-                                        />
+                                    <input
+                                        className="w-6/12 sm:w-4/12  p-2 bg-white rounded-full border border-gray-300 mr-2 placeholder-gray-500 text-primaryFont par-3"
+                                        type="email"
+                                        placeholder="Correo"
+                                        pattern="[^\s@]+@[^\s@]+.[^\s@]+"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        required={true}
+                                    />
                                 </div>
 
                                 <div className='md:mt-3 flex flex-col-reverse md:flex-row gap-2 md:gap-5 mt-2'>
                                     <button
                                         className="secondary-btn !text-white !border-white w-fit"
                                         onClick={() => setSubject("Quiero ser voluntario")}
-                                        disabled={isSubmitting} 
+                                        disabled={isSubmitting}
                                     >
                                         QUIERO SER VOLUNTARIO
                                     </button>
                                     <button
                                         className="secondary-btn !text-white !border-white w-fit"
                                         onClick={() => setSubject("Quiero ser padrino")}
-                                        disabled={isSubmitting} 
+                                        disabled={isSubmitting}
                                     >
                                         QUIERO SER PADRINO
                                     </button>

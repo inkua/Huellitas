@@ -1,4 +1,6 @@
 import "./globals.css";
+import 'react-toastify/dist/ReactToastify.css';
+
 import { AdminProvider } from "@/components/AdminProvider";
 
 export const metadata = {

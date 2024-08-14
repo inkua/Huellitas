@@ -38,7 +38,7 @@ function Colaboracion() {
             par: "",
             btn: "ECONÓMICAS",
             alt: "donación economica",
-            source: "https://res.cloudinary.com/dorljfo6v/image/upload/v1717957518/huellitas/colaboraciones-comoquierescolaborar-1_do2ctq.png",
+            source: "/assets/Colaboracion/colaboracion_001.jpg",
             action: () => openModal("donar_dinero"),
         },
         {
@@ -46,7 +46,7 @@ function Colaboracion() {
             par: "",
             btn: "INSUMOS",
             alt: "donación insumos",
-            source: "https://res.cloudinary.com/dorljfo6v/image/upload/v1717957521/huellitas/colaboraciones-comoquierescolaborar-2_koocxt.png",
+            source: "/assets/Colaboracion/colaboracion_002.jpg",
             action: () => openModal("donar_insumos"),
         },
         {
@@ -54,7 +54,7 @@ function Colaboracion() {
             par: "",
             btn: "SERVICIOS",
             alt: "donación servicios",
-            source: "https://res.cloudinary.com/dorljfo6v/image/upload/v1717957517/huellitas/colaboraciones-comoquierescolaborar-3_kaagfo.png",
+            source: "/assets/Colaboracion/colaboracion_003.jpg",
             action: () => openModal("donar_servicios"),
         },
     ];
