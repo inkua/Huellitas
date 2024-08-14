@@ -56,11 +56,11 @@ export const NuestraHistoria = () => {
                             width={700}
                         />
 
-                        <div className="flex justify-between">
+                        <div className="flex justify-between w-[100%]">
                             {/* Imágenes pequeñas */}
                             <Image
                                 src={
-                                    "/assets/fundation/image3.png"
+                                    "/assets/Fundation/image3.png"
                                 }
                                 alt="Imagen pequeña 1"
                                 className="w-[32%] h-auto mb-4 rounded-lg"
@@ -70,7 +70,7 @@ export const NuestraHistoria = () => {
 
                             <Image
                                 src={
-                                    "/assets/fundation/image4.png"
+                                    "/assets/Fundation/image4.png"
                                 }
                                 alt="Imagen pequeña 2"
                                 className="w-[32%] h-auto mb-4 rounded-lg"
@@ -80,7 +80,7 @@ export const NuestraHistoria = () => {
 
                             <Image
                                 src={
-                                    "/assets/fundation/image5.png"
+                                    "/assets/Fundation/image5.png"
                                 }
                                 alt="Imagen pequeña 3"
                                 className="w-[32%] h-auto mb-4 rounded-lg"
