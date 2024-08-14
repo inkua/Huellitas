@@ -1,4 +1,10 @@
+import Link from "next/link";
+
 import LoginForm from "./componets/LoginForm/LoginForm";
+
+export const metadata = {
+    title: "Autenticación | Huellitas Cartagena",
+};
 
 function Login() {
     return (
@@ -15,13 +21,15 @@ function Login() {
                     className="w-[15rem]"
                 />
                 <h1 className="font-semibold text-3xl text-center">
-                    Entrá a tu cuenta
+                    Entra a tu cuenta
                 </h1>
 
                 <LoginForm />
 
                 {/** Contenedor para hacer una linea de decoración */}
                 <div className="mt-10 h-[1px] w-[75%] bg-white"></div>
+
+                <Link href={'/'} className="hover:underline">Volver a inicio</Link>
             </section>
         </main>
     );

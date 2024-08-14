@@ -47,7 +47,8 @@ function Navbar() {
                         <Link href="/" className="h-full flex items-center">
                             <Image
                                 className={`py-2 w-auto h-full lg:h-full lg:max-w-[135px] lg:max-h-[135px] bg-white duration-500 ${isScrolled ? '' : 'md:h-[70%]'}`}
-                                src={"https://res.cloudinary.com/dorljfo6v/image/upload/v1718047440/huellitas/logo-huellitas_ckm05d.png"}
+                                src={"/assets/logos/png/logoHuellitas.png"}
+                                priority
                                 alt="logo"
                                 height={700}
                                 width={700}

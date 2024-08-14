@@ -1,6 +1,11 @@
 import FAQ_Adoption from "../components/FAQ_Adopcion/FAQ_Adoption";
 import CardWrapper from "./components/CardWrapper/CardWrapper";
 
+export const metadata = {
+    title: 'Adopción | Huellitas Cartagena',
+    description: 'Explora nuestra página de adopción para conocer a los animales que esperan encontrar una familia. Revisa los perfiles de nuestros adorables refugiaditos y consulta nuestra sección de preguntas frecuentes para obtener toda la información necesaria sobre el proceso de adopción. Tu próximo compañero de vida podría estar aquí esperando por ti.',
+}
+
 let faq = [
     {
         id: 1,

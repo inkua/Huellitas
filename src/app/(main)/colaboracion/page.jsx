@@ -5,11 +5,6 @@ import Modal from "./components/Modal";
 import Slider from "../components/Slider/Slider";
 import Slider2 from "../components/Slider/slider2";
 
-/* export const metadata = {
-    title: 'Huellitas - Colaboración',
-    description: 'Tu también puedes ayudar a Huellitas Cartagena colaborando de diferentes formas. Te invitamos a conocerlas!',
-}; */
-
 function Colaboracion() {
     const [modalVisible, setModalVisible] = useState({
         donar_dinero: false,
@@ -38,7 +33,7 @@ function Colaboracion() {
             par: "",
             btn: "ECONÓMICAS",
             alt: "donación economica",
-            source: "https://res.cloudinary.com/dorljfo6v/image/upload/v1717957518/huellitas/colaboraciones-comoquierescolaborar-1_do2ctq.png",
+            source: "/assets/Colaboracion/colaboracion_001.jpg",
             action: () => openModal("donar_dinero"),
         },
         {
@@ -46,7 +41,7 @@ function Colaboracion() {
             par: "",
             btn: "INSUMOS",
             alt: "donación insumos",
-            source: "https://res.cloudinary.com/dorljfo6v/image/upload/v1717957521/huellitas/colaboraciones-comoquierescolaborar-2_koocxt.png",
+            source: "/assets/Colaboracion/colaboracion_002.jpg",
             action: () => openModal("donar_insumos"),
         },
         {
@@ -54,7 +49,7 @@ function Colaboracion() {
             par: "",
             btn: "SERVICIOS",
             alt: "donación servicios",
-            source: "https://res.cloudinary.com/dorljfo6v/image/upload/v1717957517/huellitas/colaboraciones-comoquierescolaborar-3_kaagfo.png",
+            source: "/assets/Colaboracion/colaboracion_003.jpg",
             action: () => openModal("donar_servicios"),
         },
     ];
@@ -73,7 +68,6 @@ function Colaboracion() {
 
     return (
         <main className="relative">
-            <title>Colaboración | Huellitas Cartagena</title>
             <section
                 className="flex flex-col relative w-full h-80 lg:h-96 max-w-screen-2xl mx-auto bg-colab-banner bg-cover bg-center"
                 role="banner"

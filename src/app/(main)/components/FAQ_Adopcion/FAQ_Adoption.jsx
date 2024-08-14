@@ -17,7 +17,7 @@ function FAQ_Adoption({ items }) {
                         <div className="mb-4 lg:mb-0 lg:mr-4 w-full lg:w-1/2 lg:hidden">
                             <Image
                                 src={
-                                    "https://res.cloudinary.com/dorljfo6v/image/upload/v1718047294/huellitas/home-preguntasfrecuentes-mobile_qzzqdy.png"
+                                    "/assets/FAQs/Woman_Sign-mobile.png"
                                 }
                                 width={700}
                                 height={700}
@@ -28,7 +28,7 @@ function FAQ_Adoption({ items }) {
                         <div className='flex w-full'>
                             <Image
                                 src={
-                                    "https://res.cloudinary.com/dorljfo6v/image/upload/v1718046053/huellitas/adopcion-faq-desktop.png"
+                                    "/assets/FAQs/Woman_sign_desktop.png"
                                 }
                                 width={700}
                                 height={700}
