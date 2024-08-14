@@ -50,7 +50,7 @@ export const NuestraHistoria = () => {
                             src={
                                 "/assets/Fundation/image2.png"
                             }
-                            alt="Imagen grande"
+                            alt="Imagen de venta de ropa"
                             className="h-auto mb-4 rounded-lg"
                             height={700}
                             width={700}
@@ -62,7 +62,7 @@ export const NuestraHistoria = () => {
                                 src={
                                     "/assets/Fundation/image3.png"
                                 }
-                                alt="Imagen pequeña 1"
+                                alt="Mujer abrazando un perro"
                                 className="w-[32%] h-auto mb-4 rounded-lg"
                                 height={700}
                                 width={700}
@@ -72,7 +72,7 @@ export const NuestraHistoria = () => {
                                 src={
                                     "/assets/Fundation/image4.png"
                                 }
-                                alt="Imagen pequeña 2"
+                                alt="Grupo de persona con dos perros"
                                 className="w-[32%] h-auto mb-4 rounded-lg"
                                 height={700}
                                 width={700}
@@ -82,7 +82,7 @@ export const NuestraHistoria = () => {
                                 src={
                                     "/assets/Fundation/image5.png"
                                 }
-                                alt="Imagen pequeña 3"
+                                alt="Grupo de persona con dos perros"
                                 className="w-[32%] h-auto mb-4 rounded-lg"
                                 height={700}
                                 width={700}
