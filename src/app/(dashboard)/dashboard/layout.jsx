@@ -1,7 +1,10 @@
 "use client";
 
+import { ToastContainer } from 'react-toastify';
+
 import Navigation from "./components/Navigation/Navigation";
 import RouterSecurity from "@/components/RouterSecurity";
+
 
 export default function layout({ children }) {
     return (
@@ -16,6 +19,7 @@ export default function layout({ children }) {
                     </main>
 
             </RouterSecurity>
+            <ToastContainer />
         </body>
     );
 }

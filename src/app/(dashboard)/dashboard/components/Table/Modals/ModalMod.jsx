@@ -1,5 +1,7 @@
 import { uploadImage, delImage } from "@/services/services";
 
+import { successMessage, errorMessage } from "@/services/notify";
+
 function ModalMod({ item, closeCallback, config }) {
    async function handleClick(e) {
       try {
@@ -37,7 +39,8 @@ function ModalMod({ item, closeCallback, config }) {
                id: item.id,
                data: data,
             }),
-         });
+         }).finally(()=>successMessage("Operación exitosa!"))
+
 
          if (e.target.image.files[0]) {
             await delImage(item.data.imagen);
@@ -48,6 +51,8 @@ function ModalMod({ item, closeCallback, config }) {
 
          closeCallback();
       } catch (e) {
+         errorMessage('Algo salió mal, intente más tarde')
+
          console.log(e.message);
          htmlTag.classList.remove("!cursor-wait");
          htmlTag.classList.remove("pointer-events-none");

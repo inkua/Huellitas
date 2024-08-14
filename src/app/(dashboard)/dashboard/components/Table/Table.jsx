@@ -7,6 +7,8 @@ import ModalAdd from "./Modals/ModalAdd";
 import ModalMod from "./Modals/ModalMod";
 import StoriesModal from "../StoriesModal/StoriesModal";
 
+import { successMessage, errorMessage } from "@/services/notify";
+
 function Table({ data, refreshCallback, config, stories = false }) {
     const [isModalAddActive, setIsModalAddActive] = useState(false);
     const [isModalModActive, setIsModalModActive] = useState(false);
@@ -52,11 +54,13 @@ function Table({ data, refreshCallback, config, stories = false }) {
                 }),
             });
 
+            successMessage('Operación exitosa!')
             htmlTag.classList.remove("!cursor-wait");
             htmlTag.classList.remove("pointer-events-none");
 
             refreshCallback(Date.now());
         } catch (error) {
+            errorMessage('Algo salió mal, intente más tarde')
             console.log(e);
             htmlTag.classList.remove("!cursor-wait");
             htmlTag.classList.remove("pointer-events-none");

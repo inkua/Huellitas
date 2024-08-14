@@ -12,10 +12,10 @@ module.exports = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "adoption-banner": "url('https://res.cloudinary.com/dorljfo6v/image/upload/v1718050129/huellitas/adopcion-banner-mobile.jpg')",
-        "hero-banner-lg": "url('https://res.cloudinary.com/dorljfo6v/image/upload/v1718046400/huellitas/home-banner-desktop.jpg')",
-        "hero-banner-sm": "url('https://res.cloudinary.com/dorljfo6v/image/upload/v1718046399/huellitas/home-banner-mobile.jpg')",
-        "colab-banner": "url('https://res.cloudinary.com/dorljfo6v/image/upload/v1718050498/huellitas/colaboraciones-banner.jpg')",
+        "adoption-banner": "url('https://firebasestorage.googleapis.com/v0/b/huellitasctgna.appspot.com/o/static%2Fadopcion-banner-mobile.jpg?alt=media&token=626c28ba-db02-40ad-a98c-c88e4e6ef22f')",
+        "hero-banner-lg": "url('https://firebasestorage.googleapis.com/v0/b/huellitasctgna.appspot.com/o/static%2Fhome-banner-desktop.jpg?alt=media&token=ebc65f25-88e7-41ab-b635-c676c8eb85b9')",
+        "hero-banner-sm": "url('https://firebasestorage.googleapis.com/v0/b/huellitasctgna.appspot.com/o/static%2Fhome-banner-mobile.jpg?alt=media&token=6b677669-84df-42b4-a76d-563e2c30cd70')",
+        "colab-banner": "url('https://firebasestorage.googleapis.com/v0/b/huellitasctgna.appspot.com/o/static%2Fcolaboraciones-banner.jpg?alt=media&token=6c73f4a9-8c4e-4cd1-bfff-8fa51932004c')",
         "sample": "url('/assets/Sumate/girl&dog.png')",
         "error-mobile": "url('/assets/Error/error-mobile.png')",
         "error-desktop": "url('/assets/Error/error-desktop.png')",
@@ -24,6 +24,7 @@ module.exports = {
         "gradient-three": "linear-gradient(to bottom, white 66%, #F0F1F0 34%)",
         "ig-mobile": "url('/assets/Contacto/ig-img.png')",
         "tk-mobile": "url('/assets/Contacto/tk-img.png')",
+        "error-icon": "url('/assets/Error/errorIcon.svg')",
       },
       backgroundSize: {
         '1': '45%',

@@ -14,7 +14,7 @@ function Footer() {
             <Link href='/'>
               <Image
                 className="py-4 pointer-events-none w-[300px] cursor-pointer"
-                src={"https://res.cloudinary.com/dorljfo6v/image/upload/v1718048248/huellitas/logo2_b5nm5v.svg"}
+                src={"/assets/logos/png/logoHuellitas_dos.png"}
                 alt="logo"
                 height={700}
                 width={700}

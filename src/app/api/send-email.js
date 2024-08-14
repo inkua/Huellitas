@@ -18,7 +18,7 @@ export default async function handler(req, res) {
         let mailOptions = {
             from: process.env.EMAIL_USER,
             to: 'recipient_email@example.com', // Replace with the recipient's email address
-            subject: 'Consulta desde el formulario de contacto',
+            subject: 'Web Huellitas - Consulta',
             text: `Nombre: ${name}\nTeléfono: ${phone}\nCorreo electrónico: ${email}\nConsulta: ${comment}`,
         };
 

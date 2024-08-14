@@ -7,6 +7,8 @@ import Loading from "../Loading/Loading";
 import uploadImage, { delImage } from "@/services/services";
 import { convertToHTML, convertFromHTML } from "draft-convert";
 import { EditorState } from "draft-js";
+import { successMessage, errorMessage } from "@/services/notify";
+
 
 export default function StoriesModal({ isOpen, add = true, item }) {
    const [loading, setLoading] = useState(false);
@@ -47,7 +49,7 @@ export default function StoriesModal({ isOpen, add = true, item }) {
                token: "",
                data: data,
             }),
-         });
+         }).finally(()=>successMessage("Operación exitosa!"))
 
          //This Does not refresh the table
          handleclose();
@@ -55,6 +57,8 @@ export default function StoriesModal({ isOpen, add = true, item }) {
          //so meanwhile...
          location.reload();
       } catch (e) {
+         errorMessage('Algo salió mal, intente más tarde')
+
          console.log(e.message);
          htmlTag.classList.remove("!cursor-wait");
          htmlTag.classList.remove("pointer-events-none");
