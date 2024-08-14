@@ -1,88 +1,204 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
+
+/* no tocar */
+.slide-image-reference .swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* no tocar */
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--foreground-rgb));
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
 
+body {
+    color: rgb(var(--foreground-rgb));
+    background: rgb(var(--foreground-rgb));
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
 
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
 
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }
+
 @layer base {
-  html {
-    font-family: 'Poppins', sans-serif;
-  }
+    html {
+        font-family: "Poppins", sans-serif;
+    }
 }
+
 @layer base {
-  html {
-    font-family: 'Poppins', sans-serif;
-  }
+    html {
+        font-family: "Poppins", sans-serif;
+    }
 }
 
 .heading-1 {
-  @apply text-h1-m lg:text-h1-w md:text-h1-w text-primaryFont;
+    @apply text-h1-m lg:text-h1-w md:text-h1-w text-primaryFont;
 }
 
 .heading-2 {
-  @apply text-h2-m lg:text-h2-w md:text-h2-w text-primaryFont;
+    @apply text-h2-m lg:text-h2-w md:text-h2-w text-primaryFont;
 }
 
 .par-1 {
-  @apply text-p1-m lg:text-p1-w md:text-p1-w text-primaryFont;
+    @apply text-p1-m lg:text-p1-w md:text-p1-w font-normal text-primaryFont;
 }
 
 .par-2 {
-  @apply text-p2-m lg:text-p2-w md:text-p2-w text-primaryFont;
+    @apply text-p2-m lg:text-p2-w md:text-p2-w font-normal text-primaryFont;
 }
 
 .par-3 {
-  @apply text-p3-m lg:text-p3-w md:text-p3-w text-primaryFont;
+    @apply text-p3-m lg:text-p3-w md:text-p3-w font-normal text-primaryFont;
 }
 
 .primary-btn {
-  @apply text-p3-m lg:text-p3-w md:text-p3-w px-4 py-4 lg:py-1 md:py-1 font-medium text-white bg-primaryColor hover:bg-secondaryColor rounded-full shadow-md transition-all duration-150 active:bg-activeButton;
+    @apply uppercase text-p3-m lg:text-p3-w md:text-p3-w px-4 py-4 lg:py-1 md:py-1 font-medium text-white bg-primaryColor hover:bg-secondaryColor rounded-full shadow-md transition-all duration-150 active:bg-activeButton;
 }
 
 .secondary-btn {
-  @apply px-4 py-1 text-sm text-primaryColor border-solid border-2 border-primaryColor rounded-2xl hover:text-white hover:bg-primaryColor hover:border-violet-900 transition-all duration-150 active:bg-violet-600;
+    @apply uppercase px-4 py-1 text-sm text-primaryColor border-solid border-2 border-primaryColor rounded-2xl hover:text-white hover:bg-primaryColor hover:border-violet-900 transition-all duration-150 active:bg-violet-600;
 }
 
 .close-btn {
-  @apply text-p3-m lg:text-p3-w md:text-p3-w px-4 py-4 lg:py-1 md:py-1 font-medium text-black bg-gray-200 hover:bg-gray-300 rounded-full shadow-md transition-all duration-150 active:bg-gray-400;
+    @apply uppercase text-p3-m lg:text-p3-w md:text-p3-w px-4 py-4 lg:py-1 md:py-1 font-medium text-black hover:bg-gray-100 rounded-full transition-all duration-150 active:bg-gray-200;
+}
+
+/* Estilos de editor de textos */
+
+.public-DraftStyleDefault-block {
+    margin: 0;
+}
+
+.public-DraftStyleDefault-block.header-one {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.67em 0;
+}
+
+.public-DraftStyleDefault-block.header-two {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0.75em 0;
+}
+
+.public-DraftStyleDefault-block.header-three {
+    font-size: 1.17em;
+    font-weight: bold;
+    margin: 0.83em 0;
+}
+
+.public-DraftStyleDefault-block.header-four {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 1.12em 0;
+}
+
+@layer base {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: revert;
+        font-weight: revert;
+    }
+}
+
+/* editor de texto */
+.blockquote .public-DraftStyleDefault-block  {
+    border-left: 5px solid #ddd !important;
+    color: #555 !important;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    margin: 16px 0;
+    padding: 10px 20px;
+}
+
+
+/* articulo del blog */
+#blogArticle{
+    color: #22202A;
+}
+#blogArticle h1 {
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#blogArticle p {
+    margin-top: 22px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#blogArticle blockquote {
+    color: #6C5CE7;
+    font-size: 15px;
+    font-weight: 700;
+    font-style: italic;
+    padding-left: 16px;
+    border-left: 17px solid #6C5CE7;
+    margin-top: 18px;
+}
+#blogArticle ul {
+    list-style-type:disc;
+    list-style-position: inside;
+}
+#blogArticle ol {
+    list-style-type:decimal;
+    list-style-position: inside;
+}
+#blogArticle h2 {
+    margin-top: 22px;
+}
+#blogArticle h3 {
+    margin-top: 22px;
+}
+#blogArticle h4 {
+    margin-top: 22px;
+}
+
+@media (min-width: 600px) {
+    #blogArticle h1 {
+        font-size: 39px;
+    }
+    #blogArticle p {
+        font-size: 20px;
+    }
+    #blogArticle blockquote {
+        font-size: 20px;
+        padding-left: 18px;
+    }
 }

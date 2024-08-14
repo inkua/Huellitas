@@ -1,39 +1,85 @@
 import Image from "next/image";
+import CopyButton from "./CopyButton";
 
-const DonaDineroContent = () => {
+
+const DonaDineroContent = ({ onClose }) => {
   return (
     (
-        <div className="flex flex-col items-center lg:flex-col-reverse max-w-[700px]">
-          <div className="text-center lg:text-start ">
-            <h2 className="heading-1 font-semibold">TRANSFERENCIA BANCARIA</h2>
-            <p className="par-3">Doná el importe que quieras directamente en nuestra cuenta</p>
-            <p className="par-3 font-semibold py-4">-poner información de ellas-</p>
-            <div className="hidden lg:flex lg:gap-4">
-              <p className="par-3 max-w-[300px]">Hacete padrino si quieres donar todos los meses</p>
-              <button className="text-p3-m lg:text-p3-w md:text-p3-w px-5 py-2 lg:py-1 md:py-1 font-medium text-white bg-primaryColor hover:bg-secondaryColor rounded-full shadow-grey-400 shadow-md max-h-8">QUIERO SER PADRINO</button>
-
-            </div>
+      <div className="w-[80%] md:w-[70%] lg:w-[35%] max-h-[95%] bg-white rounded-3xl overflow-y-clip relative p-6 md:p-12 lg:p-14" role="contentInfo">
+        <div className="flex flex-col items-center justify-center gap-6">
+          <div className="text-center">
+            <h2 className="par-1 !font-semibold">TRANSFERENCIAS</h2>
+            <p className="par-3 justify-center text-center">Elegí el monto que puedas donar y haz una transfrencia a cualquiera de las siguientes cuentas:</p>
           </div>
 
-          <div className="flex flex-col items-center space-y-4 py-4 w-[80%] lg:w-full">
-            <div className="flex flex-col items-center py-4 gap-4 lg:flex-row lg:gap-24">
-            <div>
-            <Image src="/assets/Colaboracion/MercadoPagoLogo.svg" alt="Mercado Pago" width={150} height={150} />
-            <p className="par-3 text-center max-w-40">Elegí el monto que puedas donar</p>
-            </div>
-              <button className="text-p3-m lg:text-p3-w md:text-p3-w px-5 py-2 lg:py-1 md:py-1 font-medium text-white bg-primaryColor hover:bg-secondaryColor rounded-full shadow-grey-400 shadow-md">DONÁ AHORA</button>
-            </div>
-            <div className="flex flex-col items-center py-4 gap-4 lg:flex-row lg:gap-24">
-              <div>
-              <Image src="/assets/Colaboracion/PayPalLogo.svg" alt="PayPal" width={150} height={150} />
-              <p className="par-3 text-center max-w-40">Elegí el monto que puedas donar</p>
+          <div className="flex flex-col items-center w-full gap-6">
+            <div className="flex items-center flex-row">
+              <div className="flex items-center flex-row gap-2">
+                <div className="w-[50%] flex justify-left">
+                  <Image src="/assets/Colaboracion/PayPalLogo.svg" alt="PayPalLogo" width={150} height={150} className="w-full md:w-[80%] lg:w-[90%]" />
+                </div>
+                <div className="flex justify-start gap-4 items-center">
+                  <CopyButton text={'huellitasctgna@outlook.com'} />
+                  <div className="flex flex-col">
+                    <p className="par-3 flex">huellitasctgna</p>
+                    <p className="par-3 flex">@outlook.com</p>
+                  </div>
+                </div>
               </div>
-            
-              <button className="text-p3-m lg:text-p3-w md:text-p3-w px-5 py-2 lg:py-1 md:py-1 font-medium text-white bg-primaryColor hover:bg-secondaryColor rounded-full shadow-grey-400 shadow-md">DONÁ AHORA</button>
+            </div>
+
+            <div className="flex items-center flex-row gap-2">
+              <div className="w-[50%] flex justify-left">
+                <Image src="/assets/Colaboracion/daviplata-logo.png" alt="PayPalLogo" width={150} height={150} className="w-full md:w-[80%] lg:w-[90%]" />
+              </div>
+              <div className="flex justify-start gap-4 items-center">
+                <CopyButton text={'3152078686'} />
+                <div className="flex flex-col">
+                  <p className="par-3 flex">3152078686</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center flex-row gap-2">
+              <div className="w-[50%] flex justify-left">
+                <Image src="/assets/Colaboracion/nequi-logo.png" alt="PayPalLogo" width={150} height={150} className="w-full md:w-[80%] lg:w-[90%]" />
+              </div>
+              <div className="flex justify-start gap-4 items-center">
+                <CopyButton text={'3148176348'} />
+                <div className="flex flex-col">
+                  <p className="par-3 flex">3148176348</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center flex-row gap-2">
+              <div className="w-[50%] flex justify-left">
+                <Image src="/assets/Colaboracion/bancolombia_logo.png" alt="PayPalLogo" width={150} height={150} className="w-full md:w-[80%] lg:w-[90%]" />
+              </div>
+              <div className="flex justify-start gap-4 items-center">
+                <CopyButton text={'08500009646'} />
+                <div className="flex flex-col">
+                  <p className="par-3 flex">CA 08500009646</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full">
+              <p className="text-[11px] text-primaryFont primaryFont indent-4 text-center mx-auto">Envianos tu comprobante a <span className="font-bold">@huellitascartagena </span>para llevar cuentas organizadas</p>
             </div>
           </div>
         </div>
-      )  )
+        {/* 
+          <div className="w-full text-center pt-6 flex flex-col justify-center items-center gap-2">
+            <h2 className="par-1 font-semibold">PADRINO</h2>
+            <p className="par-3">Si querés donar todos los meses, haz click en el siguiente enlace:</p>
+            <button type="button" className="w-fit primary-btn">QUIERO SER PADRINO</button>
+          </div>
+        */}
+        <div className="absolute top-2 right-4 heading-2 cursor-pointer hover:text-primaryColor duration-200" onClick={onClose}>✖</div>
+      </div>
+
+    ))
 }
 
 export default DonaDineroContent

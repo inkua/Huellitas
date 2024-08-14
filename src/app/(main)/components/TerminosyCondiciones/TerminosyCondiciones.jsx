@@ -5,10 +5,10 @@ const TerminosyCondiciones = ({handlerViewTermsAndConditions}) => {
       <div className="bg-black opacity-50 absolute inset-0 "></div>
 
       <div className="bg-white p-8 rounded-lg shadow-lg z-10 max-w-[80%] md:max-w-[50%]">
-        <h2 className="text-grayHtas text-xl font-bold mb-4">
+        <h2 className="text-primaryFont text-xl font-bold mb-4">
           Terminos y Condiciones
         </h2>
-        <p className="text-grayHtas max-h-[300px] w-full overflow-x-hidden overflow-y-auto">
+        <p className="text-primaryFont max-h-[300px] w-full overflow-x-hidden overflow-y-auto">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi
           rem cupiditate commodi quae perferendis animi blanditiis fugit culpa
           fuga minus voluptate optio accusamus, quaerat ut! Fugit aut ex porro
@@ -354,7 +354,7 @@ const TerminosyCondiciones = ({handlerViewTermsAndConditions}) => {
 
         <div className="flex justify-end mt-8">
           <button
-            className="mr-4 font-semibold text-sm shadow-gray-400 shadow-md bg-violetHtas hover:bg-pinkHtas text-white py-2 px-4 rounded"
+            className="mr-4 font-semibold text-sm shadow-gray-400 shadow-md bg-primaryColor hover:bg-secondaryColor text-white py-2 px-4 rounded"
             onClick={() => handlerViewTermsAndConditions()}
           >
             Cerrar

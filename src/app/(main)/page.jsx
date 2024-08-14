@@ -1,9 +1,7 @@
 import Hero from "./components/Hero/Hero";
 import History from "./components/History/History";
 import Sumate from "./components/Sumate/Sumate";
-import FAQ_Adopcion from "./components/FAQ_Adopcion/FAQ_Adopcion";
-import FAQ_Colaboracion from "./components/FAQ_Colaboracion/FAQ_Colaboracion";
-
+import FAQ_Home from "./components/FAQ_Adopcion/FAQ_Home";
 
 export default function Home() {
     return (
@@ -11,8 +9,7 @@ export default function Home() {
             <Hero />
             <History />
             <Sumate />
-            <FAQ_Adopcion />
-            <FAQ_Colaboracion />
+            <FAQ_Home />
         </main>
     )
 }

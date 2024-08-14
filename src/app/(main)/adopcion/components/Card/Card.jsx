@@ -1,55 +1,92 @@
-'use client'
+"use client";
 
-import Image from "next/image"
-import { useState } from "react"
+import Image from "next/image";
+import { useState } from "react";
+import Link from "next/link";
 
-function Card({name, age, source}){
+function Card({ name, age, source, characteristics, gender, story, type }) {
     const [info, setInfo] = useState(false)
 
     return (
         <div role="listItem">
             <div className="flex flex-col gap-4 items-center lg:gap-6">
-                <div className='w-full overflow-hidden rounded-3xl'>
-                    <Image src={source} alt='Foto del perrito' width={100} height={100} className='flex w-full' />
+                <div className="w-full aspect-square overflow-hidden rounded-3xl relative">
+                    <Image
+                        src={source}
+                        alt="Foto del perrito"
+                        width={700}
+                        height={700}
+                        className="absolute w-full h-full flex object-cover"
+                    />
                 </div>
-                <h1 className='font-bold par-2'>{name}</h1>
-                <button type="button" onClick={() => setInfo(!info)} className="w-full primary-btn">SABER MÁS</button>
+                <h1 className="text-center uppercase par-3 md:par-2 !font-semibold text-nowrap">
+                    <span>{name + " - "}</span>
+                    <span className="hidden lg:inline-block">{(gender ? " MACHO" : "HEMBRA") + " - "}</span>
+                    <span>{" " + age + (type == 0 ? (age != 1 ? " años" : " año") : age != 1 ? " meses" : " mes")}</span>
+                </h1>
+                <button type="button" onClick={() => setInfo(!info)} className="w-full primary-btn">
+                    SABER MÁS
+                </button>
             </div>
 
-            {info && 
-                    (
-                        <div className='flex fixed inset-0 justify-center items-center gap-8 bg-black bg-opacity-50 backdrop-blur-sm z-50' role="section">
-                            <div className='max-w-screen-2xl mx-auto grid lg:grid-cols-[25%_1fr] w-10/12 lg:w-9/12 gap-4 lg:gap-14 p-6 lg:p-10 bg-white rounded-3xl shadow-lg' role="contentInfo">
-                                <div className='flex w-full h-40 lg:h-auto items-center overflow-hidden rounded-3xl' role="presentation">
-                                    <Image src={source} alt='Foto del perrito' width={100} height={100} className='w-full rounded-3xl'></Image>
-                                </div>
+            {info && (
+                <div className="flex fixed inset-0 w-full h-full bg-black bg-opacity-50 backdrop-blur-sm z-50">
+                    <div
+                        className="flex fixed inset-0 max-w-screen-2xl mx-auto justify-center items-center gap-8 z-50"
+                        role="section"
+                    >
+                        <div
+                            className="max-w-screen-2xl max-h-[95%] overflow-hidden mx-auto overflow-y-auto no-scrollbar grid md:grid-cols-[25%_1fr] w-10/12 md:w-[90%] lg:w-9/12 gap-4 lg:gap-14 p-6 lg:p-10 bg-white rounded-3xl shadow-lg relative"
+                            role="contentInfo"
+                        >
+                            <div
+                                className="flex w-[50%] md:w-full h-full aspect-square md:aspect-[9/12] items-center overflow-hidden rounded-3xl relative"
+                                role="presentation"
+                            >
+                                <Image
+                                    src={source}
+                                    alt="Foto del perrito"
+                                    width={900}
+                                    height={900}
+                                    className="w-full h-full absolute rounded-3xl object-cover"
+                                />
+                            </div>
 
-                                <div className='flex flex-col justify-center items-start gap-4' role="list">
-                                    <h1 className='font-bold heading-2'>{name}</h1>
-                                    <h1 className='font-bold par-1'>Edad: <span className='font-medium par-1'>{age}</span></h1>
-                                    <p className='font-bold par-1'>Caracteristicas: <span className='font-medium par-1'>
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore totam harum officiis voluptas sit! Facere possimus recusandae culpa, ipsum aliquid corrupti ipsam minus quos iste?
-                                        </span>
-                                    </p>
-                                    <p className='font-bold par-1'>Historia: <span className='font-medium par-1'>
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore totam harum officiis voluptas sit! Facere possimus recusandae culpa, ipsum aliquid corrupti ipsam minus quos iste?
-                                        </span>
-                                    </p>
-                                    <div className="flex gap-2">
+                            <div className="flex h-full flex-col justify-between gap-4" role="list">
+                                <h1 className="font-bold heading-2 uppercase">{name}</h1>
+                                <h1 className="!font-bold par-1">
+                                    Edad:{" "}
+                                    <span className="par-1">
+                                        {" " + age + (type == 0 ? (age != 1 ? " años" : " año") : (age != 1 ? ' meses' : ' mes'))}
+                                    </span>
+                                </h1>
+                                <p className="!font-bold par-1">
+                                    Caracteristicas:{" "}
+                                    <span className="par-1">
+                                        {characteristics}
+                                    </span>
+                                </p>
+                                <p className="!font-bold par-1">
+                                    Historia:{" "}
+                                    <span className="par-1">
+                                        {story}
+                                    </span>
+                                </p>
+                                <div className="flex gap-2 relative items-center">
+                                    <Link href={'https://docs.google.com/forms/d/e/1FAIpQLSfb-E2A6MtG0pbYgTzPyPjR_DnZxS26YR-DMcvt9gTHOI_XCA/viewform'} target='_blank'>
                                         <button type="button" className="primary-btn">
                                             QUIERO ADOPTARLO
                                         </button>
-                                        <button type="button" onClick={() => setInfo(!info)} className="close-btn">
-                                            CERRAR
-                                        </button>
-                                    </div>
+                                    </Link>
                                 </div>
                             </div>
+                            <div className="absolute top-2 right-4 heading-2 cursor-pointer hover:text-primaryColor duration-200" onClick={() => setInfo(!info)}>✖</div>
                         </div>
-                    )
-                }
+                    </div>
+                </div>
+            )}
         </div>
-    )
+    );
 }
 
-export default Card
+export default Card;
