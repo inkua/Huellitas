@@ -182,17 +182,17 @@ body {
 }
 #blogArticle h2 {
     margin-top: 22px;
+    font-weight: 600;
 }
-#blogArticle h3 {
-    margin-top: 22px;
-}
-#blogArticle h4 {
-    margin-top: 22px;
-}
+
+
 
 @media (min-width: 600px) {
     #blogArticle h1 {
         font-size: 39px;
+    }
+    #blogArticle h2 {
+        font-size: 31px;
     }
     #blogArticle p {
         font-size: 20px;

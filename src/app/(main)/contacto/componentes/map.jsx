@@ -112,7 +112,7 @@ function Map() {
                                     id="consulta"
                                     value={comment}
                                     onChange={(e) => setComment(e.target.value)}
-                                    className="bg-gray-50 border-2 border-gray-300 par-3 h-40 shadow-xs resize-none leading-relaxed rounded-lg block w-full p-2"
+                                    className="bg-gray-50 border-2 par-3 h-40 shadow-xs resize-none leading-relaxed rounded-lg block w-full p-2"
                                     placeholder="Déjanos aquí tu consulta"
                                     required
                                 ></textarea>

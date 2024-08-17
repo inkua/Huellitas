@@ -7,7 +7,7 @@ function Footer() {
   const [team, setTeam] = useState(false);
 
   return (
-    <footer className="w-full mt-auto mx-auto overflow-hidden">
+    <footer className="w-full mt-auto mx-auto ">
       <div className="w-full bg-primaryColor ">
         <div className="flex justify-around items-center max-w-screen-2xl mx-auto flex-col md:flex-row h-full md:h-[250px]  gap-4 py-16 md:gap-0 md:py-0">
           <div className="hidden md:flex flex-col flex-grow basis-0 items-center">
@@ -32,9 +32,6 @@ function Footer() {
               </li>
               <li className="hover:font-bold duration-200">
                 <Link href="/colaboracion">COLABORACIÓN</Link>
-              </li>
-              <li className="hover:font-bold duration-200">
-                <Link href="/adopcion#preguntas-frecuentes">PREGUNTAS FRECUENTES</Link>
               </li>
               <li className="hover:font-bold duration-200">
                 <Link href="/contacto">CONTACTO</Link>
@@ -136,7 +133,7 @@ function Footer() {
                       <li className="flex w-full gap-2">
                         <Image src={'/assets/Footer/linkedin.svg'} width={100} height={100} className="w-4 md:w-5" alt="logo LinkedIn" />
                         <Link href="https://www.linkedin.com/in/mar%C3%ADa-florencia-imbrosiano-/" target="_blank">
-                          <h3 className="par-3 !font-medium cursor-pointer hover:underline">Maria Florencia Imbrosiano</h3>
+                          <h3 className="par-3 !font-medium cursor-pointer hover:underline">María Florencia Imbrosiano</h3>
                         </Link>
                       </li>
 

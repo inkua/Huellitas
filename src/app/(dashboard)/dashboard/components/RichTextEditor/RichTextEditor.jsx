@@ -77,7 +77,7 @@ const RichTextEditor = ({data}) => {
                         onClick={() => toggleBlockType('header-two')}
                     >H2</button>
 
-                    <button
+                    {/* <button
                         type='button'
                         className='px-2 py-1 border-solid rounded-md text-[14px] hover:bg-slate-300'
                         onClick={() => toggleBlockType('header-three')}
@@ -87,7 +87,7 @@ const RichTextEditor = ({data}) => {
                         type='button'
                         className='px-2 py-1 border-solid rounded-md text-[13px] hover:bg-slate-300'
                         onClick={() => toggleBlockType('header-four')}
-                    >H4</button>
+                    >H4</button> */}
 
                     <span className='px-3 py-1 text-gray-300'>|</span>
 
