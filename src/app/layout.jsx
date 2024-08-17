@@ -8,6 +8,9 @@ export const metadata = {
     description:
         "La fundación Huellitas Cartagena se dedica al rescate y cuidado de animales en Cartagena de Indias. Explora nuestro sitio para conocer más sobre nuestras actividades, cómo trabajamos para proteger y mejorar la vida de los animales, y cómo puedes contribuir a nuestra causa.",
 };
+export const viewport = {
+    themeColor: '#6C5CE7',
+}
 
 export default function RootLayout({ children }) {
     return (
