@@ -34,9 +34,6 @@ function Footer() {
                 <Link href="/colaboracion">COLABORACIÓN</Link>
               </li>
               <li className="hover:font-bold duration-200">
-                <Link href="/adopcion#preguntas-frecuentes">PREGUNTAS FRECUENTES</Link>
-              </li>
-              <li className="hover:font-bold duration-200">
                 <Link href="/contacto">CONTACTO</Link>
               </li>
             </ul>
@@ -136,7 +133,7 @@ function Footer() {
                       <li className="flex w-full gap-2">
                         <Image src={'/assets/Footer/linkedin.svg'} width={100} height={100} className="w-4 md:w-5" alt="logo LinkedIn" />
                         <Link href="https://www.linkedin.com/in/mar%C3%ADa-florencia-imbrosiano-/" target="_blank">
-                          <h3 className="par-3 !font-medium cursor-pointer hover:underline">Maria Florencia Imbrosiano</h3>
+                          <h3 className="par-3 !font-medium cursor-pointer hover:underline">María Florencia Imbrosiano</h3>
                         </Link>
                       </li>
 
