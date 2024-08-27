@@ -48,7 +48,7 @@ export const NuestraHistoria = () => {
                         {/* Imagen grande */}
                         <Image
                             src={
-                                "/assets/Fundation/image2.png"
+                                "https://firebasestorage.googleapis.com/v0/b/huellitasctgna.appspot.com/o/static%2FhuellitasA.jpg?alt=media&token=10d95268-6aa8-4ecc-ba3c-3a9eeaff5daf"
                             }
                             alt="Imagen de venta de ropa"
                             className="h-auto mb-4 rounded-lg"
@@ -60,7 +60,7 @@ export const NuestraHistoria = () => {
                             {/* Imágenes pequeñas */}
                             <Image
                                 src={
-                                    "/assets/Fundation/image3.png"
+                                    "https://firebasestorage.googleapis.com/v0/b/huellitasctgna.appspot.com/o/static%2FhuellitasB.jpg?alt=media&token=385cffb0-c3f3-4bed-954f-b87e5cf972d5"
                                 }
                                 alt="Mujer abrazando un perro"
                                 className="w-[32%] h-auto mb-4 rounded-lg"
@@ -70,7 +70,7 @@ export const NuestraHistoria = () => {
 
                             <Image
                                 src={
-                                    "/assets/Fundation/image4.png"
+                                    "https://firebasestorage.googleapis.com/v0/b/huellitasctgna.appspot.com/o/static%2FhuellitasC.jpg?alt=media&token=9009f1aa-87f3-40f4-8123-acc4ee5bcf5e"
                                 }
                                 alt="Grupo de persona con dos perros"
                                 className="w-[32%] h-auto mb-4 rounded-lg"
@@ -80,9 +80,9 @@ export const NuestraHistoria = () => {
 
                             <Image
                                 src={
-                                    "/assets/Fundation/image5.png"
+                                    "https://firebasestorage.googleapis.com/v0/b/huellitasctgna.appspot.com/o/static%2FhuellitasD.jpg?alt=media&token=1b6be6db-6043-4088-a6ff-6c9b6cdbe554"
                                 }
-                                alt="Grupo de persona con dos perros"
+                                alt="Mujer abrazando un perro"
                                 className="w-[32%] h-auto mb-4 rounded-lg"
                                 height={700}
                                 width={700}
