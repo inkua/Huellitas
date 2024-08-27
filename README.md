@@ -84,8 +84,8 @@ The project's code is licensed under GPL. However, all elements related to visua
 This project was developed following agile methodology principles, with a team organized by roles:
 - Project Manager (Product Owner): Agustín Avellaneda, [linkedin](https://www.linkedin.com/in/avellaneda-agust%C3%ADn-tns/), [GitHub Profile](https://github.com/nitdraig)
 - Technical Leader: Manuel Florez, [linkedin](https://www.linkedin.com/in/manuel14mds/), [GitHub Profile](https://github.com/manuel14mds)
-- Graphic/UX/UI Designer: Danila Cardinale, [linkedin](https://www.linkedin.com/in/danila-cardinale/), [Behance]()
-- Graphic/UX/UI Designer: Maria Imbrosiano, [linkedin](https://www.linkedin.com/in/mar%C3%ADa-florencia-imbrosiano-/), [Behance]()
+- Graphic/UX/UI Designer: Danila Cardinale, [linkedin](https://www.linkedin.com/in/danila-cardinale/), [Behance](https://www.behance.net/DaniLaCardinale)
+- Graphic/UX/UI Designer: Maria Imbrosiano, [linkedin](https://www.linkedin.com/in/mar%C3%ADa-florencia-imbrosiano-/), [Behance](https://www.behance.net/marafimbrosi)
 - Software Developer: Melani Depetris, [linkedin](https://www.linkedin.com/in/melani-depetris/), [GitHub Profile](https://github.com/Melani-Depetris)
 - Software Developer: Gonzalo Vega, [linkedin](https://www.linkedin.com/in/gevegaeche/), [GitHub Profile](https://github.com/gevega)
 - Software Developer: Faustino Harriague, [linkedin](https://www.linkedin.com/in/faustino-harriague-26532299/), [GitHub Profile](https://github.com/FausUCU)
