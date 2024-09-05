@@ -91,20 +91,6 @@ This project was developed following agile methodology principles, with a team o
 - Software Developer: Faustino Harriague, [linkedin](https://www.linkedin.com/in/faustino-harriague-26532299/), [GitHub Profile](https://github.com/FausUCU)
 - Software Developer: Santiago Larrosa, [linkedin](https://www.linkedin.com/in/santiago-larrosa-bauz%C3%A1-99b740251/), [GitHub Profile](https://github.com/Dev-Santi)
 
-## Plugins
-
-Dillinger is currently extended with the following plugins.
-Instructions on how to use them in your own application are linked below.
-
-| Plugin | README |
-| ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md][PlDb] |
-| GitHub | [plugins/github/README.md][PlGh] |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
-
 > Thank you for taking the time to read through this README. We hope that this project will be helpful and beneficial for your needs. Your support and interest mean a lot to us, and we’re excited to see how this project might contribute to the great work being done. If you have any questions or need further assistance, please don't hesitate to reach out.
 
 [![N|inkua](https://inkua.de/web/image/1324-2e45f650/rgb-1000px-blanco.webp)](https://inkua.de)
