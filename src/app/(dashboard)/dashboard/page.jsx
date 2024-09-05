@@ -15,7 +15,6 @@ function Dashboard() {
 
     useEffect(() => {
         getData();
-        //console.log('data en page', data)
     }, [refresh]);
 
     try {
