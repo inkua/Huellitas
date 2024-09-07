@@ -14,7 +14,7 @@ export async function POST(req) {
 
     let mailOptions = {
       from: process.env.EMAIL_USER, 
-      to: process.env.EMAIL_USER, 
+      to: 'huellitasctgna@outlook.com', 
       subject: `Web Huellitas - ${subject}`, 
       text: `Nombre: ${name}\nTeléfono: ${phone}\nCorreo electrónico: ${email}\nConsulta: ${comment}`, 
     };
