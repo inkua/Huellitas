@@ -16,7 +16,7 @@ export default async function handler(req, res) {
         // Set up email data
         let mailOptions = {
             from: process.env.EMAIL_USER,
-            to: 'recipient_email@example.com', // Replace with the recipient's email address
+            to: 'huellitasctgna@outlook.com', // Replace with the recipient's email address
             subject: 'Web Huellitas - Consulta',
             text: `Nombre: ${name}\nTeléfono: ${phone}\nCorreo electrónico: ${email}\nConsulta: ${comment}`,
         };
