@@ -62,7 +62,7 @@ function Map() {
                     </div>
 
                     <div className="w-[90%] lg:w-[50%]">
-                        <h1 className='heading-2 mb-4'>¿TIENES ALGUNA CONSULTA?</h1>
+                        <h2 className='heading-2 mb-4'>¿TIENES ALGUNA CONSULTA?</h2>
                         <form onSubmit={handleSubmit} className='flex flex-col gap-6 lg:gap-4'>
                             <div>
                                 <label htmlFor="first_name" className="hidden lg:block mb-2 par-3 !font-light">Nombre</label>

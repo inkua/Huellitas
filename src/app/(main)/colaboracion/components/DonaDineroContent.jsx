@@ -8,7 +8,7 @@ const DonaDineroContent = ({ onClose }) => {
       <div className="w-[80%] md:w-[70%] lg:w-[35%] max-h-[95%] bg-white rounded-3xl overflow-y-clip relative p-6 md:p-12 lg:p-14" role="contentInfo">
         <div className="flex flex-col items-center justify-center gap-6">
           <div className="text-center">
-            <h2 className="par-1 !font-semibold">TRANSFERENCIAS</h2>
+            <h3 className="par-1 !font-semibold">TRANSFERENCIAS</h3>
             <p className="par-3 justify-center text-center">Elegí el monto que puedas donar y haz una transfrencia a cualquiera de las siguientes cuentas:</p>
           </div>
 

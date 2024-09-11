@@ -16,7 +16,7 @@ function Contacto() {
                     <div className="w-[75%] flex flex-col gap-6">
                         <div>
                             <p className='text-primaryFont text-p3-m text-center mb-2'>Para llegar a más personas y poder seguir ayudando</p>
-                            <h1 className='par-1 !font-bold text-center'>¡NO TE OLVIDES DE SEGUIRNOS EN NUESTRAS REDES!</h1>
+                            <h2 className='par-1 !font-bold text-center'>¡NO TE OLVIDES DE SEGUIRNOS EN NUESTRAS REDES!</h2>
                         </div>
 
                         <div className="flex justify-center">

@@ -82,9 +82,9 @@ function Colaboracion() {
             </section>
 
             <section className="flex flex-col w-full max-w-screen-2xl mx-auto justify-center items-center gap-8 py-16 bg-white">
-                <h1 className="w-11/12 lg:w-9/12 lg:font-bold heading-1 lg:text-left font-semibold text-h1-m">
+                <h2 className="w-11/12 lg:w-9/12 lg:font-bold heading-1 lg:text-left font-semibold text-h1-m">
                     ¿COMO QUIERES COLABORAR?
-                </h1>
+                </h2>
                 <Slider
                     items={items}
                     type={1}
@@ -96,9 +96,9 @@ function Colaboracion() {
 
             <section className="flex w-full max-w-screen-2xl mx-auto justify-center items-center bg-white lg:justify-start lg:mb-28">
                 <div className="flex flex-col w-11/12 lg:w-full gap-8 py-8">
-                    <h1 className="font-bold heading-1 text-center lg:text-left lg:ml-[12rem]">
+                    <h2 className="font-bold heading-1 text-center lg:text-left lg:ml-[12rem]">
                         TIENDAS QUE COLABORAN
-                    </h1>
+                    </h2>
                     {itemsColab && (
                         <Slider2
                             items={itemsColab}

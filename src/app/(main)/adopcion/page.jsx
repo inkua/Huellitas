@@ -54,9 +54,9 @@ function Adopcion() {
                 role="section"
             >
                 <div className="flex flex-col w-[90%] lg:w-9/12 gap-y-20">
-                    <h1 className="hidden lg:block font-bold heading-1">
+                    <h2 className="hidden lg:block font-bold heading-1">
                         BUSCAMOS UN HOGAR CON AMOR
-                    </h1>
+                    </h2>
                     <div
                         className="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-3 lg:px-0 gap-x-4 lg:gap-x-16 gap-y-20"
                         role="list"
