@@ -3,7 +3,7 @@ const DonaInsumosContent = ({ onClose }) => {
     <div className="w-[90%] md:w-[80%] lg:w-[60%] max-h-[95%] bg-white rounded-3xl p-6 md:p-12 lg:p-14 relative flex flex-col justify-center items-center">
       <div className="flex flex-col w-full gap-8 overflow-y-auto">
         <div className="w-full">
-          <h2 className="heading-2">MEDICAMENTOS</h2>
+          <h3 className="heading-2">MEDICAMENTOS</h3>
           <p className="w-full par-3 mt-4 text-justify">
             Amoxidal, Metronidazol, Cefalexina, Prendisona, Furosemide, Enalapril, Tramadol (comprimidos o inyectable), Farmaconal, Ondasetron, Previcox, Karsivan, Morfina.
           </p>
